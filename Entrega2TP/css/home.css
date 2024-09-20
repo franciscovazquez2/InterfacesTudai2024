@@ -44,8 +44,10 @@ aside{
 
 footer{
     /*ver si setear tamanio*/
+    max-height: 400px;
     grid-area:footer;
     background-color: teal;
+
 }
 
 

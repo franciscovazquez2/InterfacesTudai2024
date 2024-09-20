@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+    max-width: 1440px;
+}
+
+/*grid body*/
+.gridContainer{
+    display:grid;
+
+    grid-template-columns: 60px auto;
+    grid-template-rows: 60px auto 400px;
+
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "footer footer";
+}
+
+header{
+    grid-area: header;
+    max-height: 60px;
+    background-color: chocolate;
+}
+
+nav{
+    /*ver si setear tamanio*/
+    grid-area: nav;
+    background-color: brown;
+}
+
+main{
+    /*ver si setear tamanio*/
+    height: 1000px;/*PROVISORIO*/
+    grid-area:main;
+    background-color: cornflowerblue;
+}
+
+
+footer{
+    /*ver si setear tamanio*/
+    max-height: 400px;
+    grid-area:footer;
+    background-color: teal;
+
+}
