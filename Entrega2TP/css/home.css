@@ -224,8 +224,53 @@ footer{
 }
 /*fin card y contenido card*/
 
+/*seccion destacada*/
+.carousel-container-outstandings{
+    width: 1400px;
+    height: 480px;
+    border: solid black 1px;
+    margin: 20px auto;
+}
 
+.carousel-outstandings-title{
+    margin: 0px;
+}
 
+.description-container-outstandings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container-outstandings-btn{
+    background-color: #326b8f;
+}
+
+.container-outstandings-btn:hover{
+    background-color: #063553;
+    cursor: pointer;
+}
+
+.carousel-outstandings{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-outstanding{
+    width: 320px;
+    height: 370px;
+}
+
+.card-outstanding img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
 
 
 
