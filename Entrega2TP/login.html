@@ -1,51 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="css/login.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
     <div class="gridContainer">
-        <header>HEADER</header>
-        <nav>NAV</nav>
-        <main>MAIN</main>
-        <footer>
-            <div>
-                <h2>Follow Us</h2>
-                <a href=""><img src="" alt="logo-facebook"></a>
-                <a href=""><img src="" alt="logo-whatsapp"></a>
-                <a href=""><img src="" alt="logo-instagram"></a>
+      <header>HEADER</header>
+      <nav>NAV</nav>
+      <main>
+        <form class="form-conteiner" action="" method="get">
+          <h4>INICIAR SECION</h4>
+          <div class="form">
+            <input type="text" required />
+            <label class="lbl-nombre">
+              <span class="text-nomb"> Email </span>
+            </label>
+          </div>
+          <div class="form">
+            <input type="password" required />
+            <label class="lbl-nombre">
+              <span class="text-nomb"> Password </span>
+            </label>
+          </div>
+          <div>
+            <input type="submit" value="INGRESAR" />
+          </div>
+        </form>
+        <div class="conteiner_login_redes">
+          <div class="redes_sociales">
+            <div class="divisor_redes">
+              <div>------</div>
+              <span>O INGRESE CON</span>
+              <div>------</div>
             </div>
-            <div>
-                <h2>Contact Us</h2>
-                <p>¿Tienes preguntas? Nosotros tenemos las respuestas, no dudes en contactarnos.</p>
-                <button>Email us</button>
+            <div class="icons_redes">
+                <a class="box_facebook" href="">
+                    <img class="img_redes" src=".\src\icons\facebook.png" alt="facebook" srcset=""/>
+                </a>
+                <a class="box_google" href="">
+                    <img class="img_redes" src=".\src\icons\google.png" alt="google"/>
+                </a>
+                <a class="box_apple" href="">
+                    <img class="img_redes" src=".\src\icons\apple.png" alt="" srcset=""/>
+                </a>
             </div>
-            <div>
-                <h2>Que es Next Games?</h2>
-                <p>Next Games tiene su sede en Tandil y cuenta con un equipo de 3 personas trabajando en la platafotma.
-                Nuestro objetivo es crear el mejor patio de juegos online. Gratis y abierto a todos.
-                </p>
-            </div>
-            <div>
-                <h2>Empezar a jugar</h2>
-                <p>¿No estas seguro de a qué jugar? Empieza a descubrir juegos en nuestra página de inicio, 
-                o elige un juego de cualquiera de estas categorias populares:</p>
-                <ul>
-                    <li>Clasicos</li>
-                    <li>Aventura</li>
-                    <li>Deportes</li>
-                    <li>Accion</li>
-                </ul>
-            </div>
-            <div>
-                <p>El uso de este sitio web significa que aceptas los Términos de uso. Next Games ™ y © 2024 Turner 
-                Broadcasting System Europe Limited. Todos los derechos reservados.</p>
-                <p>Copyright © - Next Games, Inc. Games © Franiem. </p>
-            </div>
-        </footer>
+          </div>
+          <div class="text_redes">
+            <a href=""><span>No puedo iniciar sesion</span></a>
+            <a href=".\registrer.html"><span>Crear una cuenta</span></a>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div>
+          <h2>Follow Us</h2>
+          <a href="">
+            <img src=".\src\icons\Facebook.png" alt="logo-facebook" />
+          </a>
+          <a href="">
+            <img src=".\src\icons\Whatsapp.png" alt="logo-whatsapp" />
+          </a>
+          <a href="">
+            <img src=".\src\icons\Instagram.png" alt="logo-instagram" />
+          </a>
+        </div>
+        <div>
+          <h2>Contact Us</h2>
+          <p>
+            ¿Tienes preguntas? Nosotros tenemos las respuestas, no dudes en
+            contactarnos.
+          </p>
+          <button>Email us</button>
+        </div>
+        <div>
+          <h2>Que es Next Games?</h2>
+          <p>
+            Next Games tiene su sede en Tandil y cuenta con un equipo de 3
+            personas trabajando en la platafotma. Nuestro objetivo es crear el
+            mejor patio de juegos online. Gratis y abierto a todos.
+          </p>
+        </div>
+        <div>
+          <h2>Empezar a jugar</h2>
+          <p>
+            ¿No estas seguro de a qué jugar? Empieza a descubrir juegos en
+            nuestra página de inicio, o elige un juego de cualquiera de estas
+            categorias populares:
+          </p>
+          <ul>
+            <li>Clasicos</li>
+            <li>Aventura</li>
+            <li>Deportes</li>
+            <li>Accion</li>
+          </ul>
+        </div>
+        <div>
+          <p>
+            El uso de este sitio web significa que aceptas los Términos de uso.
+            Next Games ™ y © 2024 Turner Broadcasting System Europe Limited.
+            Todos los derechos reservados.
+          </p>
+          <p>Copyright © - Next Games, Inc. Games © Franiem.</p>
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
