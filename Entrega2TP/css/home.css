@@ -114,7 +114,7 @@ footer{
     margin: 20px auto;
 }
 
-
+/*contenido card inicio*/
 .card {
     flex: 0 0 220px; /* Tamaño fijo de cada card */
     height: 280px;
@@ -142,6 +142,8 @@ footer{
     font-weight: bold;
     color: white;
     border-bottom-right-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+    
 }
 
 .badge-new {
@@ -220,7 +222,7 @@ footer{
 .card-btn:hover {
     background-color: #063553;
 }
-
+/*fin card y contenido card*/
 
 
 
