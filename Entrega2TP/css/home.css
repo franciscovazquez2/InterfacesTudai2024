@@ -49,58 +49,52 @@ footer{
     background-color: teal;
 
 }
+
+/*carouseles simples*/
 .carousel-container {
     position: relative;
     width: 1400px; /* Ancho fijo del contenedor */
     margin: 20px auto;
-    overflow: hidden;
+    overflow: hidden;/*evita rebalse de cards/carousel*/
 }
 
+/*nombre de categoria-REVISAR PROPIEDADES FIGMA*/
 .carousel-title {
-    text-align: left; /* Alineación a la izquierda */
-    margin-bottom: 15px;
-    font-size: 24px;
-    font-weight: bold;
+    text-align: left;
+    margin-bottom: 15px;/*ACA*/
+    font-size: 24px;/*ACA*/
+    font-weight: bold;/*ACA*/
 }
 
+/*contenedor de cards-REVISAR PROPIEDADES FIGMA*/
 .carousel {
     display: flex;
-    justify-content: center;
+    justify-content: center;/*centra las cartas y cumple con la ley de gestalt*/
     transition: transform 0.5s ease;
-    gap: 20px;
+    gap: 20px;/*ACA*/
     margin-top: 10px;
     margin-bottom: 10px;
     will-change: transform;
 }
 
-.card {
-    flex: 0 0 220px; /* Tamaño fijo de cada card */
-    height: 280px;
-    background-color: #3498db;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: scale(1.1);
-    z-index: 1;
-}
-
-
+/*boton de carousel FALTA DAR CORRECTO DISEÑO*/
 .carousel-btn {
     background-color: #333;
     color: white;
     border: none;
     padding: 10px;
     position: absolute;
-    top: 60%; /* Ajustado para que siempre estén centrados */
+    top: 60%; /* Ajustado para que siempre estén centrados a card */
     transform: translateY(-50%);
     z-index: 1;
-    cursor: pointer;
+    cursor: pointer;/*cuando se acerca se cambia el cursor a clickeable*/
     opacity: 0.7;
     display: none;
+}
+
+/*visibilidad del boton cuando navega por carousel*/
+.carousel-container:hover .carousel-btn {
+    display: block;
 }
 
 .carousel-btn.left {
@@ -119,9 +113,115 @@ footer{
     padding-top: 30px; /* Añadido para dar espacio al título y evitar que los botones se muevan */
     margin: 20px auto;
 }
-.carousel-container:hover .carousel-btn {
-    display: block;
+
+
+.card {
+    flex: 0 0 220px; /* Tamaño fijo de cada card */
+    height: 280px;
+    background-color: #fafafa;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    /*nuevos cambios*/
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;/* ACA ver si va*/
 }
+
+.card:hover {
+    transform: scale(1.05);/*estaba en 1.1*/
+    z-index: 1;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    /*left: 10px;*/
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    border-bottom-right-radius: 15px;
+}
+
+.badge-new {
+    background-color: #e74c3c; /* Rojo */
+}
+
+.badge-popular {
+    background-color: #f39c12; /* Naranja */
+}
+
+.badge-update {
+    background-color: #27ae60; /* Verde */
+}
+
+.card-img {
+    width: 100%;
+    height: 185px;
+    object-fit:cover;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/*conjunto contenido card*/
+.card-body {
+    margin-top: 0px;
+    padding-left: 5px;
+    padding-top: 0px;
+}
+
+.card-title {
+    font-size: 16px;/*ACA*/
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.card-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-btn {
+    background-color: #3498db;
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.card-btn:hover {
+    background-color: #063553;
+}
+
+
 
 
 
