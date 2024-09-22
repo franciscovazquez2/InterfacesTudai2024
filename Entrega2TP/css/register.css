@@ -1,3 +1,20 @@
+:root {
+    --primary-color: #2F3A50; /* 500 Azul*/
+    --secondary-color: #9D9D9D; /* 500 Gris */
+    --accent-color: #EAA329; /* 500 Naranja*/
+    --error--color:#FC4040;
+    --warning--color:#F5DF14;
+    --success--color:#33CC33;
+    --black--color:#000000;
+    --white--color:#FFFFFF;
+    --font-size-h1: 40px;
+    --font-size-h2: 32px;
+    --font-size-h3: 24px;
+    --font-size-h4: 20px;
+    --font-size-paragraph-desktop: 26px;
+    --font-size-paragraph-small: 14px; /* Gris oscuro */
+}
+
 body{
     margin: 0;
     padding: 0;
