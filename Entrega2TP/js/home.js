@@ -1,6 +1,7 @@
 "use strict";
 
 function createCarousel(carouselId) {
+    console.log(carouselId);
     const carousel = document.getElementById(carouselId);
     let cards = carousel.querySelectorAll('.card');
     const cardWidth = cards[0].offsetWidth + 20; // Ancho de cada card más el gap
@@ -68,12 +69,18 @@ function createCarousel(carouselId) {
         }
     }
 
-    // Asignar eventos a los botones
-    carousel.querySelector('.carousel-btn.right').addEventListener('click', moveRight);
-    carousel.querySelector('.carousel-btn.left').addEventListener('click', moveLeft);
+    const leftBtn = carousel.parentNode.querySelector('.carousel-btn.left');
+    const rightBtn = carousel.parentNode.querySelector('.carousel-btn.right');
+
+    if (leftBtn && rightBtn) {
+        leftBtn.addEventListener('click', moveLeft);
+        rightBtn.addEventListener('click', moveRight);
+    } else {
+        console.error("No se encontraron los botones izquierdo y derecho.");
+    }
 }
 
 // Inicializar carouseles por ID
-createCarousel('carousel1');
-createCarousel('carousel2');
-// Añade más carouseles aquí llamando a createCarousel con su ID
+document.addEventListener('DOMContentLoaded', () => {
+    createCarousel('carousel1');
+});
