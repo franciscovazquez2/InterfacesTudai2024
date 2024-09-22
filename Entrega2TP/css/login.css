@@ -21,6 +21,10 @@ header{
     grid-area: header;
     max-height: 60px;
     background-color: chocolate;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav{
@@ -153,3 +157,10 @@ footer{
 .box_google{
     background: #FFFFFF;
 }
+
+
+/*--NAV--*/
+nav{
+    align-items: center;
+}
+ul li {list-style: none;}
