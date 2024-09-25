@@ -593,4 +593,26 @@ footer{
 
 }
 
+/*____________________________FOOTER____________________________*/
+.container-footer-cards{
+    display: flex;
+    justify-content: space-between;
+}
 
+.card-footer{
+    height: 220px;
+    width: 250px;
+
+}
+
+.card-long-footer{
+    height: 220px;
+    width: 500px;
+}
+
+.footer-copyright{
+    padding-top: 45px;
+    text-align: center;
+    height: 150px;
+    width: 1300px;
+}
