@@ -1,15 +1,15 @@
 body{
     margin: 0;
     padding: 0;
-    max-width: 1440px;
     font-family: 'Nunito'; font-size: 16px;
     background-color: #F7F7F7;
+    width: 100%;
 }
 
 /*grid body*/
 .gridContainer{
     display:grid;
-
+    max-width: 1440px;
     grid-template-columns: 60px auto;
     grid-template-rows: 60px 480px auto 400px;
 
@@ -40,12 +40,13 @@ main{
 
 aside{
     grid-area: aside;
-    height: max-content;/*se amolda al alto que ocupan*/
+    height: auto;/*se amolda al alto que ocupan*/
+    /*max-width: 1440px;*/
 }
 
 footer{
     /*ver si setear tamanio*/
-    max-height: 400px;
+    height: max-content;
     grid-area:footer;
     background-color: #293346;
 
@@ -56,7 +57,7 @@ footer{
     margin-top: 20px;
     padding-top: 0px;
     position: relative;
-    width: 1400px; /* Ancho fijo del contenedor */
+    max-width: 1400px; /* Ancho fijo del contenedor */
     margin-left:20px;
     margin-right: 20px;
     overflow: hidden;/*evita rebalse de cards/carousel*/
@@ -230,7 +231,7 @@ footer{
 
 /*seccion destacada*/
 .carousel-container-outstandings{
-    width: 1400px;
+    max-width: 1400px;
     height: 480px;
     margin: 20px auto;
 }
@@ -578,17 +579,33 @@ footer{
         grid-template-rows: 60px 480px auto 400px;
 
         grid-template-areas:
-            "header header"
-            "main main"
-            "aside aside"
-            "footer footer";
+            "header"
+            "main"
+            "aside"
+            "footer";
+    }
+
+    nav{
+        display: none;
+    }
+
+    aside{
+        height: max-content;
+    }
+
+    footer{
+        height: max-content;
+    }
+
+    .carousel-outstandings{
+        flex-direction: column;
     }
 
     .slider .list .item .content{
         padding-right: 0;
     }
     .slider .list .item .content .title{
-        font-size: 50px;
+        font-size: 30pxpx;
     }
 
 }

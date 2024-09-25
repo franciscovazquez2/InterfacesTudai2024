@@ -82,7 +82,7 @@ function createCarousel(carouselId) {
 
 // Inicializar carouseles por ID
 document.addEventListener('DOMContentLoaded', () => {
-    createCarousel('carousel1');
+    //createCarousel('carousel1');
     createCarousel('carousel2');
     createCarousel('carousel3');
     createCarousel('carousel4');
