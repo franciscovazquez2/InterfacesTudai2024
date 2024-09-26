@@ -41,7 +41,8 @@ main{
 aside{
     grid-area: aside;
     height: auto;/*se amolda al alto que ocupan*/
-    /*max-width: 1440px;*/
+    max-width: 1440px;
+    overflow: hidden;
 }
 
 footer{
@@ -49,7 +50,8 @@ footer{
     height: max-content;
     grid-area:footer;
     background-color: #293346;
-
+    z-index: 1;
+    position: relative;
 }
 
 /*carouseles simples*/
@@ -61,6 +63,8 @@ footer{
     margin-left:20px;
     margin-right: 20px;
     overflow: hidden;/*evita rebalse de cards/carousel*/
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -80,7 +84,7 @@ footer{
     transition: transform 0.5s ease;
     gap: 20px;/*ACA*/
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     will-change: transform;
 }
 
@@ -232,7 +236,9 @@ footer{
 /*seccion destacada*/
 .carousel-container-outstandings{
     max-width: 1400px;
-    height: 480px;
+    justify-content: center;
+    width: 100%;
+    height: auto;
     margin: 20px auto;
 }
 
@@ -272,13 +278,15 @@ footer{
 }
 
 .carousel-outstandings{
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
 }
 
 .card-outstanding{
-    width: 320px;
+    width: 300px;
     height: 370px;
 }
 
@@ -574,7 +582,7 @@ footer{
 @media only screen and (max-width: 650px){
     
     .gridContainer{
-            
+        max-width: 1440px;
         grid-template-columns: auto;
         grid-template-rows: 60px 480px auto 400px;
 
@@ -599,13 +607,14 @@ footer{
 
     .carousel-outstandings{
         flex-direction: column;
+        align-items: center;
     }
 
     .slider .list .item .content{
         padding-right: 0;
     }
     .slider .list .item .content .title{
-        font-size: 30pxpx;
+        font-size: 30px;
     }
 
 }
