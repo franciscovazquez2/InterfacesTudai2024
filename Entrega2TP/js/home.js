@@ -1,7 +1,6 @@
 "use strict";
 
 function createCarousel(carouselId) {
-    console.log(carouselId);
     const carousel = document.getElementById(carouselId);
     let cards = carousel.querySelectorAll('.card');
     const cardWidth = cards[0].offsetWidth + 20; // Ancho de cada card más el gap
