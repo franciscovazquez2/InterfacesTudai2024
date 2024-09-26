@@ -595,6 +595,7 @@ footer{
 
 /*____________________________FOOTER____________________________*/
 .container-footer-cards{
+    color: white;
     display: flex;
     justify-content: space-between;
 }
@@ -609,16 +610,35 @@ footer{
 
 .container-social-networks{
     flex-direction: row;
+    justify-content: space-around;
 }
 
 .card-long-footer{
+    
     height: 220px;
     width: 500px;
 }
 
 .footer-copyright{
+    color: white;
     padding-top: 45px;
     text-align: center;
     height: 150px;
     width: 1300px;
+}
+
+.span-copyright{
+    color: #EAA329;
+}
+
+.line-card-footer{
+    border: none;
+    background-color: #1D2432;
+    height: 2px;
+    width: 100%;
+}
+
+.p-desktop-smallLight{
+    font-size: 14px;
+
 }
