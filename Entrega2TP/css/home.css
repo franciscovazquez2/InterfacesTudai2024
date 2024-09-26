@@ -600,9 +600,15 @@ footer{
 }
 
 .card-footer{
+    flex-direction: column;
+    justify-content: flex-start;
     height: 220px;
     width: 250px;
+    
+}
 
+.container-social-networks{
+    flex-direction: row;
 }
 
 .card-long-footer{
