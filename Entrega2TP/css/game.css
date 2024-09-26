@@ -20,8 +20,78 @@ body{
 header{
     grid-area: header;
     max-height: 60px;
-    background-color: chocolate;
+    background-color:#293346;     
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
+/*MENU-logo*/
+.menu{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:30px;
+    margin-left: 10px;
+}
+
+.config{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin-right: 5px;
+}
+/*MENU-config*/
+
+
+/*BARRA BUSQUEDA HEADER*/
+.search-container{
+    position:relative;
+    max-width: 250px;
+    justify-self: center;
+}
+
+.search-input{
+    border:solid 1px white;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 40px;
+    height: 25px;
+    box-sizing: border-box;
+    background-color:transparent;
+    border-radius: 5px;
+    color: white;
+}
+
+.search-input:focus{
+    outline: none;
+    box-shadow: none;
+}
+.search-input::placeholder{
+    color: white;
+    opacity: 0.8;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.search-icon{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+}
+button,.icon{
+    border: none;
+    background-color: #293346;
+    cursor: pointer;
+}
+.icon{
+    background-color:#293346;
+}
+
 
 nav{
     /*ver si setear tamanio*/
