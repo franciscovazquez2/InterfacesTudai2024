@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
     <link rel="stylesheet" href="css/game.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
 </head>
 <body>
+    <div id="loader">
+        <div class="loader-container">
+            <div class="spinner"></div>
+            <p class="porcentaje">%<span id="porcentaje">0</span></p>
+        </div>
+    </div>
     <div class="gridContainer">
         <header>
             <div class="menu">
                 <button><img src=".\src\icons\Hamburger.png" alt="hamburger" srcset="" class="icon"></button>
-                <a href="http://" target="_blank" rel="noopener noreferrer"><img src=".\src\icons\logo2.png" alt="logo" srcset=""></a>
+                <a href="home.html" target="_blank" rel="noopener noreferrer"><img src=".\src\icons\logo2.png" alt="logo" srcset=""></a>
             </div>
             <div class="search-container">
                 <input type="text" placeholder="Search..." class="search-input">
@@ -61,5 +68,6 @@
             </div>
         </footer>
     </div>
+    <script src="js/game.js"></script>
 </body>
 </html>
