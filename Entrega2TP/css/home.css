@@ -276,7 +276,7 @@ footer{
     margin-top: 0px;
     text-align: left;
     margin-bottom: 15px;/*ACA*/
-    font-size: 24px;/*ACA*/
+    font-size: 32px;/*ACA*/
     font-weight: bold;/*ACA*/
 }
 
@@ -311,6 +311,7 @@ footer{
 /*visibilidad del boton cuando navega por carousel*/
 .carousel-container:hover .carousel-btn {
     display: block;
+    transition: 0.5s linear;
 }
 
 .carousel-btn.left {
@@ -327,7 +328,7 @@ footer{
 
 /*contenido card inicio*/
 .card {
-    flex: 0 0 220px; /* Tamaño fijo de cada card */
+    flex: 0 0 200px; /* Tamaño fijo de cada card */
     height: 280px;
     background-color: #fafafa;
     border-bottom-left-radius: 10px;
@@ -349,7 +350,7 @@ footer{
     top: 10px;
     /*left: 10px;*/
     padding: 5px 10px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     color: white;
     border-bottom-right-radius: 15px;
@@ -379,16 +380,19 @@ footer{
 
 /*conjunto contenido card*/
 .card-body {
+    margin-bottom: 0px;
     margin-top: 0px;
     padding-left: 5px;
     padding-top: 0px;
 }
 
 .card-title {
-    font-size: 16px;/*ACA*/
+    font-size: 20px;/*ACA*/
     font-weight: bold;
     margin-top: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    padding: 0;
+    
 }
 
 .card-description {
@@ -400,29 +404,107 @@ footer{
 
 .card-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
     align-items: center;
     margin-bottom: 10px;
-
 }
 
 .card-price {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: normal;
 }
+/*boton animado*/
+.button-with-icon {
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #232B3C;
+    font-style: 'nunito',sans;
+    /*letter-spacing: 1px;*/
+    padding: 0 12px;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: normal;
+    border-radius: 3px;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    transform: translateY(0px);
+    position: relative;
+    box-shadow:
+      inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+      inset 0 1px 20px rgba(0, 0, 0, 0),
+      0 3px 0 #232B3C,
+      0 3px 2px rgba(0, 0, 0, 0.2),
+      0 5px 10px rgba(0, 0, 0, 0.1),
+      0 10px 20px rgba(0, 0, 0, 0.1);
+    background: #435372;
+    color: white;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    transition: 150ms all ease-in-out;
+  }
+  
+  .button-with-icon .icon {
+    margin-right: 8px;
+    width: 18px;
+    height: 14px;
+    background-color:transparent;
+    transition: all 0.5s ease-in-out;
+  }
+  /*boton cuando se aprieta*/
+  .button-with-icon:active {
+    transform: translateY(3px);
+    box-shadow:
+      inset 0 16px 2px -15px rgba(0, 0, 0, 0),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+      inset 0 1px 20px rgba(0, 0, 0, 0.1),
+      0 0 0 #435372,
+      0 0 0 2px rgba(255, 255, 255, 0.5),
+      0 0 0 rgba(0, 0, 0, 0),
+      0 0 0 rgba(0, 0, 0, 0);
+  }
+  
+  .button-with-icon:hover .text {
+    transform: translateX(80px);
+  }
+  .button-with-icon:hover .icon {
+    transform: translate(30px);
+  }
+  .button-with-icon:hover .icon.play {
+    transform: translate(17px);
+  }
+  
+  .text {
+    transition: all 0.5s ease-in-out;
+  }
+  
 
-.card-btn {
+/*boton card tradicional*/
+/*.card-btn {
     background-color: #435372;
-    width: 40px;
-    height: 40px;
+    width: 100px;
+    height: 30px;
     border: none;
     padding: 10px;
     margin-right: 5px;
     border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.9);
     cursor: pointer;
     display: flex;
     align-items: center;
+    gap: 5px;
     justify-content: center;
+    
+}
+
+.card-btn span{
+    color: #fafafa;
+    font-weight: 550;
+    justify-content: start;
 }
 
 .card-btn img {
@@ -433,7 +515,8 @@ footer{
 
 .card-btn:hover {
     background-color: #063553;
-}
+
+}*/
 /*fin card y contenido card*/
 
 /*seccion destacada*/
@@ -522,7 +605,7 @@ footer{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: blur(1px)brightness(0.8);
+    /*filter: blur(1px)brightness(0.8);*/
 
 }
 .slider .list .item .content{
@@ -536,7 +619,7 @@ footer{
     padding-right: 30%;
     box-sizing: border-box;
     color: #fff;
-    text-shadow: 0 5px 10px #0004;
+    text-shadow: 0 20px 20px #0004;
 }
 
 .slider .list .item .content .title{
