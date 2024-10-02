@@ -263,14 +263,6 @@ aside{
     overflow: hidden;
 }
 
-footer{
-    /*ver si setear tamanio*/
-    height: max-content;
-    grid-area:footer;
-    background-color: #293346;
-    z-index: 1;
-    position: relative;
-}
 
 /*carouseles simples*/
 .carousel-container {
@@ -922,25 +914,38 @@ footer{
     .slider .list .item .content .title{
         font-size: 30px;
     }
+    .p-desktop-smallLight{
+        font-size: 12px;
+    }
+    footer h2{
+        font-size: 20px;
+    }
 
 }
 
 
 /*____________________________FOOTER____________________________*/
-
-footer h2{
-    font-size: 24px;
-}
-
-
-
+/*ver si setear tamanio*/
 footer{
+    
+    height: max-content;
+    grid-area:footer;
+    background-color: #293346;
+    z-index: 1;
+    position: relative;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+footer h2{
+    font-size: 24px;
+    margin: 5px 0px 0px 0px;
+}
+
 .container-footer-cards{
+    flex-wrap: wrap;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -949,30 +954,37 @@ footer{
 }
 
 .card-footer-card{
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
     height: 220px;
-    width: 250px;
+    max-width: 250px;
     
 }
 
 .card-long-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 0%;
     height: 220px;
-    width: 500px;
+    max-width: 500px;
 }
 
 .container-social-networks{
+    width: 230px;
+    display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .footer-copyright{
     color: white;
-    padding-top: 45px;
     text-align: center;
+    justify-content: end;
     height: 150px;
-    width: 1300px;
+    max-width: 1300px;
 }
 
 .span-copyright{
@@ -988,8 +1000,10 @@ footer{
 
 .p-desktop-smallLight{
     font-size: 14px;
-
 }
+    
+
+
 
 /*____________PRUEBA BOTON____________*/
 /*
@@ -1035,3 +1049,92 @@ button:hover::before {
     width: 250%;
 }
 */
+
+/*______________________PRUEBA REDES SOCIALES____________________
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: 50px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+  }
+  
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background: #1da1f2;
+    color: #fff;
+  }
+  
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+  }
+
+  */
