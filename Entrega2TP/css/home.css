@@ -897,6 +897,10 @@ footer{
         align-items: center;
     }
 
+    .face{
+        position: relative;
+    }
+
     .slider .list .item .content{
         padding-right: 0;
     }
