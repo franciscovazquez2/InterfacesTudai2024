@@ -932,7 +932,7 @@ footer{
     gap: 20px;
 }
 
-.card-footer.card{
+.card-footer-card{
     flex-direction: column;
     justify-content: flex-start;
     height: 220px;
