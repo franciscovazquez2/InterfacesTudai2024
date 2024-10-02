@@ -1181,7 +1181,7 @@ aside{
 /*ver si setear tamanio*/
 footer{
     
-    height: max-content;
+    /* height: max-content; */
     grid-area:footer;
     background-color: #293346;
     z-index: 1;
@@ -1189,6 +1189,7 @@ footer{
     max-width: 1440px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -1247,7 +1248,15 @@ footer h2{
 .line-card-footer{
     border: none;
     background-color: #1D2432;
-    height: 2px;
+    height: 1px;
+    width: 100%;
+}
+
+.long-line-card-footer{
+    border: none;
+    margin-top: 5px;
+    background-color: #ffff;
+    height: 3px;
     width: 100%;
 }
 
@@ -1255,6 +1264,12 @@ footer h2{
     font-size: 14px;
 }
     
+
+.lista-parrafo-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 
 
