@@ -504,6 +504,7 @@ aside{
     height: 30px;
     font-size: 14px;
     font-weight: normal;
+    text-transform: uppercase;
     border-radius: 3px;
     outline: none;
     user-select: none;
@@ -518,7 +519,7 @@ aside{
       0 3px 2px rgba(0, 0, 0, 0.2),
       0 5px 10px rgba(0, 0, 0, 0.1),
       0 10px 20px rgba(0, 0, 0, 0.1);
-    background: #435372;
+    background: #435373;
     color: white;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
     transition: 150ms all ease-in-out;
@@ -647,18 +648,183 @@ aside{
     gap: 15px;
 }
 
-.card-outstanding{
+.card-outstandings{
+    position: relative;
     width: 300px;
-    height: 370px;
+    height: 350px;
 }
 
-.card-outstanding img{
+.card-outstandings .face{
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit:cover;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 1s ease;
 }
+
+.card-outstandings .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card-outstandings .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-outstandings .back {
+    transform: perspective(300px) rotateY(180deg);
+    color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.img-cart-mario{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../src/img/cubo mario.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.img-cart-adventure{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../src/img/adventure.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.img-cart-pacman{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../src/img/pacman.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+.img-cart-asteroids{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../src/img/asteroids.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.card-outstandings .back .link a{
+    text-decoration: none;
+    color: #FAFAFA;
+}
+
+.card-outstandings .back h3{
+    font-size: 24px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+.card-outstandings .back p {
+    letter-spacing: 1px;
+}
+
+.card-outstandings:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card-outstandings:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+.cart-conteiner-outstandings{
+    display: flex;
+    flex-direction: colum;
+    justify-content: space-around;
+}
+
+.button-animation-outstandings {
+    width: 100px;
+    height: 30px;
+    position: relative;
+    margin: 0;
+    padding: 0.8em 1em;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    background-color: #435372;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+    font-family: inherit;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+  }
+  
+  .button-animation-outstandings:hover {
+    animation: sh0 0.5s ease-in-out both;
+  }
+  
+  @keyframes sh0 {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  
+    25% {
+      transform: rotate(7deg) translate3d(0, 0, 0);
+    }
+  
+    50% {
+      transform: rotate(-7deg) translate3d(0, 0, 0);
+    }
+  
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+  
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+  
+  .button-animation-outstandings:hover .span-animation-outstandings {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+  }
+  
+  .button-animation-outstandings::before,
+  .button-animation-outstandings::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+    z-index: -1;
+    transform: translate(100%, -25%) translate3d(0, 0, 0);
+  }
+  
+  .button-animation-outstandings:hover::before,
+  .button-animation-outstandings:hover::after {
+    opacity: 0.15;
+    transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+  }
+  
+  .button-animation-outstandings:hover::before {
+    transform: translate3d(50%, 0, 0) scale(0.9);
+  }
+  
+  .button-animation-outstandings:hover::after {
+    transform: translate(50%, 0) scale(1.1);
+  }
+
 /*fin seccion destacada*/
 
 /* slider section  */
