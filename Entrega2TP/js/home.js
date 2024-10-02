@@ -108,4 +108,11 @@ function createCarousel(carouselId) {
     }
 }
 
+
+var hamburguer = document.getElementById('hamburger');
+let sidebar = document.querySelector('.sidebar');
+hamburguer.addEventListener('click',()=>{
+    sidebar.classList.toggle('hidden');
+});
+
     
