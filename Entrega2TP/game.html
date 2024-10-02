@@ -5,10 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
     <link rel="stylesheet" href="css/game.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
 </head>
 <body>
+    <div id="loader">
+        <div class="loader-container">
+            <div class="spinner"></div>
+            <p class="porcentaje">%<span id="porcentaje">0</span></p>
+        </div>
+    </div>
     <div class="gridContainer">
-        <header>HEADER</header>
+        <header>
+            <div class="menu">
+                <button><img src=".\src\icons\Hamburger.png" alt="hamburger" srcset="" class="icon"></button>
+                <a href="home.html" target="_blank" rel="noopener noreferrer"><img src=".\src\icons\logo2.png" alt="logo" srcset=""></a>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-input">
+                <img src=".\src\icons\search.png" alt="Search" class="search-icon">
+            </div>
+            <div class="config">
+                <button><img src=".\src\icons\Cart.png" alt="cart" srcset="" class="icon"></button>
+                <button><img src=".\src\icons\Setting.png" alt="setting" class="icon"></button>
+                <button><img src=".\src\icons\User.png" alt="user" class="icon"></button>
+            </div>
+        </header>
         <nav>NAV</nav>
         <main>MAIN</main>
         <footer>
@@ -47,5 +68,6 @@
             </div>
         </footer>
     </div>
+    <script src="js/game.js"></script>
 </body>
 </html>

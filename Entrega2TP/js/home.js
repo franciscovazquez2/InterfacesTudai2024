@@ -1,7 +1,35 @@
 "use strict";
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Esperar hasta que la página se haya cargado completamente
+    let porcentaje = 0;
+    const porcentajeCarga = document.getElementById('porcentaje');
+
+    // Simular el incremento del porcentaje
+    const interval = setInterval(function() {
+        if (porcentaje < 100) {
+            porcentaje++;
+            porcentajeCarga.innerText = porcentaje;
+        } else {
+            clearInterval(interval);
+            setTimeout(function() {
+                document.body.classList.add('loaded'); // Ocultar el loader
+            }, 800); // momento antes de iniciar
+        }
+    }, 20); //tiempo del intervalo que incrementa el loader
+
+    createCarousel('carousel1');
+    createCarousel('carousel2');
+    createCarousel('carousel3');
+    createCarousel('carousel4');
+    createCarousel('carousel5');
+    createCarousel('carousel6');
+    createCarousel('carousel7');
+
+});
+
+
 function createCarousel(carouselId) {
-    console.log(carouselId);
     const carousel = document.getElementById(carouselId);
     let cards = carousel.querySelectorAll('.card');
     const cardWidth = cards[0].offsetWidth + 20; // Ancho de cada card más el gap
@@ -80,13 +108,4 @@ function createCarousel(carouselId) {
     }
 }
 
-// Inicializar carouseles por ID
-document.addEventListener('DOMContentLoaded', () => {
-    createCarousel('carousel1');
-    createCarousel('carousel2');
-    createCarousel('carousel3');
-    createCarousel('carousel4');
-    createCarousel('carousel5');
-    createCarousel('carousel6');
-    createCarousel('carousel7');
-});
+    
