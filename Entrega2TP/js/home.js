@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Simular el incremento del porcentaje
     const interval = setInterval(function() {
         if (porcentaje < 100) {
-            porcentaje++;
+            porcentaje = porcentaje + 5;
             porcentajeCarga.innerText = porcentaje;
         } else {
             clearInterval(interval);
