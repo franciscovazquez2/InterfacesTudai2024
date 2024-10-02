@@ -99,8 +99,12 @@ header{
     display:flex;
     flex-direction: row;
     align-items: center;
-    gap:30px;
+    gap:40px;
     margin-left: 15px;
+}
+
+.header-logos{
+    margin-top: 3px;
 }
 
 /*MENU-config*/
@@ -158,6 +162,16 @@ button,.icon{
 }
 .icon{
     background-color:#293346;
+}
+
+.header-icon-cart{
+    height: 22px;
+    width: 26px;
+}
+
+.header-icon{
+    height: 24px;
+    width: 24px;
 }
 
 /*NAV*/
@@ -917,6 +931,8 @@ footer{
 footer h2{
     font-size: 24px;
 }
+
+
 
 footer{
     display: flex;
