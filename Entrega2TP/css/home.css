@@ -6,6 +6,7 @@ body{
     width: 100%;
 }
 
+
 /* Loader */
 .loader-container{
     position: absolute;
@@ -275,7 +276,7 @@ footer{
 .carousel-title {
     margin-top: 0px;
     text-align: left;
-    margin-bottom: 15px;/*ACA*/
+    margin-bottom: 0px;/*ACA*/
     font-size: 32px;/*ACA*/
     font-weight: bold;/*ACA*/
 }
