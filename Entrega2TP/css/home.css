@@ -888,7 +888,7 @@ footer{
     aside{
         height: max-content;
     }
-
+    
     footer{
         height: max-content;
     }
@@ -932,7 +932,7 @@ footer{
     gap: 20px;
 }
 
-.card-footer{
+.card-footer.card{
     flex-direction: column;
     justify-content: flex-start;
     height: 220px;
