@@ -1137,7 +1137,7 @@ button:hover::before {
 }
 */
 
-/*______________________PRUEBA REDES SOCIALES____________________
+/*______________________PRUEBA REDES SOCIALES____________________  */
 .wrapper {
     display: inline-flex;
     list-style: none;
@@ -1185,14 +1185,14 @@ button:hover::before {
     height: 8px;
     width: 8px;
     background: #fff;
-    bottom: -3px;
+    bottom: 22px;
     left: 50%;
     transform: translate(-50%) rotate(45deg);
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
   
   .wrapper .icon:hover .tooltip {
-    top: 50px;
+    top: 65px;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -1224,4 +1224,3 @@ button:hover::before {
     color: #fff;
   }
 
-  */
