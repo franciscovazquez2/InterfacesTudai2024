@@ -912,3 +912,110 @@ footer{
 }
 
 
+/*____________________________FOOTER____________________________*/
+
+footer h2{
+    font-size: 24px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-footer-cards{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-footer{
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 220px;
+    width: 250px;
+    
+}
+
+.card-long-footer{
+    margin-top: 0%;
+    height: 220px;
+    width: 500px;
+}
+
+.container-social-networks{
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-copyright{
+    color: white;
+    padding-top: 45px;
+    text-align: center;
+    height: 150px;
+    width: 1300px;
+}
+
+.span-copyright{
+    color: #EAA329;
+}
+
+.line-card-footer{
+    border: none;
+    background-color: #1D2432;
+    height: 2px;
+    width: 100%;
+}
+
+.p-desktop-smallLight{
+    font-size: 14px;
+
+}
+
+/*____________PRUEBA BOTON____________*/
+/*
+
+.button {
+    margin-top:10px ;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #232B3C;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #1D2432;
+}
+
+button:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #1D2432;
+    box-shadow: 4px 5px 7px -4px #ffffff;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #232B3C;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+button:hover::before {
+    width: 250%;
+}
+*/
