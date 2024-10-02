@@ -166,7 +166,7 @@ nav{
     grid-area: nav;
     background-color: #232B3C;
 }
-
+/*INICIO NAV ANIMACION
 .vertical-nav{
     width: 60px;
     display: flex;
@@ -196,10 +196,10 @@ nav{
 }
 
 .nav-item:hover {
-    background-color: #444; /* Cambia el fondo cuando haces hover */
+    background-color: #444; /* Cambia el fondo cuando haces hover
 }
 
-/* Estilo de los íconos */
+/* Estilo de los íconos 
 nav .icon {
     width: 20px;
     height: 20px;
@@ -207,10 +207,10 @@ nav .icon {
 }
 
 .nav-item:hover .icon {
-    transform: scale(1.1); /* Aumenta el tamaño del icono al hacer hover */
+    transform: scale(1.1); /* Aumenta el tamaño del icono al hacer hover 
 }
 
-/* Estilo de las descripciones (ocultas inicialmente) */
+/* Estilo de las descripciones (ocultas inicialmente) 
 nav .description {
     white-space: nowrap;
     margin-left: 15px;
@@ -221,19 +221,19 @@ nav .description {
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    left: 60px; /* Ajustado al ancho del nav */
+    left: 60px; /* Ajustado al ancho del nav 
     top: 50%;
     transform: translateY(-50%);
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 100;
 }
 
-/* Mostrar la descripción cuando se hace hover sobre el item */
+/* Mostrar la descripción cuando se hace hover sobre el item 
 .nav-item:hover .description {
     opacity: 1;
     visibility: visible;
 }
-
+FIN DEL NAV*/
 
 
 main{
