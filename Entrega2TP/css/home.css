@@ -427,10 +427,9 @@ aside{
     justify-content: center;
     border: 1px solid #232B3C;
     font-style: 'nunito',sans;
-    /*letter-spacing: 1px;*/
     padding: 0 12px;
     text-align: center;
-    width: 100px;
+    width: 105px;
     height: 30px;
     font-size: 14px;
     font-weight: normal;
@@ -479,10 +478,10 @@ aside{
     transform: translateX(80px);
   }
   .button-with-icon:hover .icon {
-    transform: translate(30px);
+    transform: translate(36px);
   }
   .button-with-icon:hover .icon.play {
-    transform: translate(17px);
+    transform: translate(19px);
   }
   
   .text {
