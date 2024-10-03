@@ -19,3 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 20); //tiempo del intervalo que incrementa el loader
 
 });
+
+var hamburguer = document.getElementById('hamburger');
+let sidebar = document.querySelector('.sidebar');
+hamburguer.addEventListener('click',()=>{
+    sidebar.classList.toggle('hidden');
+});
