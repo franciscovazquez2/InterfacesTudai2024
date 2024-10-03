@@ -5,163 +5,212 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="css/login.css" />
-    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="gridContainer">
       <header>
         <div class="menu">
-            <button><img src=".\src\icons\Hamburger.png" alt="hamburger" srcset="" class="icon"></button>
-            <a href="home.html" target="_blank" rel="noopener noreferrer"><img src=".\src\icons\logo2.png" alt="logo" srcset=""></a>
-        </div>
-        <div class="search-container">
-            <input type="text" placeholder="Search..." class="search-input">
-            <img src=".\src\icons\search.png" alt="Search" class="search-icon">
+          <button>
+            <img
+              src=".\src\icons\Hamburger.png"
+              alt="hamburger"
+              id="hamburger"
+              class="icon"
+            />
+          </button>
+          <div class="header-logos">
+            <a href="home.html"
+              ><img src=".\src\icons\PlayersLogo.png" alt="playerslogo"
+            /></a>
+            <a href="home.html"
+              ><img src=".\src\icons\logo2.png" alt="logo"
+            /></a>
+          </div>
         </div>
         <div class="config">
-            <button><img src=".\src\icons\Cart.png" alt="cart" srcset="" class="icon"></button>
-            <button><img src=".\src\icons\Setting.png" alt="setting" class="icon"></button>
-            <button><img src=".\src\icons\User.png" alt="user" class="icon"></button>
+          <button>
+            <img
+              src=".\src\icons\User.png"
+              alt="user"
+              class="icon header-icon"
+            />
+          </button>
         </div>
-    </header>
-      <nav>
+      </header>
+      <nav class="sidebar hidden">
         <ul>
-            <li>
-                <a href=""><img src=".\src\icons\Home.png" alt="home" srcset=""></a>
-                <span>Home</span>
-            </li>
-            <li>
-                <a href=""><img src=".\src\icons\clock.png" alt="reloj" srcset=""></a>
-                <span>Recientes</span>
-            </li>
-            <li>
-                <a href=""><img src=".\src\icons\novedades.png" alt="novedades" srcset=""></a>
-                <span>Novedades</span>
-            </li>
-            <li>
-                <a href=""><img src=".\src\icons\star.png" alt="estrella" srcset=""></a>
-                <span>Destacados</span>
-            </li>
-            <li><div>---</div></li>
-            <li>
-                <a href=""><img src=".\src\icons\espada.png" alt="espada" srcset=""></a>
-                <span>Accion</span>
-            </li>
-            <li>
-                <a href=""><img src=".\src\icons\brujula.png" alt="brujula" srcset=""></a>
-                <span>Aventura</span>
-            </li>
-            <li>
-                <a href=""><img src=".\src\icons\ball.png" alt="ball" srcset=""></a>
-                <span>Deportes</span>
-            </li>
-            <li>
-                <a href=""><img src=".\src\icons\cartas.png" alt="cartas" srcset=""></a>
-                <span>Cartas</span>
-            </li>
-            <li>
-                <a href=""><img src=".\src\icons\clasicos.png" alt="clasicos" srcset=""></a>
-                <span>Clasicos</span>
-            </li>
-
+          <li>
+            <a href="home.html"><img src="src/icons/Home.png" alt="Home" /></a
+            ><span class="category">Inicio</span>
+          </li>
+          <li>
+            <a href="#recientes"
+              ><img src="src/icons/Clock.png" alt="Recientes" /></a
+            ><span class="category">Recientes</span>
+          </li>
+          <li>
+            <a href="#"><img src="src/icons/Novedades.png" alt="Novedades" /></a
+            ><span class="category">Novedades</span>
+          </li>
+          <li>
+            <a href="#"><img src="src/icons/Star.png" alt="Destacados" /></a
+            ><span class="category">Destacados</span>
+          </li>
+          <li>
+            <a href="#accion"><img src="src/icons/Espada.png" alt="Espada" /></a
+            ><span class="category">Acción</span>
+          </li>
+          <li>
+            <a href="#aventura"
+              ><img src="src/icons/Brujula.png" alt="Brujula" /></a
+            ><span class="category">Aventura</span>
+          </li>
+          <li>
+            <a href="#deportes"><img src="src/icons/Ball.png" alt="Ball" /></a
+            ><span class="category">Deportes</span>
+          </li>
+          <li>
+            <a href="#cartas"><img src="src/icons/Cartas.png" alt="Cartas" /></a
+            ><span class="category">Cartas</span>
+          </li>
+          <li>
+            <a href="#clasicos"
+              ><img src="src/icons/Home.png" alt="Joystik" /></a
+            ><span class="category">Clásicos</span>
+          </li>
         </ul>
       </nav>
       <main>
-        <form class="form-conteiner" action="" method="get">
-          <h4>INICIAR SECION</h4>
-          <div class="form">
-            <input type="text" required />
-            <label class="lbl-nombre">
-              <span class="text-nomb"> Email </span>
-            </label>
-          </div>
-          <div class="form">
-            <input type="password" required />
-            <label class="lbl-nombre">
-              <span class="text-nomb"> Password </span>
-            </label>
-          </div>
-          <div>
-            <input type="submit" value="INGRESAR" />
-          </div>
-        </form>
-        <div class="conteiner_login_redes">
-          <div class="redes_sociales">
-            <div class="divisor_redes">
-              <div>------</div>
-              <span>O INGRESE CON</span>
-              <div>------</div>
+        <div class="form-conteiner">
+          <form class="login-form" id="login-form"  action="" method="get">
+            <h2>Iniciar Sesion</h2>
+            <div class="form">
+              <input type="text" required/>
+              <label class="lbl-nombre">
+                <span class="text-nomb"> Email </span>
+              </label>
             </div>
-            <div class="icons_redes">
+            <div class="form">
+              <input type="password" required/>
+              <label class="lbl-nombre">
+                <span class="text-nomb"> Password </span>
+              </label>
+            </div>
+            <input type="submit" value="INGRESAR" id="button-form" class="buttonn btn-email-us">
+          </form>
+          <div class="conteiner_login_redes">
+            <div class="redes_sociales">
+              <div class="divisor_redes">
+                <div class="line-card-form"></div>
+                <span>O INGRESE CON</span>
+                <div class="line-card-form"></div>
+              </div>
+              <div class="icons_redes">
                 <a class="box_facebook" href="">
-                    <img class="img_redes" src=".\src\icons\facebook.png" alt="facebook" srcset=""/>
+                  <img
+                    class="img_redes"
+                    src=".\src\icons\facebook.png"
+                    alt="facebook"
+                    srcset=""
+                  />
                 </a>
                 <a class="box_google" href="">
-                    <img class="img_redes" src=".\src\icons\google.png" alt="google"/>
+                  <img
+                    class="img_redes"
+                    src=".\src\icons\google.png"
+                    alt="google"
+                  />
                 </a>
                 <a class="box_apple" href="">
-                    <img class="img_redes" src=".\src\icons\apple.png" alt="" srcset=""/>
+                  <img
+                    class="img_redes"
+                    src=".\src\icons\apple.png"
+                    alt=""
+                    srcset=""
+                  />
                 </a>
+              </div>
             </div>
-          </div>
-          <div class="text_redes">
-            <a href=""><span>No puedo iniciar sesion</span></a>
-            <a href=".\registrer.html"><span>Crear una cuenta</span></a>
+            <div class="text_redes">
+              <a href=""><span>No puedo iniciar sesion</span></a>
+              <a href=".\registrer.html"><span>Crear una cuenta</span></a>
+            </div>
           </div>
         </div>
       </main>
       <footer>
-        <div>
-          <h2>Follow Us</h2>
-          <a href="">
-            <img src=".\src\icons\Facebook.png" alt="logo-facebook" />
-          </a>
-          <a href="">
-            <img src=".\src\icons\Whatsapp.png" alt="logo-whatsapp" />
-          </a>
-          <a href="">
-            <img src=".\src\icons\Instagram.png" alt="logo-instagram" />
-          </a>
+        <!-------------FOOTER------------->
+        <div class="container-footer-cards">
+          <div class="long-line-card-footer"></div>
+          <div class="card-footer-card">
+            <h2>Follow Us</h2>
+            <div class="line-card-footer"></div>
+            <div class="container-social-networks">
+              <a href=""
+                ><img src=".\src\icons\Facebook.png" alt="logo-facebook"
+              /></a>
+              <a href=""
+                ><img src=".\src\icons\Whatsapp.png" alt="logo-whatsapp"
+              /></a>
+              <a href=""
+                ><img src=".\src\icons\Instagram.png" alt="logo-instagram"
+              /></a>
+            </div>
+          </div>
+          <div class="card-footer-card">
+            <h2>Contact Us</h2>
+            <div class="line-card-footer"></div>
+            <p class="p-desktop-smallLight">
+              ¿Tienes preguntas? Nosotros tenemos las respuestas, no dudes en
+              contactarnos.
+            </p>
+            <button class="buttonn btn-email-us">Email us</button>
+          </div>
+          <div class="card-footer-card">
+            <h2>Que es Next Games?</h2>
+            <div class="line-card-footer"></div>
+            <p class="p-desktop-smallLight">
+              Next Games tiene su sede en Tandil y cuenta con un equipo de 3
+              personas trabajando en la platafotma. Nuestro objetivo es crear el
+              mejor patio de juegos online. Gratis y abierto a todos.
+            </p>
+          </div>
+          <div class="card-long-footer">
+            <h2>Empezar a jugar</h2>
+            <div class="line-card-footer"></div>
+            <div class="lista-parrafo-footer">
+              <p class="p-desktop-smallLight">
+                ¿No estas seguro de a qué jugar? Empieza a descubrir juegos en
+                nuestra página de inicio, o elige un juego de cualquiera de
+                estas categorias populares:
+              </p>
+              <ul class="p-desktop-smallLight">
+                <li>Clasicos</li>
+                <li>Aventura</li>
+                <li>Deportes</li>
+                <li>Accion</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div>
-          <h2>Contact Us</h2>
-          <p>
-            ¿Tienes preguntas? Nosotros tenemos las respuestas, no dudes en
-            contactarnos.
-          </p>
-          <button>Email us</button>
-        </div>
-        <div>
-          <h2>Que es Next Games?</h2>
-          <p>
-            Next Games tiene su sede en Tandil y cuenta con un equipo de 3
-            personas trabajando en la platafotma. Nuestro objetivo es crear el
-            mejor patio de juegos online. Gratis y abierto a todos.
-          </p>
-        </div>
-        <div>
-          <h2>Empezar a jugar</h2>
-          <p>
-            ¿No estas seguro de a qué jugar? Empieza a descubrir juegos en
-            nuestra página de inicio, o elige un juego de cualquiera de estas
-            categorias populares:
-          </p>
-          <ul>
-            <li>Clasicos</li>
-            <li>Aventura</li>
-            <li>Deportes</li>
-            <li>Accion</li>
-          </ul>
-        </div>
-        <div>
-          <p>
+        <div class="footer-copyright">
+          <div class="line-card-footer"></div>
+          <p class="p-desktop-smallLight">
             El uso de este sitio web significa que aceptas los Términos de uso.
             Next Games ™ y © 2024 Turner Broadcasting System Europe Limited.
             Todos los derechos reservados.
           </p>
-          <p>Copyright © - <span>Next Games</span>, Inc. Games © <span>Franiem</span>.</p>
+          <p class="p-desktop-smallLight">
+            Copyright © - <span class="span-copyright">Next Games</span>, Inc.
+            Games © <span class="span-copyright">Franiem</span>.
+          </p>
         </div>
       </footer>
     </div>
   </body>
+  <script src="js/login.js"></script>
 </html>
