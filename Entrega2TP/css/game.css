@@ -184,7 +184,7 @@ list-style-type: none;
 }
 
 .view-container{
-    height: 660px;
+    height: 600px;
     width: 1210px;
     border: 1px solid;
     display: flex;
@@ -194,14 +194,14 @@ list-style-type: none;
 
 .gameframe{
     width: 1000px;
-    height: 660px;
-    border:1px solid;
+    height: 600px;
+    display:flex;
+    flex-direction: column;
 }
 
 .galery{
-    height: 660px;
+    height: 600px;
     width: 200px;
-    border: 1px solid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -209,7 +209,7 @@ list-style-type: none;
 
 .imgsuperior{
     width: 200px;
-    height: 210px;
+    height: 190px;
     border: 1px solid;
     justify-content: center;
     align-items: center;
@@ -217,16 +217,14 @@ list-style-type: none;
 
 .imgmedium{
     width: 200px;
-    height: 210px;
-    border:1px solid;
+    height: 190px;
     justify-content: center;
     align-items: center;
 }
 
 .imginf{
     width: 200px;
-    height: 210px;
-    border:1px solid;
+    height: 190px;
     justify-content: center;
     align-items: center;
 }
@@ -234,9 +232,90 @@ list-style-type: none;
 .game-container img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
+.frame{
+    height: 560px;
+}
+.bargame{
+    background-color: #435372;
+    height: 40px;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
 
+.bargame .icon{
+    background-color: #435372;
+    margin-right: 15px;
+    width: 24px;
+    height: 24px;
+}
+
+.aboutGame{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.aboutGame img{
+    width: 25px;
+    height: 25px;
+}
+
+.gameinstructions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.gameinstructions img{
+    width: 25px;
+    height: 25px;
+}
+
+.instructions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 3000px;
+    gap: 10px;
+}
+
+.instructions img{
+    width: 35px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.comentarycontainer{
+    display:flex;
+    flex-direction:column;
+}
+
+.comentarytitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:10px
+}
+
+.comentarytitle img{
+    width: 25px;
+    height: 25px;
+}
+
+.comentary{
+    width: 600px;
+    height: 635px;
+    border: 1px solid;
+}
 
 
 
