@@ -17,6 +17,7 @@ body{
         "footer footer";
 }
 
+/*HEADER*/
 header{
     grid-area: header;
     max-height: 60px;
@@ -25,6 +26,47 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+/*MENU-logo*/
+.menu{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:40px;
+    margin-left: 15px;
+}
+
+.header-logos{
+    margin-top: 3px;
+}
+
+/*MENU-config*/
+.config{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin-right: 5px;
+}
+
+
+button,.icon{
+    border: none;
+    background-color: #293346;
+    cursor: pointer;
+}
+.icon{
+    background-color:#293346;
+}
+
+.header-icon-cart{
+    height: 22px;
+    width: 26px;
+}
+
+.header-icon{
+    height: 24px;
+    width: 24px;
 }
 /*MENU-logo*/
 .menu{
@@ -44,90 +86,290 @@ header{
 }
 /*MENU-config*/
 
-
-/*BARRA BUSQUEDA HEADER*/
-.search-container{
-    position:relative;
-    max-width: 250px;
-    justify-self: center;
-}
-
-.search-input{
-    border:solid 1px white;
-    width: 100%;
-    padding-left: 5px;
-    padding-right: 40px;
-    height: 25px;
-    box-sizing: border-box;
-    background-color:transparent;
-    border-radius: 5px;
-    color: white;
-}
-
-.search-input:focus{
-    outline: none;
-    box-shadow: none;
-}
-.search-input::placeholder{
-    color: white;
-    opacity: 0.8;
-    font-size: 14px;
-    font-weight: normal;
-}
-
-.search-icon{
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 15px;
-    height: 15px;
-}
-button,.icon{
-    border: none;
-    background-color: #293346;
-    cursor: pointer;
-}
-.icon{
-    background-color:#293346;
-}
-
-
 nav{
     /*ver si setear tamanio*/
     grid-area: nav;
-    background-color: brown;
+    background-color: #232B3C;
+    
+}
+
+
+
+.sidebar{
+    width: 200px; /* Ancho del nav sin hover */
+    background-color: #1a2b40;
+    height: 480px;
+    overflow: hidden;
+    padding-top: 0px;
+    position: relative;
+    z-index: 9998;
+}
+
+.sidebar ul {
+    margin-top: 0px;
+    margin-left: -22px;
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+.sidebar li{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0px;
+    justify-content: start;
+    gap: 22px;
+}
+
+.sidebar img{
+    width: 20px;
+    height: 18px;
+}
+
+.sidebar ul li:hover{
+    background-color: #3b4a61;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar ul li.category {
+    font-size: 14px;
+    color: #ddd;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.sidebar ul li.category:hover {
+    background-color: transparent;
+    cursor: default;
+}
+
+.sidebar {
+    width: 60px;
+    transition: width 0.3s ease;
+}
+
+.sidebar:hover {
+    width: 160px;
 }
 
 main{
     /*ver si setear tamanio*/
-    height: 1000px;/*PROVISORIO*/
+    height: 700px;
     grid-area:main;
-    background-color: cornflowerblue;
-}
-
-
-footer{
-    /*ver si setear tamanio*/
-    max-height: 400px;
-    grid-area:footer;
-    background-color: teal;
+    background-color: #FAFAFA;
     display: flex;
-    align-items: center;
-    flex-direction: row;
     justify-content: center;
-
+    align-items: center;
 }
+/*____________________________FOOTER____________________________*/
+/*ver si setear tamanio*/
+footer{
+    
+    /* height: max-content; */
+    grid-area:footer;
+    background-color: #293346;
+    z-index: 1;
+    position: relative;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer h2{
+    font-size: 24px;
+    margin: 0px 0px 5px 0px;
+}
+
+.container-footer-cards{
+    flex-wrap: wrap;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-footer-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 220px;
+    max-width: 250px;
+    
+}
+
+.card-long-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0%;
+    height: 220px;
+    max-width: 500px;
+}
+
+.container-social-networks{
+    width: 230px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 14px;
+}
+
+ul.p-desktop-smallLight {
+    padding-left: 20px;
+}
+
+.footer-copyright{
+    color: white;
+    text-align: center;
+    align-content: center;
+    height: 150px;
+    max-width: 1300px;
+}
+
+.span-copyright{
+    color: #EAA329;
+}
+
+.line-card-footer{
+    border: none;
+    background-color: #1D2432;
+    height: 1px;
+    width: 100%;
+}
+
+.long-line-card-footer{
+    border: none;
+    margin-top: 12px;
+    border-radius: 3px;
+    background-color: #ffff;
+    height: 3px;
+    width: 100%;
+}
+
+.p-desktop-smallLight{
+    font-size: 14px;
+}
+    
+
+.lista-parrafo-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+/*____________PRUEBA BOTON____________*/
+/**/
+
+.buttonn {
+    margin-top:10px ;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fafafa;
+    background-color: rgba(87, 108, 149, 0.75)    ;
+    transition: all 1000ms;
+    font-size: 15px;
+    font-family: 'Nunito';
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #1D2432;
+}
+
+.btn-email-us{
+    background-color: #576C95;
+}
+
+.buttonn:hover {
+    color: #576C95;
+    transform: scale(1.1);
+    outline: 2px solid #1D2432;
+    box-shadow: 4px 5px 7px -4px #ffffff;
+    outline: 2px solid #576C95;
+}
+
+.buttonn::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #fafafa;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+.buttonn:hover::before {
+    width: 250%;
+}
+
+
+
+/* --- DESDE ACA PARA ABAJO ES LO DEL LOGIN---
+
+    lo de arriba ya esta en el home.css
+
+*/
+
+/* -- FORMULARIO DE LOGGEO -- */
 
 .form-conteiner, .text_redes, .conteiner_login_redes{
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
 }
 
 .form-conteiner, .conteiner_login_redes{
     background: #293346;
+}
+
+.form-conteiner{
+    width: 450px;
+    height: 600px;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    color: #BAC4D7;
+    box-shadow: 2px 5px 7px #1D2432;
+}
+
+.login-form{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.login-form h4{
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.conteiner_login_redes{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .form{
@@ -191,7 +433,24 @@ footer{
     flex-direction: row;
 }
 
+.line-card-form{
+    border: none;
+    background-color: #1D2432;
+    height: 1px;
+    width: 50px;
+}
+
+.divisor_redes span{
+    color: #BAC4D7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+
 .text_redes a {
+    cursor: pointer;
     color: #BAC4D7;
     text-decoration: none;
 }
@@ -224,6 +483,16 @@ footer{
     background: #FFFFFF;
 }
 
+@media only screen and (max-width: 800px){
+    main{
+        margin: 0px;
+        height: 650px;
+    }
+}
 
-/*--NAV--*/
-ul li {list-style: none;}
+@media only screen and (max-width: 650px){
+    main{
+        margin: 0px;
+        height: 600px;
+    }
+}

@@ -1,7 +1,8 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Nunito'; font-size: 16px;
+    font-family: 'Nunito'; 
+    font-size: 16px;
     background-color: #F7F7F7;
     width: 100%;
 }
@@ -1088,7 +1089,7 @@ footer{
 
 footer h2{
     font-size: 24px;
-    margin: 5px 0px 0px 0px;
+    margin: 0px 0px 5px 0px;
 }
 
 .container-footer-cards{
@@ -1124,12 +1125,17 @@ footer h2{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-top: 14px;
+}
+
+ul.p-desktop-smallLight {
+    padding-left: 20px;
 }
 
 .footer-copyright{
     color: white;
     text-align: center;
-    justify-content: end;
+    align-content: center;
     height: 150px;
     max-width: 1300px;
 }
@@ -1147,7 +1153,8 @@ footer h2{
 
 .long-line-card-footer{
     border: none;
-    margin-top: 5px;
+    margin-top: 12px;
+    border-radius: 3px;
     background-color: #ffff;
     height: 3px;
     width: 100%;
@@ -1167,9 +1174,9 @@ footer h2{
 
 
 /*____________PRUEBA BOTON____________*/
-/*
+/**/
 
-.button {
+.buttonn {
     margin-top:10px ;
     padding: 0.5em 1em;
     border: none;
@@ -1178,40 +1185,47 @@ footer h2{
     letter-spacing: 5px;
     text-transform: uppercase;
     cursor: pointer;
-    color: #232B3C;
+    color: #fafafa;
+    background-color: rgba(87, 108, 149, 0.75)    ;
     transition: all 1000ms;
     font-size: 15px;
+    font-family: 'Nunito';
     position: relative;
     overflow: hidden;
     outline: 2px solid #1D2432;
 }
 
-button:hover {
-    color: #ffffff;
+.btn-email-us{
+    background-color: #576C95;
+}
+
+.buttonn:hover {
+    color: #576C95;
     transform: scale(1.1);
     outline: 2px solid #1D2432;
     box-shadow: 4px 5px 7px -4px #ffffff;
+    outline: 2px solid #576C95;
 }
 
-button::before {
+.buttonn::before {
     content: "";
     position: absolute;
     left: -50px;
     top: 0;
     width: 0;
     height: 100%;
-    background-color: #232B3C;
+    background-color: #fafafa;
     transform: skewX(45deg);
     z-index: -1;
     transition: width 1000ms;
 }
 
-button:hover::before {
+.buttonn:hover::before {
     width: 250%;
 }
-*/
 
-/*______________________PRUEBA REDES SOCIALES____________________  */
+
+/*______________________PRUEBA REDES SOCIALES____________________  
 .wrapper {
     display: inline-flex;
     list-style: none;
@@ -1297,4 +1311,4 @@ button:hover::before {
     background: #e4405f;
     color: #fff;
   }
-
+____________________________________*/

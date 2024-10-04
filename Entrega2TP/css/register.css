@@ -62,53 +62,6 @@ header{
 /*MENU-config*/
 
 
-/*BARRA BUSQUEDA HEADER*/
-.search-container{
-    position:relative;
-    max-width: 250px;
-    justify-self: center;
-}
-
-.search-input{
-    border:solid 1px white;
-    width: 100%;
-    padding-left: 5px;
-    padding-right: 40px;
-    height: 25px;
-    box-sizing: border-box;
-    background-color:transparent;
-    border-radius: 5px;
-    color: white;
-}
-
-.search-input:focus{
-    outline: none;
-    box-shadow: none;
-}
-.search-input::placeholder{
-    color: white;
-    opacity: 0.8;
-    font-size: 14px;
-    font-weight: normal;
-}
-
-.search-icon{
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 15px;
-    height: 15px;
-}
-button,.icon{
-    border: none;
-    background-color: #293346;
-    cursor: pointer;
-}
-.icon{
-    background-color:#293346;
-}
-
 
 nav{
     /*ver si setear tamanio*/
@@ -123,10 +76,156 @@ main{
     background-color: cornflowerblue;
 }
 
-footer{
-    /*ver si setear tamanio*/
-    max-height: 400px;
-    grid-area:footer;
-    background-color: teal;
 
+/*____________________________FOOTER____________________________*/
+/*ver si setear tamanio*/
+footer{
+    
+    /* height: max-content; */
+    grid-area:footer;
+    background-color: #293346;
+    z-index: 1;
+    position: relative;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer h2{
+    font-size: 24px;
+    margin: 0px 0px 5px 0px;
+}
+
+.container-footer-cards{
+    flex-wrap: wrap;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-footer-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 220px;
+    max-width: 250px;
+    
+}
+
+.card-long-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0%;
+    height: 220px;
+    max-width: 500px;
+}
+
+.container-social-networks{
+    width: 230px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 14px;
+}
+
+ul.p-desktop-smallLight {
+    padding-left: 20px;
+}
+
+.footer-copyright{
+    color: white;
+    text-align: center;
+    align-content: center;
+    height: 150px;
+    max-width: 1300px;
+}
+
+.span-copyright{
+    color: #EAA329;
+}
+
+.line-card-footer{
+    border: none;
+    background-color: #1D2432;
+    height: 1px;
+    width: 100%;
+}
+
+.long-line-card-footer{
+    border: none;
+    margin-top: 12px;
+    border-radius: 3px;
+    background-color: #ffff;
+    height: 3px;
+    width: 100%;
+}
+
+.p-desktop-smallLight{
+    font-size: 14px;
+}
+    
+
+.lista-parrafo-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+/*____________PRUEBA BOTON____________*/
+/**/
+
+.buttonn {
+    margin-top:10px ;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fafafa;
+    background-color: rgba(87, 108, 149, 0.75)    ;
+    transition: all 1000ms;
+    font-size: 15px;
+    font-family: 'Nunito';
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #1D2432;
+}
+
+.btn-email-us{
+    background-color: #576C95;
+}
+
+.buttonn:hover {
+    color: #576C95;
+    transform: scale(1.1);
+    outline: 2px solid #1D2432;
+    box-shadow: 4px 5px 7px -4px #ffffff;
+    outline: 2px solid #576C95;
+}
+
+.buttonn::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #fafafa;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+.buttonn:hover::before {
+    width: 250%;
 }
