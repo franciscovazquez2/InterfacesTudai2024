@@ -866,7 +866,7 @@ aside{
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    background-color: #EAA329;
+    /* background-color: #EAA329; comentado para que funcione*/
     border: none;
     color: #fff;
     font-family: monospace;
@@ -875,8 +875,8 @@ aside{
     cursor: pointer;
 }
 .nextPrevArrows button:hover{
-    background-color: #fff;
-    color: #000;
+    /* background-color: #fff; comentado para que funcione*/
+    color: #ffffff;
 }
 
 /* Animation Part */
@@ -1240,10 +1240,6 @@ ul.p-desktop-smallLight {
     outline: 2px solid #1D2432;
 }
 
-.btn-email-us{
-    background-color: #576C95;
-}
-
 .buttonn:hover {
     color: #576C95;
     transform: scale(1.1);
@@ -1269,6 +1265,109 @@ ul.p-desktop-smallLight {
     width: 250%;
 }
 
+/*____________ MODIFICACION BOTON EMAIL US____________*/
+
+.btn-email-us{
+    background-color: #576C95;
+}
+
+/*____________BOTON CARRUSEL PRINCIPAL____________*/
+
+.btn-carrusel-principal {
+    margin-top:25px ;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fafafa;
+    background-color: transparent;
+    transition: all 1000ms;
+    font-size: 15px;
+    font-family: 'Nunito';
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #ffffff;
+}
+
+.btn-carrusel-principal:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #1D2432;
+    box-shadow: 4px 5px 7px -4px #2b2a2a;
+    outline: 2px solid #ffffff;
+}
+
+.btn-carrusel-principal::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #EAA329;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+.btn-carrusel-principal:hover::before {
+    width: 250%;
+}
+
+/*_____________ MODIFICACION BOTON SLIDE CARRUSEL_____________*/
+.btnPrevNextTransition::before{
+    transition: 600ms;
+}
+
+
+/*_____________  BOTON SLIDE LEFT CARRUSEL_____________*/
+
+.btn-carrusel-principal-left {
+    margin-top:25px ;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fafafa;
+    background-color: transparent;
+    transition: all 1000ms;
+    font-size: 15px;
+    font-family: 'Nunito';
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #ffffff;
+}
+
+.btn-carrusel-principal-left:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #1D2432;
+    box-shadow: 4px 5px 7px -4px #2b2a2a;
+    outline: 2px solid #ffffff;
+}
+
+.btn-carrusel-principal-left::before {
+    content: "";
+    position: absolute;
+    right: -30px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #EAA329;
+    transform: skewX(135deg);
+    z-index: -1;
+    transition: width 600ms;
+}
+
+.btn-carrusel-principal-left:hover::before {
+    width: 250%;
+}
 
 /*______________________PRUEBA REDES SOCIALES____________________  
 .wrapper {
