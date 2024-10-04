@@ -76,7 +76,7 @@ body.loaded #loader {
     display:grid;
     max-width: 1440px;
     grid-template-columns: 60px auto;
-    grid-template-rows: 60px 480px auto 400px;
+    grid-template-rows: 60px 410px auto 400px;
 
     grid-template-areas:
         "header header"
@@ -180,13 +180,14 @@ nav{
     /*ver si setear tamanio*/
     grid-area: nav;
     background-color: #232B3C;
+    height: 410px;
     
 }
 
 .sidebar{
     width: 200px; /* Ancho del nav sin hover */
     background-color: #1a2b40;
-    height: 480px;
+    height: 410px;
     overflow: hidden;
     padding-top: 0px;
     position: relative;
