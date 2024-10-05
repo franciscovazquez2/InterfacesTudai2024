@@ -1,24 +1,8 @@
-:root {
-    --primary-color: #2F3A50; /* 500 Azul*/
-    --secondary-color: #9D9D9D; /* 500 Gris */
-    --accent-color: #EAA329; /* 500 Naranja*/
-    --error--color:#FC4040;
-    --warning--color:#F5DF14;
-    --success--color:#33CC33;
-    --black--color:#000000;
-    --white--color:#FFFFFF;
-    --font-size-h1: 40px;
-    --font-size-h2: 32px;
-    --font-size-h3: 24px;
-    --font-size-h4: 20px;
-    --font-size-paragraph-desktop: 26px;
-    --font-size-paragraph-small: 14px; /* Gris oscuro */
-}
-
 body{
     margin: 0;
     padding: 0;
     max-width: 1440px;
+    font-family: 'Nunito', sans;
 }
 
 /*grid body*/
@@ -48,6 +32,47 @@ header{
     display:flex;
     flex-direction: row;
     align-items: center;
+    gap:40px;
+    margin-left: 15px;
+}
+
+.header-logos{
+    margin-top: 3px;
+}
+
+/*MENU-config*/
+.config{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin-right: 5px;
+}
+
+
+button,.icon{
+    border: none;
+    background-color: #293346;
+    cursor: pointer;
+}
+.icon{
+    background-color:#293346;
+}
+
+.header-icon-cart{
+    height: 22px;
+    width: 26px;
+}
+
+.header-icon{
+    height: 24px;
+    width: 24px;
+}
+/*MENU-logo*/
+.menu{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
     gap:30px;
     margin-left: 10px;
 }
@@ -69,11 +94,81 @@ nav{
     background-color: brown;
 }
 
+
+.sidebar{
+    width: 200px; /* Ancho del nav sin hover */
+    background-color: #1a2b40;
+    height: 480px;
+    overflow: hidden;
+    padding-top: 0px;
+    position: relative;
+    z-index: 9998;
+}
+
+.sidebar ul {
+    margin-top: 0px;
+    margin-left: -22px;
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+.sidebar li{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0px;
+    justify-content: start;
+    gap: 22px;
+}
+
+.sidebar img{
+    width: 20px;
+    height: 18px;
+}
+
+.sidebar ul li:hover{
+    background-color: #3b4a61;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar ul li.category {
+    font-size: 14px;
+    color: #ddd;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.sidebar ul li.category:hover {
+    background-color: transparent;
+    cursor: default;
+}
+
+.sidebar {
+    width: 60px;
+    transition: width 0.3s ease;
+}
+
+.sidebar:hover {
+    width: 160px;
+}
+
 main{
     /*ver si setear tamanio*/
-    height: 1200px;/*PROVISORIO*/
+    height: 920px;
     grid-area:main;
-    background-color: cornflowerblue;
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -228,4 +323,131 @@ ul.p-desktop-smallLight {
 
 .buttonn:hover::before {
     width: 250%;
+}
+
+
+/* ----- REGISTRER ----- */
+
+.form-conteiner, .text_redes, .conteiner_login_redes{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-conteiner, .conteiner_login_redes{
+    background: #293346;
+}
+
+.form-conteiner{
+    width: 450px;
+    height: 820px;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    color: #BAC4D7;
+    box-shadow: 2px 5px 7px #1D2432;
+}
+
+.personal-info, .acount-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.acount-info h4, .personal-info h4{
+    margin: 10px;
+}
+
+.login-form{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.login-form h4{
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.conteiner_login_redes{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.form{
+    margin: 10px;
+    font-size: 16px;
+    width: 100%;
+    height: 40px;
+    max-width: 360px;
+    position: relative;
+}
+.form input{
+    width: 356px;
+    height: 36px;
+    background: none;
+    padding: 0px 0px 0px 10px;
+    outline: 0px;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #BAC4D7;
+    color: #BAC4D7;
+}
+
+.form .border-bad-login{
+    border-color: red;
+}
+
+.form .border-ok-login{
+    border-color: green;
+}
+
+/* POPOVER  -  DAR ESTILO*/
+#id-popover-on::backdrop{
+    background-color: rgba(0, 0, 0, 0.80);
+} 
+
+#id-popover-off::backdrop {
+    background-color: rgba(0, 0, 0, 0.80);
+}
+/* FIN POPOVER */
+
+.form .lbl-nombre{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    
+}
+.form .lbl-nombre:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+.text-nomb{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    color: #BAC4D7;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    text-shadow: #293346 1px 2px;
+}
+.form input:focus + .lbl-nombre .text-nomb,
+.form input:valid + .lbl-nombre .text-nomb{
+    transform: translateY(-70%);
+    font-size: 12px;
+    color: #BAC4D7;
 }
