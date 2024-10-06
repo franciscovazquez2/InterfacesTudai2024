@@ -104,28 +104,31 @@
         </ul>
       </nav>
       <main>
-        <div class="form-conteiner">
-          <form class="login-form" id="login-form" action="" method="get">
+        <div class="form-reg-conteiner">
+          <form class="register-form" id="registrer-form" action="" method="get">
             <h2>Crear una cuenta</h2>
             <div class="personal-info">
               <h4>Datos Personales</h4>
               <div class="form">
-                <input id="inputMail" type="text" autocomplete="off" required />
+                <input id="inputRegName"  type="text" autocomplete="off" required />
                 <label class="lbl-nombre">
                   <span class="text-nomb"> Nombre </span>
                 </label>
+                <div id="messageName"></div>
               </div>
               <div class="form">
-                <input id="inputPass" type="text" autocomplete="off" required />
+                <input id="inputSurname" type="text" autocomplete="off" required />
                 <label class="lbl-nombre">
                   <span class="text-nomb"> Apellido </span>
                 </label>
+                <div id="messageSurnme"></div>
               </div>
               <div class="form">
-                <input id="inputPass" type="text" autocomplete="off" required />
+                <input id="inputDate"  type="text" autocomplete="off" required />
                 <label class="lbl-nombre">
-                  <span class="text-nomb"> Fecha Nacimiento </span>
+                  <span class="text-nomb"> Nacimiento (YYYY-MM-DD)</span>
                 </label>
+                <div id="messageDate"></div>
               </div>
             </div>
             <div class="acount-info">
@@ -135,27 +138,36 @@
                 <label class="lbl-nombre">
                   <span class="text-nomb"> Email </span>
                 </label>
+                <div id="messegeMail"></div>
               </div>
               <div class="form">
-                <input id="inputPass" type="text" autocomplete="off" required />
+                <input id="inputNickname"  type="text" autocomplete="off" required />
                 <label class="lbl-nombre">
                   <span class="text-nomb">Nickname</span>
                 </label>
+                <div id="messegeNickname"></div>
               </div>
               <div class="form">
                 <input id="inputPass" type="text" autocomplete="off" required />
                 <label class="lbl-nombre">
                   <span class="text-nomb"> Password </span>
                 </label>
+                
               </div>
               <div class="form">
-                <input id="inputPass" type="text" autocomplete="off" required />
+                <input id="inputRepit" type="text" autocomplete="off" required />
                 <label class="lbl-nombre">
                   <span class="text-nomb"> Repetir Password </span>
                 </label>
+                <div id="messageRepit"></div>
               </div>
             </div>
-            <div><input type="checkbox" name="captcha" id="" />Captcha</div>
+            <div class="captcha-conteiner">
+              <input type="checkbox" name="captcha" id="" />
+              <span>No soy un robot</span>
+              <img class="icons" src="../src/icons/ReCaptcha.png" alt="">
+            </div>
+
             <div>
               <input
                 type="submit"
@@ -164,6 +176,19 @@
               />
             </div>
           </form>
+          <div id="messegePass"></div>
+        </div>
+        <div id="id-popover-on" popover ="manual">
+          <span>Registrado con exito</span>
+          <div class="btn-conteiner-popover">
+            <button id="btn-popover-on" popovertarget ="id-popover-on">Ingresar</button>
+          </div>
+        </div>
+        <div id="id-popover-off" popover ="manual">
+          <span>Por favor verifique los datos mal cargados</span>
+          <div class="btn-conteiner-popover">
+            <button id="btn-popover-off" popovertarget ="id-popover-off">Ingresar</button>
+          </div>
         </div>
       </main>
       <footer>
@@ -237,4 +262,5 @@
       </footer>
     </div>
   </body>
+  <script src="../js/registrer.js"></script>
 </html>

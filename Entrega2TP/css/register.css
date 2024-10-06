@@ -328,17 +328,17 @@ ul.p-desktop-smallLight {
 
 /* ----- REGISTRER ----- */
 
-.form-conteiner, .text_redes, .conteiner_login_redes{
+.form-reg-conteiner, .text_redes, .conteiner_login_redes{
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.form-conteiner, .conteiner_login_redes{
+.form-reg-conteiner, .conteiner_login_redes{
     background: #293346;
 }
 
-.form-conteiner{
+.form-reg-conteiner{
     width: 450px;
     height: 820px;
     border-radius: 5px;
@@ -358,7 +358,7 @@ ul.p-desktop-smallLight {
     margin: 10px;
 }
 
-.login-form{
+.register-form{
     height: 100%;
     display: flex;
     align-items: center;
@@ -366,7 +366,7 @@ ul.p-desktop-smallLight {
     justify-content: space-evenly;
 }
 
-.login-form h4{
+.register-form h4{
     font-size: 24px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -445,9 +445,23 @@ ul.p-desktop-smallLight {
     padding-bottom: 5px;
     text-shadow: #293346 1px 2px;
 }
+.form span .span-name-ok{color: green;}
+.form span .span-name-off{color: red;}
+
 .form input:focus + .lbl-nombre .text-nomb,
 .form input:valid + .lbl-nombre .text-nomb{
     transform: translateY(-70%);
     font-size: 12px;
     color: #BAC4D7;
 }
+
+.captcha-conteiner{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.captcha-conteiner span {margin-left: 3px;
+margin-right: 25px;}
