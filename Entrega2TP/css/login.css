@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     max-width: 1440px;
+    font-family: 'Nunito', sans;
 }
 
 /*grid body*/
@@ -401,8 +402,12 @@ ul.p-desktop-smallLight {
 }
 
 /* POPOVER  -  DAR ESTILO*/
-#id-popover-on::backdrop, #id-popover-off::backdrop {
-    background-color: rgba(87, 108, 149, 0.70);
+#id-popover-on::backdrop{
+    background-color: rgba(0, 0, 0, 0.80);
+} 
+
+#id-popover-off::backdrop {
+    background-color: rgba(0, 0, 0, 0.80);
 }
 /* FIN POPOVER */
 

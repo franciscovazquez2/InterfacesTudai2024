@@ -27,8 +27,6 @@ document.addEventListener('DOMContentLoaded', inicio);
         btnGoogle.addEventListener('click', validarRedes);
         loginForm.addEventListener('submit', validarForm);
 
-        //inputMail.addEventListener('input', userValidate);
-        //inputPass.addEventListener('input', passValidate)
         
         function validarRedes(event){
             event.preventDefault();
@@ -57,91 +55,3 @@ document.addEventListener('DOMContentLoaded', inicio);
         }
 
     }
-    /*
-       
-        function userValidate(){
-            const value = inputMail.value.toLowerCase();
-            const messageMail = document.querySelector('#message-mail');
-
-            if(!validateMail(value)){
-                createMessageBad(messageMail);
-                inputMail.classList.remove('border-ok-login');
-                inputMail.classList.add('border-bad-login');
-                userOK = true;
-            }else {
-                deleteMessageBad(messageMail);
-                inputMail.classList.remove('border-bad-login');
-                inputMail.classList.add('border-ok-login');
-            }
-        };
-
-        function createMessageBad(messageMail){
-            if(!messageMail.lastChild){
-            let span = document.createElement("span");
-            span.textContent = "Usuario incorrecto";
-            messageMail.appendChild(span);
-            }
-        }
-
-        function deleteMessageBad(messageMail){
-            if(messageMail.lastChild){
-            messageMail.removeChild(messageMail.lastChild);
-            }
-        }
-
-        function validateMail(value){
-            let validated = false;
-            users.forEach(element => { if(value.localeCompare(element.username, undefined, { sensitivity: 'base' }) === 0) {validated = true;}});
-            return validated;
-        }
-
-        ////// PASSWORD /////
-
-        function passValidate(){
-            const messagePass = document.querySelector('#message-pass');
-            const passValue = inputPass.value.toLowerCase();
-            const userValue = inputMail.value.toLowerCase();
-
-            console.log(passValue);
-            console.log(userValue);
-
-            if(!validatePass(userValue,passValue)){
-                createMessagePassBad(messagePass);
-                inputPass.classList.remove('border-ok-login');
-                inputPass.classList.add('border-bad-login');
-                passOK = true;
-            }else {
-                deleteMessagePassBad(messagePass);
-                inputPass.classList.remove('border-bad-login');
-                inputPass.classList.add('border-ok-login');
-            }
-        };
-
-        function createMessagePassBad(messagePass){
-            if(!messagePass.lastChild){
-            let span = document.createElement("span");
-            span.textContent = "Password incorrecto";
-            messagePass.appendChild(span);
-            }
-        }
-
-        function deleteMessagePassBad(messagePass){
-            if(messagePass.lastChild){
-            messagePass.removeChild(messagePass.lastChild);
-            }
-        }
-
-        function validatePass(valueUser,valuePass){
-            let validated = false;
-            users.forEach(element => { 
-                if( (valueUser.localeCompare(element.username, undefined, { sensitivity: 'base' }) === 0) &&
-                    (valuePass.localeCompare(element.password, undefined, { sensitivity: 'base' }) === 0))
-                    {validated = true;}});
-            return validated;
-        }
-
-        
-
-
-    }
-        */
