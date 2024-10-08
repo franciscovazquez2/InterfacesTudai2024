@@ -119,6 +119,11 @@ header{
     margin-right: 5px;
 }
 
+/*SECCION USER*/
+.seccion-usuario{
+    display: none;
+}
+
 
 /*BARRA BUSQUEDA HEADER*/
 .search-container{

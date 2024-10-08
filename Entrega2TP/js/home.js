@@ -116,3 +116,18 @@ hamburguer.addEventListener('click',()=>{
 });
 
     
+
+const buyButton = document.getElementById('buy-btn');
+if(buyButton){
+    console.log("boton compra encontrado");
+    //const cartAddIcon = buyButton.getElementsByClassName('icon-cart-add');
+    //const cartInIcon = buyButton.getElementsByClassName('icon-cart-in');
+
+    buyButton.addEventListener('click', () => {
+        console.log("boton compra clickeado");
+    //    cartAddIcon.style.display = 'none';
+    //    cartInIcon.style.display = 'block';
+    })
+} else {
+    console.log("boton de compra no encontrado");
+}
