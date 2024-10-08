@@ -26,6 +26,25 @@ document.addEventListener("DOMContentLoaded", function() {
     createCarousel('carousel6');
     createCarousel('carousel7');
 
+    const buyButton = document.querySelector('#buy-btn');
+    const cartAddIcon = buyButton.querySelector('.icon-cart-add');
+    const cartInIcon = buyButton.querySelector('.icon-cart-in');
+
+    if(cartAddIcon && cartInIcon){
+        console.log("imagenes encontradas");
+    }else{
+        console.log("no se encontraron las imagenes");
+    }
+    
+    if(buyButton){
+        console.log("buybutton encontrado");
+    }
+    
+        buyButton.addEventListener('click', () => {
+            console.log("boton compra clickeado");
+            cartAddIcon.style.display = 'none';
+            cartInIcon.style.display = 'block';
+        })
 });
 
 
@@ -117,17 +136,3 @@ hamburguer.addEventListener('click',()=>{
 
     
 
-const buyButton = document.getElementById('buy-btn');
-if(buyButton){
-    console.log("boton compra encontrado");
-    //const cartAddIcon = buyButton.getElementsByClassName('icon-cart-add');
-    //const cartInIcon = buyButton.getElementsByClassName('icon-cart-in');
-
-    buyButton.addEventListener('click', () => {
-        console.log("boton compra clickeado");
-    //    cartAddIcon.style.display = 'none';
-    //    cartInIcon.style.display = 'block';
-    })
-} else {
-    console.log("boton de compra no encontrado");
-}

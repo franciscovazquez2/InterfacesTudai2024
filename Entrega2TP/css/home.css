@@ -124,6 +124,14 @@ header{
     display: none;
 }
 
+.icon-cart-add{
+    display: inline;
+}
+
+.icon-cart-in{
+display: none;
+}
+
 
 /*BARRA BUSQUEDA HEADER*/
 .search-container{
