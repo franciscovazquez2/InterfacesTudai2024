@@ -121,7 +121,7 @@ button,.icon{
     top:60px;
     z-index: 9998;
     max-height: 0px;
-    transition: max-height 0.6s ease; 
+    transition: max-height 0.8s ease; 
     overflow: hidden;
 }
 
@@ -435,6 +435,7 @@ input{
     font-family: 'Nunito', sans;
     font-size: 14px;
 }
+
 
 
 

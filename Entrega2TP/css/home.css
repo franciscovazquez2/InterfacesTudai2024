@@ -236,14 +236,10 @@ nav{
     margin-top: 20px;
 }
 
-.sidebar ul li.category:hover {
-    background-color: transparent;
-    cursor: default;
-}
 
 .sidebar {
     width: 60px;
-    transition: width 0.3s ease;
+    transition: width 0.8s ease;
 }
 
 .sidebar:hover {
