@@ -86,19 +86,10 @@ button,.icon{
 }
 /*MENU-config*/
 
-
-
-nav{
-    /*ver si setear tamanio*/
-    grid-area: nav;
-    background-color: brown;
-}
-
-
 .sidebar{
-    width: 200px; /* Ancho del nav sin hover */
+    width: 160px; /* Ancho del nav sin hover */
     background-color: #1a2b40;
-    height: 480px;
+    height: 370px;
     overflow: hidden;
     padding-top: 0px;
     position: relative;
@@ -106,7 +97,7 @@ nav{
 }
 
 .sidebar ul {
-    margin-top: 0px;
+    margin-top: 10px;
     margin-left: -22px;
     list-style-type: none;
 }
@@ -114,7 +105,7 @@ nav{
 .sidebar ul li {
     color: #fff;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 15px;
 
 }
 
@@ -127,7 +118,7 @@ nav{
 }
 
 .sidebar img{
-    width: 20px;
+    width: 21px;
     height: 18px;
 }
 
