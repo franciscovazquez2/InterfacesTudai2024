@@ -121,7 +121,7 @@ button,.icon{
     top:60px;
     z-index: 9998;
     max-height: 0px;
-    transition: max-height 0.6s ease; 
+    transition: max-height 0.8s ease; 
     overflow: hidden;
 }
 
@@ -173,10 +173,11 @@ list-style-type: none;
 /*game*/
 
 .game-container{
+    background-color: #F0F0F0;
     margin:10px;
     width: 1300px;
     height: 1870px;
-    border: 1px solid;
+    /*border: 1px solid;*/
     display:flex;
     flex-direction: column;
     margin-left: 15px;
@@ -186,7 +187,7 @@ list-style-type: none;
 .view-container{
     height: 600px;
     width: 1210px;
-    border: 1px solid;
+    /*border: 1px solid;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -210,7 +211,7 @@ list-style-type: none;
 .imgsuperior{
     width: 200px;
     height: 190px;
-    border: 1px solid;
+    /*border: 1px solid;*/
     justify-content: center;
     align-items: center;
 }
@@ -311,10 +312,128 @@ list-style-type: none;
     height: 25px;
 }
 
-.comentary{
+.comentarybody{
     width: 600px;
     height: 635px;
-    border: 1px solid;
+    /*border: 1px solid;*/
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.comentary{
+    position: relative;
+    width: 600px;
+    height: 80px;
+    background-color: #273f5e;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+input{
+    width: 420px;
+    height: 30px;
+    align-items: center;
+    background-color: #1a2b40;
+    margin-left: 15px;
+    background: none;
+    border: none;
+    opacity: 0.9;
+    border-bottom: 1px solid white;
+    padding-left: 35px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Nunito', sans;
+
+}
+::placeholder{
+    color: #bb7c0f;
+    font-weight: 500;
+}
+
+.comentary img{
+    position: absolute;
+    left: 20px;
+    z-index: 99999;
+    width: 15px;
+    height: 15px;
+}
+
+.comentary button{
+    justify-content: center;
+    width: 80px;
+    height: 25px;
+    background-color: #EAA329;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Nunito', sans;
+    font-size: 14px;
+}
+
+.comentary button:hover{
+    background-color: #bb7c0f;
+}
+
+.coments{
+    width: 600px;
+    height: 80px;
+    background-color: #3e6699;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+}
+.userperfil{
+    width: 420px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 35px;
+    margin-left: 15px;
+    border-bottom: 1px solid white;
+    margin-bottom: 0px;
+}
+
+.userperfil img{
+    width: 15px;
+    height: 15px;
+}
+
+.icon-user{
+    position: absolute;
+    left: 52px;
+}
+
+.icon-like{
+    position: absolute;
+    left: 480px;
+}
+
+.coment{
+    padding-left: 35px;
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.comment,p{
+    margin: 0;
+}
+
+.vertodos{
+    align-self: flex-end;
+    width: 110px;
+    height: 30px;
+    background-color: #EAA329;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Nunito', sans;
+    font-size: 14px;
 }
 
 

@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     max-width: 1440px;
+    font-family: 'Nunito', sans;
 }
 
 /*grid body*/
@@ -384,12 +385,32 @@ ul.p-desktop-smallLight {
     width: 356px;
     height: 36px;
     background: none;
-    color: #BAC4D7;
     padding: 0px 0px 0px 10px;
     outline: 0px;
     border: 2px solid;
     border-radius: 5px;
+    border-color: #BAC4D7;
+    color: #BAC4D7;
 }
+
+.form .border-bad-login{
+    border-color: red;
+}
+
+.form .border-ok-login{
+    border-color: green;
+}
+
+/* POPOVER  -  DAR ESTILO*/
+#id-popover-on::backdrop{
+    background-color: rgba(0, 0, 0, 0.80);
+} 
+
+#id-popover-off::backdrop {
+    background-color: rgba(0, 0, 0, 0.80);
+}
+/* FIN POPOVER */
+
 .form .lbl-nombre{
     position: absolute;
     bottom: 0;
