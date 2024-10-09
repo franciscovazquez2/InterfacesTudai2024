@@ -121,17 +121,34 @@ header{
 
 /*SECCION USER*/
 .seccion-usuario{
-    display: none;
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    width: 280px;
+    visibility: hidden;
+    position: absolute;
+    margin-top: 60px;
+    margin-right: 0px;
 }
 
-.icon-cart-add{
-    display: inline;
+.seccion-usuario-hidden{
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    width: 280px;
+    position: absolute;
+    margin-top: 60px;
+    margin-right: 0px;
 }
 
-.icon-cart-in{
-display: none;
+/*CLASES PARA CAMBIO DE ICONO AL AGREGAR AL CARRITO*/
+.inCart{
+    
 }
 
+.addCart{
+    
+}
 
 /*BARRA BUSQUEDA HEADER*/
 .search-container{
