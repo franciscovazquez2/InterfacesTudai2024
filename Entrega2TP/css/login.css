@@ -35,11 +35,16 @@ header{
     flex-direction: row;
     align-items: center;
     gap:40px;
-    margin-left: 15px;
+    margin-left: 11px;
 }
 
 .header-logos{
     margin-top: 3px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.img-logo-header{
+    height: 30px;
 }
 
 /*MENU-config*/
@@ -130,14 +135,6 @@ button,.icon{
 .header-icon{
     height: 24px;
     width: 24px;
-}
-/*MENU-logo*/
-.menu{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    gap:30px;
-    margin-left: 10px;
 }
 
 .config{
@@ -580,5 +577,8 @@ ul.p-desktop-smallLight {
     main{
         margin: 0px;
         height: 600px;
+    }
+    .menu{
+        gap: 25px;
     }
 }

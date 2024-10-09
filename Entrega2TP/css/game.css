@@ -43,6 +43,15 @@ main{
     margin-left: 10px;
 }
 
+.header-logos{
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.img-logo-header{
+    height: 30px;
+}
+
 .config{
     display: flex;
     flex-direction: row;
