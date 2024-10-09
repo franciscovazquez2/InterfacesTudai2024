@@ -26,6 +26,49 @@ document.addEventListener("DOMContentLoaded", function() {
     createCarousel('carousel6');
     createCarousel('carousel7');
 
+    /*Boton cambio de icono addCart*/
+    /*__________________FALTA HACERLO FUNCIONAR__________________*/
+    let buyButton = document.getElementById('buy-btn');
+    
+    if(buyButton){
+        console.log("boton encontrado");
+    }
+
+    buyButton.addEventListener('click', () => {
+        console.log("clickeado");
+        buyButton.classList.remove('button-with-icon');
+        buyButton.classList.add('ocultar');
+        buyingButton.classList.remove('ocultar');
+        buyingButton.classList.add('button-with-icon');
+    });
+
+    /*
+    if(cartAddIcon && cartInIcon){
+        console.log("imagenes encontradas");
+    }else{
+        console.log("no se encontraron las imagenes");
+    }
+    
+    buyButton.addEventListener('click', () => {
+        console.log("boton compra clickeado");
+        cambiarImagenCart();
+    });
+
+    function cambiarImagenCart(){
+        cartAddIcon.classList.toggle('icon-cart-add');
+        cartAddIcon.classList.toggle('icon-cart-add-off');
+        cartInIcon.classList.toggle('icon-cart-in-off');
+        cartInIcon.classList.toggle('icon-cart-in');
+    }
+    */
+    
+    /*Boton abrir seccion user*/
+    var userHeader = document.getElementById('user-header');
+    let usmenu = document.querySelector('.seccion-usuario');
+    userHeader.addEventListener('click',()=>{
+    usmenu.classList.toggle('seccion-usuario-hidden');
+    usmenu.classList.toggle('seccion-usuario');
+    });
 });
 
 
@@ -116,3 +159,4 @@ hamburguer.addEventListener('click',()=>{
 });
 
     
+
