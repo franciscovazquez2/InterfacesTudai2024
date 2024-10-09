@@ -255,4 +255,10 @@ function init() {
         input.classList.remove('border-bad-login');
     }
 
+        /*Boton abrir seccion user*/
+        var userHeader = document.getElementById('user-header');
+        let usmenu = document.querySelector('.seccion-usuario');
+        userHeader.addEventListener('click',()=>{
+            usmenu.classList.toggle('userHidden');
+        });
 }

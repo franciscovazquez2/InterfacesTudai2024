@@ -26,6 +26,7 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 /*MENU-logo*/
 .menu{
@@ -49,6 +50,67 @@ header{
     margin-right: 5px;
 }
 
+/*SECCION USER*/
+.userHidden{
+    visibility: hidden;
+}
+
+.seccion-usuario{
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(35, 43, 60, 0.9);
+    height: 320px;
+    width: 280px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    z-index: 9990;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.section-userSection{
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.icon-userSection{
+    height: 14px;
+    width: 14px;
+    margin-right: 4px;
+}
+
+.sectionUser-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.p-desktop-regular{
+    font-size: 16px;
+    margin: 5px;
+}
+
+.user-icon{
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    border: 3px solid #7588AE;
+    background-color: #7588AE;
+}
+
+.close-session-user{
+    color: #7588AE;
+    font-style: 'nunito',sans;
+}
 
 button,.icon{
     border: none;
@@ -175,8 +237,7 @@ main{
 /*____________________________FOOTER____________________________*/
 /*ver si setear tamanio*/
 footer{
-    
-    /* height: max-content; */
+    height: max-content;
     grid-area:footer;
     background-color: #293346;
     z-index: 1;
@@ -296,10 +357,6 @@ ul.p-desktop-smallLight {
     outline: 2px solid #1D2432;
 }
 
-.btn-email-us{
-    background-color: #576C95;
-}
-
 .buttonn:hover {
     color: #576C95;
     transform: scale(1.1);
@@ -325,6 +382,13 @@ ul.p-desktop-smallLight {
     width: 250%;
 }
 
+/*____________ MODIFICACION BOTON EMAIL US____________*/
+
+.btn-email-us{
+    background-color: #576C95;
+}
+
+/*________________________FIN FOOTER________________________*/
 
 /* ----- REGISTRER ----- */
 

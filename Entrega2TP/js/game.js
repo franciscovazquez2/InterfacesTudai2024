@@ -18,6 +18,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }, 20); //tiempo del intervalo que incrementa el loader
 
+        /*Boton abrir seccion user*/
+        var userHeader = document.getElementById('user-header');
+        let usmenu = document.querySelector('.seccion-usuario');
+        userHeader.addEventListener('click',()=>{
+            usmenu.classList.toggle('userHidden');
+        });
 });
 
 var hamburguer = document.getElementById('hamburger');
