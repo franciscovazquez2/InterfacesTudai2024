@@ -66,8 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var userHeader = document.getElementById('user-header');
     let usmenu = document.querySelector('.seccion-usuario');
     userHeader.addEventListener('click',()=>{
-    usmenu.classList.toggle('seccion-usuario-hidden');
-    usmenu.classList.toggle('seccion-usuario');
+        usmenu.classList.toggle('userHidden');
     });
 });
 

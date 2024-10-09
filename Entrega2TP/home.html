@@ -33,22 +33,28 @@
                 <button><img src=".\src\icons\Setting.png" alt="setting" class="icon header-icon"></button>
                 <button><img src=".\src\icons\User.png" alt="user" class="icon header-icon" id="user-header"></button>
             </div>
-            <div class="seccion-usuario">
-                <img src=".\src\icons\User.png" alt="User">
-                <h3>¡Hola Gamer!</h3>
-                <div>
-                    <img src=".\src\icons\Burbuja.png" alt=" burbuja de texto">
-                    <h4>Historial de compentarios</h4>
+            <div class="seccion-usuario userHidden">
+                <div class="sectionUser-header">
+                    <img class="user-icon" src=".\src\icons\User32.png" alt="User">
+                    <h3 style="margin-top: 5px;">¡Hola Gamer!</h3>
                 </div>
                 <div>
-                    <img src=".\src\icons\Config.png" alt=" burbuja de texto">
-                    <h4>Configuracion de la cuenta</h4>
+                    <a href="" class="section-userSection">
+                        <img class="icon-userSection" src=".\src\icons\Burbuja.png" alt=" burbuja de texto">
+                        <h4 class="p-desktop-regular">Historial de compentarios</h4>
+                    </a>
+                    <a href="" class="section-userSection">
+                        <img class="icon-userSection" src=".\src\icons\Config.png" alt=" burbuja de texto">
+                        <h4 class="p-desktop-regular">Configuracion de la cuenta</h4>
+                    </a>
+                    <a href="" class="section-userSection">
+                        <img class="icon-userSection" src=".\src\icons\Actividad.png" alt=" burbuja de texto">
+                        <h4 class="p-desktop-regular">Tu actividad</h4>
+                    </a>
                 </div>
-                <div>
-                    <img src=".\src\icons\Actividad.png" alt=" burbuja de texto">
-                    <h4>Tu actividad</h4>
-                </div>
-                <h4>Cerrar sesión</h4>
+                <a style="text-decoration: none;" href="login.html">
+                    <h4 class="close-session-user">Cerrar sesión</h4>
+                </a>
             </div>
         </header>
         <nav class="sidebar hidden">
@@ -65,6 +71,7 @@
             </ul>
         </nav>
         <main>    
+
             <div class="slider">
 
             <div class="list">
@@ -965,7 +972,7 @@
             <button class="carousel-btn right">›</button>
         </div>
     </aside>
-    <footer>                                   <!-------------FOOTER------------->
+    <footer>
         <div class="container-footer-cards">
             <div class="long-line-card-footer"></div>
             <div class="card-footer-card">
@@ -982,7 +989,6 @@
                 <div class="line-card-footer"></div>
                 <p class="p-desktop-smallLight">¿Tienes preguntas? Nosotros tenemos las respuestas, no dudes en contactarnos.</p>
                 <button class="buttonn btn-email-us">Email us</button>
-                <!-- <button>Email us</button> -->
             </div>
             <div class="card-footer-card">
                 <h2>Que es Next Games?</h2>

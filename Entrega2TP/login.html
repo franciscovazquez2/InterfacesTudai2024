@@ -23,13 +23,9 @@
             />
           </button>
           <div class="header-logos">
-            <a href="home.html"
-              ><img src=".\src\icons\PlayersLogo.png" alt="playerslogo"
-            /></a>
-            <a href="home.html"
-              ><img src=".\src\icons\logo2.png" alt="logo"
-            /></a>
-          </div>
+            <a href="home.html"><img src=".\src\icons\PlayersLogo.png" alt="playerslogo" class="img-logo-header"></a>
+            <a href="home.html"><img src=".\src\icons\logo2.png" alt="logo" class="img-logo-header"></a>
+        </div>
         </div>
         <div class="config">
           <button>
@@ -37,9 +33,33 @@
               src=".\src\icons\User.png"
               alt="user"
               class="icon header-icon"
+              id="user-header"
             />
           </button>
         </div>
+        <div class="seccion-usuario userHidden">
+          <div class="sectionUser-header">
+              <img class="user-icon" src=".\src\icons\User32.png" alt="User">
+              <h3 style="margin-top: 5px;">¡Hola Gamer!</h3>
+          </div>
+          <div>
+              <a href="" class="section-userSection">
+                  <img class="icon-userSection" src=".\src\icons\Burbuja.png" alt=" burbuja de texto">
+                  <h4 class="p-desktop-regular">Historial de compentarios</h4>
+              </a>
+              <a href="" class="section-userSection">
+                  <img class="icon-userSection" src=".\src\icons\Config.png" alt=" burbuja de texto">
+                  <h4 class="p-desktop-regular">Configuracion de la cuenta</h4>
+              </a>
+              <a href="" class="section-userSection">
+                  <img class="icon-userSection" src=".\src\icons\Actividad.png" alt=" burbuja de texto">
+                  <h4 class="p-desktop-regular">Tu actividad</h4>
+              </a>
+          </div>
+          <a style="text-decoration: none;" href="login.html">
+              <h4 class="close-session-user">Iniciar sesión</h4>
+          </a>
+      </div>
       </header>
       <nav class="sidebar hidden">
         <ul>
@@ -155,73 +175,52 @@
         </div>
       </main>
       <footer>
-        <!-------------FOOTER------------->
         <div class="container-footer-cards">
-          <div class="long-line-card-footer"></div>
-          <div class="card-footer-card">
-            <h2>Follow Us</h2>
-            <div class="line-card-footer"></div>
-            <div class="container-social-networks">
-              <a href=""
-                ><img src=".\src\icons\Facebook.png" alt="logo-facebook"
-              /></a>
-              <a href=""
-                ><img src=".\src\icons\Whatsapp.png" alt="logo-whatsapp"
-              /></a>
-              <a href=""
-                ><img src=".\src\icons\Instagram.png" alt="logo-instagram"
-              /></a>
+            <div class="long-line-card-footer"></div>
+            <div class="card-footer-card">
+                <h2>Follow Us</h2>
+                <div class="line-card-footer"></div>
+                <div class="container-social-networks">
+                    <a href=""><img src=".\src\icons\Facebook.png" alt="logo-facebook"></a>
+                    <a href=""><img src=".\src\icons\Whatsapp.png" alt="logo-whatsapp"></a>
+                    <a href=""><img src=".\src\icons\Instagram.png" alt="logo-instagram"></a>
+                </div>
             </div>
-          </div>
-          <div class="card-footer-card">
-            <h2>Contact Us</h2>
-            <div class="line-card-footer"></div>
-            <p class="p-desktop-smallLight">
-              ¿Tienes preguntas? Nosotros tenemos las respuestas, no dudes en
-              contactarnos.
-            </p>
-            <button class="buttonn btn-email-us">Email us</button>
-          </div>
-          <div class="card-footer-card">
-            <h2>Que es Next Games?</h2>
-            <div class="line-card-footer"></div>
-            <p class="p-desktop-smallLight">
-              Next Games tiene su sede en Tandil y cuenta con un equipo de 3
-              personas trabajando en la platafotma. Nuestro objetivo es crear el
-              mejor patio de juegos online. Gratis y abierto a todos.
-            </p>
-          </div>
-          <div class="card-long-footer">
-            <h2>Empezar a jugar</h2>
-            <div class="line-card-footer"></div>
-            <div class="lista-parrafo-footer">
-              <p class="p-desktop-smallLight">
-                ¿No estas seguro de a qué jugar? Empieza a descubrir juegos en
-                nuestra página de inicio, o elige un juego de cualquiera de
-                estas categorias populares:
-              </p>
-              <ul class="p-desktop-smallLight">
-                <li>Clasicos</li>
-                <li>Aventura</li>
-                <li>Deportes</li>
-                <li>Accion</li>
-              </ul>
+            <div class="card-footer-card">
+                <h2>Contact Us</h2>
+                <div class="line-card-footer"></div>
+                <p class="p-desktop-smallLight">¿Tienes preguntas? Nosotros tenemos las respuestas, no dudes en contactarnos.</p>
+                <button class="buttonn btn-email-us">Email us</button>
             </div>
-          </div>
+            <div class="card-footer-card">
+                <h2>Que es Next Games?</h2>
+                <div class="line-card-footer"></div>
+                <p class="p-desktop-smallLight">Next Games tiene su sede en Tandil y cuenta con un equipo de 3 personas trabajando en la platafotma.
+                Nuestro objetivo es crear el mejor patio de juegos online. Gratis y abierto a todos.
+                </p>
+            </div>
+            <div class="card-long-footer">
+                <h2>Empezar a jugar</h2>
+                <div class="line-card-footer"></div>
+                <div class="lista-parrafo-footer">
+                    <p class="p-desktop-smallLight">¿No estas seguro de a qué jugar? Empieza a descubrir juegos en nuestra página de inicio, 
+                    o elige un juego de cualquiera de estas categorias populares:</p>
+                    <ul class="p-desktop-smallLight">
+                        <li>Clasicos</li>
+                        <li>Aventura</li>
+                        <li>Deportes</li>
+                        <li>Accion</li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="footer-copyright">
-          <div class="line-card-footer"></div>
-          <p class="p-desktop-smallLight">
-            El uso de este sitio web significa que aceptas los Términos de uso.
-            Next Games ™ y © 2024 Turner Broadcasting System Europe Limited.
-            Todos los derechos reservados.
-          </p>
-          <p class="p-desktop-smallLight">
-            Copyright © - <span class="span-copyright">Next Games</span>, Inc.
-            Games © <span class="span-copyright">Franiem</span>.
-          </p>
+            <div class="line-card-footer"></div>
+            <p class="p-desktop-smallLight">El uso de este sitio web significa que aceptas los Términos de uso. Next Games ™ y © 2024 Turner 
+            Broadcasting System Europe Limited. Todos los derechos reservados.</p>
+            <p class="p-desktop-smallLight">Copyright © - <span class="span-copyright">Next Games</span>, Inc. Games © <span class="span-copyright">Franiem</span>.</p>
         </div>
-      </footer>
+    </footer>
     </div>
   </body>
   <script src="js/login.js"></script>
