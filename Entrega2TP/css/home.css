@@ -312,7 +312,7 @@ aside{
 
 /*carouseles simples*/
 .carousel-container {
-    margin-top: 20px;
+    margin-top: 10px;
     padding-top: 0px;
     position: relative;
     max-width: 1400px; /* Ancho fijo del contenedor */
@@ -329,7 +329,7 @@ aside{
     margin-top: 0px;
     text-align: left;
     margin-bottom: 0px;/*ACA*/
-    font-size: 32px;/*ACA*/
+    font-size: 28px;/*ACA*/
     font-weight: bold;/*ACA*/
 }
 
@@ -337,11 +337,10 @@ aside{
 .carousel {
     display: flex;
     justify-content: center;/*centra las cartas y cumple con la ley de gestalt*/
-    transition: transform 0.5s ease;
-    gap: 20px;/*ACA*/
+    transition: transform 0.9s ease;
+    gap: 15px;/*ACA*/
     margin-top: 10px;
     margin-bottom: 15px;
-    will-change: transform;
 }
 
 /*boton de carousel FALTA DAR CORRECTO DISEÑO*/
@@ -353,7 +352,7 @@ aside{
     padding: 15px;
     border-radius: 5px;
     position: absolute;
-    top: 60%; /* Ajustado para que siempre estén centrados a card */
+    top: 50%; /* Ajustado para que siempre estén centrados a card */
     transform: translateY(-50%);
     z-index: 1;
     cursor: pointer;/*cuando se acerca se cambia el cursor a clickeable*/
@@ -537,10 +536,6 @@ aside{
   
 
 /*seccion destacada*/
-.title-big-cards{
-display: flex;
-justify-content: space-between;
-}
 
 .carousel-container-outstandings{
     max-width: 1400px;
@@ -551,9 +546,19 @@ justify-content: space-between;
 }
 
 .carousel-outstandings-title{
+    display: flex;
+    gap: 20px;
+    align-items: center;
     margin: 0px;
     margin-left: 20px;
-    font-size: 32px;
+    margin-right: 20px;
+    font-size: 28px;
+}
+
+.carousel-outstandings-title h1{
+    font-size: 28px;
+    padding: 0;
+    margin: 0;
 }
 
 .description-container-outstandings{
@@ -1140,6 +1145,161 @@ justify-content: space-between;
     .menu{
         gap: 25px;
     }
+
+    /*carouseles simples*/
+/*.carousel-container {
+    margin-top: 10px;
+    padding-top: 0px;
+    position: relative;
+    max-width: 1400px; /* Ancho fijo del contenedor 
+    margin-left:20px;
+    margin-right: 20px;
+    overflow: hidden;/*evita rebalse de cards/carousel
+    justify-content: center;
+    align-items: center;
+    
+}/*
+
+/*nombre de categoria-REVISAR PROPIEDADES FIGMA*/
+.carousel-title {
+    font-size: 22px;/*ACA*/
+}
+
+/*boton de carousel FALTA DAR CORRECTO DISEÑO*/
+.carousel-btn {
+    font-size: 30px;
+    padding: 10px;
+}
+
+/*visibilidad del boton cuando navega por carousel*/
+.carousel-container:hover .carousel-btn {
+    display: block;
+    transition: 0.5s linear;
+}
+
+.carousel-btn.left {
+    left: 10px;
+}
+
+.carousel-btn.right {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    opacity: 1;
+}
+
+/*contenido card inicio*/
+.card {
+    flex: 0 0 160px; /* Tamaño fijo de cada card */
+    height: 240px;
+}
+
+.badge {
+    font-size: 10px;    
+}
+
+.card-img {
+    width: 100%;
+    height: 70%;
+}
+
+.card-title {
+    font-size: 18px;/*ACA*/
+    font-weight: bold;
+}
+
+.card-description {
+    display: none;
+    font-size: 12px;
+    color: #666;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top:5px
+}
+
+.card-price {
+    font-size: 14px;
+    font-weight: bold;
+}
+/*boton animado*/
+.button-with-icon {
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #232B3C;
+    font-style: 'Nunito',sans;
+    padding: 0 12px;
+    text-align: center;
+    width: 90px;
+    height: 25px;
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-radius: 3px;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    transform: translateY(0px);
+    position: relative;
+    box-shadow:
+      inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+      inset 0 1px 20px rgba(0, 0, 0, 0),
+      0 3px 0 #232B3C,
+      0 3px 2px rgba(0, 0, 0, 0.2),
+      0 5px 10px rgba(0, 0, 0, 0.1),
+      0 10px 20px rgba(0, 0, 0, 0.1);
+    background: #435373;
+    color: white;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    transition: 150ms all ease-in-out;
+  }
+  
+  .button-with-icon .icon {
+    margin-right: 8px;
+    width: 16px;
+    height: 12px;
+    background-color:transparent;
+    transition: all 0.5s ease-in-out;
+  }
+  /*boton cuando se aprieta*/
+  .button-with-icon:active {
+    transform: translateY(3px);
+    box-shadow:
+      inset 0 16px 2px -15px rgba(0, 0, 0, 0),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+      inset 0 1px 20px rgba(0, 0, 0, 0.1),
+      0 0 0 #435372,
+      0 0 0 2px rgba(255, 255, 255, 0.5),
+      0 0 0 rgba(0, 0, 0, 0),
+      0 0 0 rgba(0, 0, 0, 0);
+  }
+  
+  .button-with-icon:hover .text {
+    transform: translateX(80px);
+  }
+  .button-with-icon:hover .icon {
+    transform: translate(36px);
+  }
+  .button-with-icon:hover .icon.play {
+    transform: translate(19px);
+  }
+  
+  .text {
+    transition: all 0.5s ease-in-out;
+  }
+  
+
+
 }
 
 
