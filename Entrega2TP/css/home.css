@@ -74,7 +74,7 @@ body.loaded #loader {
 /*grid body*/
 .gridContainer{
     display:grid;
-    max-width: 1440px;
+    max-width: 100%;
     grid-template-columns: 60px auto;
     grid-template-rows: 60px 370px auto 400px;
 
@@ -97,6 +97,10 @@ header{
     position: relative;
 }
 /*MENU-logo*/
+.hamburgerHidden{
+    display: none;
+}
+
 .menu{
     display:flex;
     flex-direction: row;
@@ -347,7 +351,7 @@ nav{
 
 .sidebar {
     width: 60px;
-    transition: width 0.8s ease;
+    transition: width 0.2s ease;
 }
 
 .sidebar:hover {
@@ -363,7 +367,7 @@ main{
 aside{
     grid-area: aside;
     height: auto;/*se amolda al alto que ocupan*/
-    max-width: 1440px;
+    max-width: 100%;
     overflow: hidden;
 }
 
@@ -373,12 +377,13 @@ aside{
     margin-top: 10px;
     padding-top: 0px;
     position: relative;
-    max-width: 1400px; /* Ancho fijo del contenedor */
+    max-width: 100%; /* Ancho fijo del contenedor */
     margin-left:20px;
     margin-right: 20px;
     overflow: hidden;/*evita rebalse de cards/carousel*/
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     
 }
 
@@ -389,6 +394,7 @@ aside{
     margin-bottom: 0px;/*ACA*/
     font-size: 28px;/*ACA*/
     font-weight: bold;/*ACA*/
+    margin-left:5px;
 }
 
 /*contenedor de cards-REVISAR PROPIEDADES FIGMA*/
@@ -596,18 +602,21 @@ aside{
 /*seccion destacada*/
 
 .carousel-container-outstandings{
-    max-width: 1400px;
+    max-width: 100%;
     justify-content: center;
     width: 100%;
     height: auto;
     margin: 20px auto;
+    padding-bottom: 20px;
 }
 
 .carousel-outstandings-title{
     display: flex;
     gap: 20px;
+    justify-content: space-between;
     align-items: center;
     margin: 0px;
+    margin-bottom: 15px;
     margin-left: 20px;
     margin-right: 20px;
     font-size: 28px;
@@ -617,22 +626,6 @@ aside{
     font-size: 28px;
     padding: 0;
     margin: 0;
-}
-
-.description-container-outstandings{
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    margin-left: 38px;
-    margin-right: 20px;
-    margin-top: 0px;
-    margin-bottom: 10px;
-}
-
-.description-container-outstandings p{
-    margin:0px;
-    margin-bottom: 5px;
-    font-size: 16px;
 }
 
 .container-outstandings-btn{
@@ -653,8 +646,7 @@ aside{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    justify-content: space-around;
 }
 
 .card-outstandings{
@@ -746,7 +738,6 @@ aside{
     width: 100px;
     height: 30px;
     position: relative;
-    margin-top: 13px;
     padding: 0.8em 1em;
     outline: none;
     text-decoration: none;
@@ -1110,7 +1101,7 @@ aside{
 @media only screen and (max-width: 650px){
     
     .gridContainer{
-        max-width: 1440px;
+        max-width: 100%;
         grid-template-columns: auto;
         grid-template-rows: 60px 370px auto 400px;
 
@@ -1138,6 +1129,10 @@ aside{
     
     footer{
         height: max-content;
+    }
+
+    .hamburgerHidden{
+        display:block;
     }
     
     .cart-container-outstandings{
@@ -1205,18 +1200,6 @@ aside{
     }
 
     /*carouseles simples*/
-/*.carousel-container {
-    margin-top: 10px;
-    padding-top: 0px;
-    position: relative;
-    max-width: 1400px; /* Ancho fijo del contenedor 
-    margin-left:20px;
-    margin-right: 20px;
-    overflow: hidden;/*evita rebalse de cards/carousel
-    justify-content: center;
-    align-items: center;
-    
-}/*
 
 /*nombre de categoria-REVISAR PROPIEDADES FIGMA*/
 .carousel-title {
@@ -1227,8 +1210,12 @@ aside{
 .carousel-btn {
     font-size: 30px;
     padding: 10px;
+    display:block;
 }
-
+.carousel-container{
+    margin-left: 0px;
+    margin-right: 0px;
+}
 /*visibilidad del boton cuando navega por carousel*/
 .carousel-container:hover .carousel-btn {
     display: block;
@@ -1355,6 +1342,10 @@ aside{
   .text {
     transition: all 0.5s ease-in-out;
   }
+
+  .carousel-container-outstandings{
+    margin:0 px;
+  }
   
 
 
@@ -1369,7 +1360,7 @@ footer{
     background-color: #293346;
     z-index: 1;
     position: relative;
-    max-width: 1440px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -1426,7 +1417,7 @@ ul.p-desktop-smallLight {
     text-align: center;
     align-content: center;
     height: 150px;
-    max-width: 1300px;
+    max-width: 100%;
 }
 
 .span-copyright{

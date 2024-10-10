@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    max-width: 1440px;
+    max-width: 100%;
     font-family: 'Nunito', sans;
 }
 
@@ -9,13 +9,13 @@ body{
 .gridContainer{
     display:grid;
 
-    grid-template-columns: 60px auto;
+    grid-template-columns: auto;
     grid-template-rows: 60px auto 400px;
 
     grid-template-areas:
-        "header header"
-        "nav main"
-        "footer footer";
+        "header"
+        "main"
+        "footer";
 }
 
 header{
@@ -219,73 +219,6 @@ button,.icon{
     margin-right: 5px;
 }
 /*MENU-config*/
-
-.sidebar{
-    width: 160px; /* Ancho del nav sin hover */
-    background-color: #1a2b40;
-    height: 370px;
-    overflow: hidden;
-    padding-top: 0px;
-    position: relative;
-    z-index: 9998;
-}
-
-.sidebar ul {
-    margin-top: 10px;
-    margin-left: -22px;
-    list-style-type: none;
-}
-
-.sidebar ul li {
-    color: #fff;
-    cursor: pointer;
-    margin-top: 15px;
-
-}
-
-.sidebar li{
-    display: flex;
-    flex-direction: row;
-    margin-left: 0px;
-    justify-content: start;
-    gap: 22px;
-}
-
-.sidebar img{
-    width: 21px;
-    height: 18px;
-}
-
-.sidebar ul li:hover{
-    background-color: #3b4a61;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.sidebar ul li.category {
-    font-size: 14px;
-    color: #ddd;
-    text-transform: uppercase;
-    margin-top: 20px;
-}
-
-.sidebar ul li.category:hover {
-    background-color: transparent;
-    cursor: default;
-}
-
-.sidebar {
-    width: 60px;
-    transition: width 0.3s ease;
-}
-
-.sidebar:hover {
-    width: 160px;
-}
-
 main{
     /*ver si setear tamanio*/
     height: 920px;
