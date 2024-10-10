@@ -52,16 +52,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function cambiarImagenCart(buyButton){
         let cartAddIc = buyButton.querySelector('.addCart');
-        let cartInIc = buyButton.querySelector('.cart-off');
-        
-        if(cartAddIc && cartInIc){
+        let cartInIc = buyButton.querySelector('.inCart');
+
+        if(cartAddIc.style.display==="block" && cartInIc.style.display==="none"){
             cartAddIc.style.display = "none";
             cartInIc.style.display = "block";
-            /*cartAddIc.classList.toggle('addCart');
-            cartAddIc.classList.toggle('cart-off');
-            cartInIc.classList.toggle('cart-off');
-            cartInIc.classList.toggle('inCart');*/
-        }else{
+        }else if(cartAddIc.style.display==="none" && cartInIc.style.display==="block"){
+            cartAddIc.style.display = "block";
+            cartInIc.style.display = "none";
+        }
+        else{
             console.log("Iconos no encontrados en el boton actual")
         }
     }
