@@ -49,20 +49,32 @@ document.addEventListener("DOMContentLoaded", function() {
     }else{
         console.log("No se encontraron las imagenes");
     }
-
+    
+    var contador = 0;
     function cambiarImagenCart(buyButton){
         let cartAddIc = buyButton.querySelector('.addCart');
         let cartInIc = buyButton.querySelector('.inCart');
+        let cantidadCarrito = document.querySelector('.cuentaCarrito');
 
         if(cartAddIc.style.display==="block" && cartInIc.style.display==="none"){
             cartAddIc.style.display = "none";
             cartInIc.style.display = "block";
+            contador++;
+            cantidadCarrito.innerHTML=contador;
         }else if(cartAddIc.style.display==="none" && cartInIc.style.display==="block"){
             cartAddIc.style.display = "block";
             cartInIc.style.display = "none";
+            contador--;
+            cantidadCarrito.innerHTML=contador;
         }
         else{
             console.log("Iconos no encontrados en el boton actual")
+        }
+
+        if(contador>0){
+            cantidadCarrito.style.display="block";
+        }else{
+            cantidadCarrito.style.display="none";
         }
     }
     

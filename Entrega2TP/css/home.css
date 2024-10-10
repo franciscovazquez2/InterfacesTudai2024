@@ -195,6 +195,19 @@ header{
     display: none;
 }
 
+.cuentaCarrito{
+    display: none;
+    font-size: smaller;
+    background-color: #e74c3c;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 4px;
+    right: 88px;;
+}
+
 /*BARRA BUSQUEDA HEADER*/
 .search-container{
     position:relative;
@@ -262,6 +275,7 @@ button,.icon{
 .header-icon-cart{
     height: 20px;
     width: 24px;
+    position: relative;
 }
 
 .header-icon{
