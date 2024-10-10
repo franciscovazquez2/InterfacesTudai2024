@@ -182,15 +182,18 @@ header{
     font-style: 'nunito',sans;
 }
 
-/*CLASES PARA CAMBIO DE ICONO AL AGREGAR AL CARRITO
+/*CLASES PARA CAMBIO DE ICONO AL AGREGAR AL CARRITO*/
 .inCart{
-    
+    display: inline;
 }
 
 .addCart{
-    
+    display: inline;
 }
-*/
+
+.Cart-off{
+    display: none;
+}
 
 /*BARRA BUSQUEDA HEADER*/
 .search-container{
