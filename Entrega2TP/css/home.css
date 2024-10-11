@@ -115,6 +115,10 @@ header{
     flex-wrap: nowrap;
 }
 
+.img-logo-header{
+    height: 30px;
+}
+
 /*MENU-config*/
 .config{
     display: flex;
@@ -242,10 +246,6 @@ header{
     background-color:transparent;
     border-radius: 5px;
     color: white;
-}
-
-.img-logo-header{
-    height: 30px;
 }
 
 .search-input:focus{
