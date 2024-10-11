@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', inicio);
         const btnGoogle = document.querySelector('#btn-google');
 
         btnPopoverOff.addEventListener('click', ()=>{loginForm.reset();});
-        btnPopoverOn.addEventListener('click', ()=>{window.location.href = '../home.html';});
+        btnPopoverOn.addEventListener('click', ()=>{window.location.href = '../Entrega2TP/home.html';});
         btnApple.addEventListener('click', validarRedes);
         btnFacebook.addEventListener('click', validarRedes);
         btnGoogle.addEventListener('click', validarRedes);

@@ -122,6 +122,10 @@ button,.icon{
     border: none;
     background-color: #293346;
     cursor: pointer;
+    /*estos cambios estan hechos solo en el login para el popover*/
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 8px 12px;
 }
 .icon{
     background-color:#293346;
@@ -489,6 +493,26 @@ ul.p-desktop-smallLight {
 }
 .box_google{
     background: #FFFFFF;
+}
+
+.btn-conteiner-popover{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+/*modificacion popover*/
+[popover]{
+    height: 78px;
+    width: 270px;
+    border-radius: 6px;
+}
+
+.span-popover{
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
 }
 
 @media only screen and (max-width: 800px){
