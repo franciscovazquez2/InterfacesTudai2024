@@ -14,7 +14,7 @@
     <div class="gridContainer">
       <header>
         <div class="menu">
-          <button>
+          <button style="display: none;">
             <img
               src=".\src\icons\Hamburger.png"
               alt="hamburger"
@@ -27,26 +27,7 @@
             <a href="home.html"><img src=".\src\icons\logo2.png" alt="logo" class="img-logo-header"></a>
           </div>
         </div>
-        <div class="search-container">
-            <input type="text" placeholder="Search..." class="search-input">
-            <input type="text" placeholder="" class="search-input-mobile">
-            <img src=".\src\icons\search.png" alt="Search" class="search-icon">
-        </div>
         <div class="config">
-          <button>
-            <img
-              src=".\src\icons\Cart.png"
-              alt="cart"
-              class="icon header-icon-cart"
-            />
-          </button>
-          <button>
-            <img
-              src=".\src\icons\Setting.png"
-              alt="setting"
-              class="icon header-icon"
-            />
-          </button>
           <button>
             <img
               src=".\src\icons\User.png"
@@ -146,25 +127,21 @@
             </div>
 
             <div>
-              <input
-                type="submit"
-                value="REGISTRAR"
-                class="buttonn btn-email-us"
-              />
+              <button class="buttonn btn-email-us">Registrar</button>
             </div>
           </form>
           <div id="messegePass"></div>
         </div>
         <div id="id-popover-on" popover ="manual">
-          <span>Registrado con exito</span>
+          <span class="span-popover">Registrado con exito</span>
           <div class="btn-conteiner-popover">
             <button id="btn-popover-on" popovertarget ="id-popover-on">Ingresar</button>
           </div>
         </div>
         <div id="id-popover-off" popover ="manual">
-          <span>Por favor verifique los datos mal cargados</span>
+          <span class="span-popover">Por favor verifique los datos mal cargados</span>
           <div class="btn-conteiner-popover">
-            <button id="btn-popover-off" popovertarget ="id-popover-off">Ingresar</button>
+            <button id="btn-popover-off" popovertarget ="id-popover-off">Reintentar</button>
           </div>
         </div>
       </main>

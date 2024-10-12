@@ -196,6 +196,10 @@ button,.icon{
     border: none;
     background-color: #293346;
     cursor: pointer;
+        /*estos cambios estan hechos solo en el login para el popover*/
+        color: #ffffff;
+        border-radius: 4px;
+        padding: 8px 12px;
 }
 .icon{
     background-color:#293346;
@@ -238,7 +242,7 @@ footer{
     background-color: #293346;
     z-index: 1;
     position: relative;
-    max-width: 1440px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -473,6 +477,26 @@ ul.p-desktop-smallLight {
 
 #id-popover-off::backdrop {
     background-color: rgba(0, 0, 0, 0.80);
+}
+
+.btn-conteiner-popover{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+/*modificacion popover*/
+[popover]{
+    height: 78px;
+    width: 320px;
+    border-radius: 6px;
+}
+
+.span-popover{
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
 }
 /* FIN POPOVER */
 

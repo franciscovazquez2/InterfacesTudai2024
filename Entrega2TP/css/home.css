@@ -115,6 +115,10 @@ header{
     flex-wrap: nowrap;
 }
 
+.img-logo-header{
+    height: 30px;
+}
+
 /*MENU-config*/
 .config{
     display: flex;
@@ -186,15 +190,31 @@ header{
     font-style: 'nunito',sans;
 }
 
-/*CLASES PARA CAMBIO DE ICONO AL AGREGAR AL CARRITO
+/*CLASES PARA CAMBIO DE ICONO AL AGREGAR AL CARRITO*/
 .inCart{
-    
+    display: inline;
 }
 
 .addCart{
-    
+    display: inline;
 }
-*/
+
+.Cart-off{
+    display: none;
+}
+
+.cuentaCarrito{
+    display: none;
+    font-size: smaller;
+    background-color: #e74c3c;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 4px;
+    right: 88px;;
+}
 
 /*BARRA BUSQUEDA HEADER*/
 .search-container{
@@ -205,10 +225,10 @@ header{
 
 .search-input{
     border:solid 1px white;
-    width: 100%;
+    width: 250px;
     padding-left: 5px;
     padding-right: 40px;
-    height: 25px;
+    height: 30px;
     box-sizing: border-box;
     background-color:transparent;
     border-radius: 5px;
@@ -226,10 +246,6 @@ header{
     background-color:transparent;
     border-radius: 5px;
     color: white;
-}
-
-.img-logo-header{
-    height: 30px;
 }
 
 .search-input:focus{
@@ -263,6 +279,7 @@ button,.icon{
 .header-icon-cart{
     height: 20px;
     width: 24px;
+    position: relative;
 }
 
 .header-icon{
@@ -317,6 +334,8 @@ nav{
 
 .sidebar ul li:hover{
     background-color: #3b4a61;
+    border-radius: 4px;
+    width: 135px;
 }
 
 .sidebar ul li a {
@@ -1080,259 +1099,7 @@ aside{
 
 
 
-/*diseño mobile*/
-@media only screen and (max-width: 650px){
-    
-    .gridContainer{
-        max-width: 100%;
-        grid-template-columns: auto;
-        grid-template-rows: 60px 370px auto 400px;
 
-        grid-template-areas:
-            "header"
-            "main"
-            "aside"
-            "footer";
-    }
-
-    nav{
-        grid-area: main;
-        position: absolute;
-        z-index: 99999;
-        left: 0px;
-    }
-
-    main{
-        max-height: 370px;
-    }
-
-    aside{
-        height: max-content;
-    }
-    
-    footer{
-        height: max-content;
-    }
-
-    .hamburgerHidden{
-        display:block;
-    }
-    
-    .cart-container-outstandings{
-        gap: 60px;
-    }
-
-    .face{
-        position: relative;
-    }
-
-    .slider .list .item .content{
-        padding-right: 0;
-    }
-    .slider .list .item .content .title{
-        font-size: 30px;
-    }
-
-    
-    .hidden{
-        visibility: hidden;
-    }
-
-    .sidebar{
-        width: 160px; /* Ancho del nav sin hover */
-        background-color: #1a2b40;
-        overflow: hidden;
-        padding-top: 0px;
-        position: relative;
-        z-index: 9998;
-        transition: height 0.9s ease;
-    }
-    
-    .p-desktop-smallLight{
-        font-size: 12px;
-    }
-    footer h2{
-        font-size: 20px;
-    }
-
-    .search-input{
-        display: none;
-    }
-
-    /* .search-icon{
-        border: solid 1px white;
-        border-radius: 5px;
-        padding: 4px 5px;
-    } */
-
-    .search-input-mobile{
-        display: block;
-        border:solid 1px white;
-        width: 100px;
-        padding-left: 5px;
-        padding-right: 40px;
-        height: 25px;
-        box-sizing: border-box;
-        background-color:transparent;
-        border-radius: 5px;
-        color: white;
-    }
-
-    .menu{
-        gap: 25px;
-    }
-
-    /*carouseles simples*/
-
-/*nombre de categoria-REVISAR PROPIEDADES FIGMA*/
-.carousel-title {
-    font-size: 22px;/*ACA*/
-}
-
-/*boton de carousel FALTA DAR CORRECTO DISEÑO*/
-.carousel-btn {
-    font-size: 30px;
-    padding: 10px;
-    display:block;
-}
-.carousel-container{
-    margin-left: 0px;
-    margin-right: 0px;
-}
-/*visibilidad del boton cuando navega por carousel*/
-.carousel-container:hover .carousel-btn {
-    display: block;
-    transition: 0.5s linear;
-}
-
-.carousel-btn.left {
-    left: 10px;
-}
-
-.carousel-btn.right {
-    right: 10px;
-}
-
-.carousel-btn:hover {
-    opacity: 1;
-}
-
-/*contenido card inicio*/
-.card {
-    flex: 0 0 160px; /* Tamaño fijo de cada card */
-    height: 240px;
-}
-
-.badge {
-    font-size: 10px;    
-}
-
-.card-img {
-    width: 100%;
-    height: 70%;
-}
-
-.card-title {
-    font-size: 18px;/*ACA*/
-    font-weight: bold;
-}
-
-.card-description {
-    display: none;
-    font-size: 12px;
-    color: #666;
-    margin-top: 0px;
-    margin-bottom: 5px;
-}
-
-.card-footer {
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    margin-bottom: 0;
-    margin-top:5px
-}
-
-.card-price {
-    font-size: 14px;
-    font-weight: bold;
-}
-/*boton animado*/
-.button-with-icon {
-    overflow: hidden;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #232B3C;
-    font-style: 'Nunito',sans;
-    padding: 0 12px;
-    text-align: center;
-    width: 90px;
-    height: 25px;
-    font-size: 12px;
-    font-weight: normal;
-    text-transform: uppercase;
-    border-radius: 3px;
-    outline: none;
-    user-select: none;
-    cursor: pointer;
-    transform: translateY(0px);
-    position: relative;
-    box-shadow:
-      inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.3),
-      inset 0 1px 20px rgba(0, 0, 0, 0),
-      0 3px 0 #232B3C,
-      0 3px 2px rgba(0, 0, 0, 0.2),
-      0 5px 10px rgba(0, 0, 0, 0.1),
-      0 10px 20px rgba(0, 0, 0, 0.1);
-    background: #435373;
-    color: white;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
-    transition: 150ms all ease-in-out;
-  }
-  
-  .button-with-icon .icon {
-    margin-right: 8px;
-    width: 16px;
-    height: 12px;
-    background-color:transparent;
-    transition: all 0.5s ease-in-out;
-  }
-  /*boton cuando se aprieta*/
-  .button-with-icon:active {
-    transform: translateY(3px);
-    box-shadow:
-      inset 0 16px 2px -15px rgba(0, 0, 0, 0),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.15),
-      inset 0 1px 20px rgba(0, 0, 0, 0.1),
-      0 0 0 #435372,
-      0 0 0 2px rgba(255, 255, 255, 0.5),
-      0 0 0 rgba(0, 0, 0, 0),
-      0 0 0 rgba(0, 0, 0, 0);
-  }
-  
-  .button-with-icon:hover .text {
-    transform: translateX(80px);
-  }
-  .button-with-icon:hover .icon {
-    transform: translate(36px);
-  }
-  .button-with-icon:hover .icon.play {
-    transform: translate(19px);
-  }
-  
-  .text {
-    transition: all 0.5s ease-in-out;
-  }
-
-  .carousel-container-outstandings{
-    margin:0 px;
-  }
-  
-
-
-}
 
 
 /*____________________________FOOTER____________________________*/
@@ -1370,7 +1137,7 @@ footer h2{
     justify-content: flex-start;
     align-items: center;
     height: 220px;
-    max-width: 250px;
+    width: 250px;
     
 }
 
@@ -1677,3 +1444,279 @@ ul.p-desktop-smallLight {
     color: #fff;
   }
 ____________________________________*/
+
+
+/*diseño mobile*/
+@media only screen and (max-width: 650px){
+    
+    .gridContainer{
+        max-width: 100%;
+        grid-template-columns: auto;
+        grid-template-rows: 60px 370px auto 400px;
+
+        grid-template-areas:
+            "header"
+            "main"
+            "aside"
+            "footer";
+    }
+
+    nav{
+        grid-area: main;
+        position: absolute;
+        z-index: 99999;
+        left: 0px;
+    }
+
+    main{
+        max-height: 370px;
+    }
+
+    aside{
+        height: max-content;
+    }
+    
+    footer{
+        height: max-content;
+    }
+
+    .hamburgerHidden{
+        display:block;
+    }
+    
+    .cart-container-outstandings{
+        gap: 60px;
+    }
+
+    .face{
+        position: relative;
+    }
+
+    .slider .list .item .content{
+        padding-right: 0;
+    }
+    .slider .list .item .content .title{
+        font-size: 30px;
+    }
+
+    
+    .hidden{
+        visibility: hidden;
+    }
+
+    .sidebar{
+        width: 160px; /* Ancho del nav sin hover */
+        background-color: #1a2b40;
+        overflow: hidden;
+        padding-top: 0px;
+        position: relative;
+        z-index: 9998;
+        transition: height 0.9s ease;
+    }
+    
+    .p-desktop-smallLight{
+        font-size: 12px;
+        margin: 5px;
+    }
+    footer h2{
+        font-size: 20px;
+    }
+
+    .search-input{
+        display: none;
+    }
+
+    /* .search-icon{
+        border: solid 1px white;
+        border-radius: 5px;
+        padding: 4px 5px;
+    } */
+
+    .search-input-mobile{
+        display: block;
+        border:solid 1px white;
+        width: 100px;
+        padding-left: 5px;
+        padding-right: 40px;
+        height: 25px;
+        box-sizing: border-box;
+        background-color:transparent;
+        border-radius: 5px;
+        color: white;
+    }
+
+    .menu{
+        gap: 25px;
+    }
+
+    /*carouseles simples*/
+
+/*nombre de categoria-REVISAR PROPIEDADES FIGMA*/
+.carousel-title {
+    font-size: 22px;/*ACA*/
+}
+
+/*boton de carousel FALTA DAR CORRECTO DISEÑO*/
+.carousel-btn {
+    font-size: 30px;
+    padding: 10px;
+    display:block;
+}
+.carousel-container{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+/*visibilidad del boton cuando navega por carousel*/
+.carousel-container:hover .carousel-btn {
+    display: block;
+    transition: 0.5s linear;
+}
+
+.carousel-btn.left {
+    left: 10px;
+}
+
+.carousel-btn.right {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    opacity: 1;
+}
+
+/*contenido card inicio*/
+.card {
+    flex: 0 0 160px; /* Tamaño fijo de cada card */
+    height: 240px;
+}
+
+.badge {
+    font-size: 10px;    
+}
+
+.card-img {
+    width: 100%;
+    height: 70%;
+}
+
+.card-title {
+    font-size: 18px;/*ACA*/
+    font-weight: bold;
+}
+
+.card-description {
+    display: none;
+    font-size: 12px;
+    color: #666;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top:5px
+}
+
+.card-price {
+    font-size: 14px;
+    font-weight: bold;
+}
+/*boton animado*/
+.button-with-icon {
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #232B3C;
+    font-style: 'Nunito',sans;
+    padding: 0 12px;
+    text-align: center;
+    width: 90px;
+    height: 25px;
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-radius: 3px;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    transform: translateY(0px);
+    position: relative;
+    box-shadow:
+      inset 0 30px 30px -15px rgba(255, 255, 255, 0.1),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+      inset 0 1px 20px rgba(0, 0, 0, 0),
+      0 3px 0 #232B3C,
+      0 3px 2px rgba(0, 0, 0, 0.2),
+      0 5px 10px rgba(0, 0, 0, 0.1),
+      0 10px 20px rgba(0, 0, 0, 0.1);
+    background: #435373;
+    color: white;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    transition: 150ms all ease-in-out;
+  }
+  
+  .button-with-icon .icon {
+    margin-right: 8px;
+    width: 16px;
+    height: 12px;
+    background-color:transparent;
+    transition: all 0.5s ease-in-out;
+  }
+  /*boton cuando se aprieta*/
+  .button-with-icon:active {
+    transform: translateY(3px);
+    box-shadow:
+      inset 0 16px 2px -15px rgba(0, 0, 0, 0),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+      inset 0 1px 20px rgba(0, 0, 0, 0.1),
+      0 0 0 #435372,
+      0 0 0 2px rgba(255, 255, 255, 0.5),
+      0 0 0 rgba(0, 0, 0, 0),
+      0 0 0 rgba(0, 0, 0, 0);
+  }
+  
+  .button-with-icon:hover .text {
+    transform: translateX(80px);
+  }
+  .button-with-icon:hover .icon {
+    transform: translate(36px);
+  }
+  .button-with-icon:hover .icon.play {
+    transform: translate(19px);
+  }
+  
+  .text {
+    transition: all 0.5s ease-in-out;
+  }
+
+  .carousel-container-outstandings{
+    margin:0 px;
+  }
+  
+  .ocultarMobile{
+    display:none;
+  }
+
+  .footer-copyright{
+    height: 120px;
+    margin: 0px 15px;
+  }
+
+  .card-footer-card{
+    height: 150px;
+    width: 310px;
+  }
+
+  .container-footer-cards{
+    gap: 12px;
+  }
+
+  .buttonn{
+    padding: 0.3em 0.6em;
+  }
+
+}

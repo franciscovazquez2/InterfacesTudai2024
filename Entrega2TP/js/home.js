@@ -28,39 +28,56 @@ document.addEventListener("DOMContentLoaded", function() {
 
     /*Boton cambio de icono addCart*/
     /*__________________FALTA HACERLO FUNCIONAR__________________*/
-    let buyButton = document.getElementById('buy-btn');
+    let buyButtons = document.querySelectorAll('.button-with-icon');
     
-    if(buyButton){
-        console.log("boton encontrado");
+    if(buyButtons){
+        console.log("Botones encontrados");
+
+        buyButtons.forEach(buyButton => {
+            buyButton.addEventListener('click', () => {
+                console.log("Botón compra clickeado");
+                cambiarImagenCart(buyButton);
+            });
+        });
     }
 
-    buyButton.addEventListener('click', () => {
-        console.log("clickeado");
-        buyButton.classList.remove('button-with-icon');
-        buyButton.classList.add('ocultar');
-        buyingButton.classList.remove('ocultar');
-        buyingButton.classList.add('button-with-icon');
-    });
+    let cartAddIcons = document.querySelectorAll('.addCart');
+    let cartInIcons = document.querySelectorAll('.inCart');
 
-    /*
-    if(cartAddIcon && cartInIcon){
-        console.log("imagenes encontradas");
+    if(cartAddIcons.length > 0 && cartInIcons.length > 0){
+        console.log("Imagenes encontradas");
     }else{
-        console.log("no se encontraron las imagenes");
+        console.log("No se encontraron las imagenes");
     }
     
-    buyButton.addEventListener('click', () => {
-        console.log("boton compra clickeado");
-        cambiarImagenCart();
-    });
+    var contador = 0;
+    function cambiarImagenCart(buyButton){
+        let cartAddIc = buyButton.querySelector('.addCart');
+        let cartInIc = buyButton.querySelector('.inCart');
+        let cantidadCarrito = document.querySelector('.cuentaCarrito');
 
-    function cambiarImagenCart(){
-        cartAddIcon.classList.toggle('icon-cart-add');
-        cartAddIcon.classList.toggle('icon-cart-add-off');
-        cartInIcon.classList.toggle('icon-cart-in-off');
-        cartInIcon.classList.toggle('icon-cart-in');
+        if(cartAddIc.style.display==="block" && cartInIc.style.display==="none"){
+            cartAddIc.style.display = "none";
+            cartInIc.style.display = "block";
+            contador++;
+            cantidadCarrito.innerHTML=contador;
+        }else if(cartAddIc.style.display==="none" && cartInIc.style.display==="block"){
+            cartAddIc.style.display = "block";
+            cartInIc.style.display = "none";
+            contador--;
+            cantidadCarrito.innerHTML=contador;
+        }
+        else{
+            console.log("Iconos no encontrados en el boton actual")
+        }
+
+        if(contador>0){
+            cantidadCarrito.style.display="block";
+        }else{
+            cantidadCarrito.style.display="none";
+        }
     }
-    */
+    
     
     /*Boton abrir seccion user*/
     var userHeader = document.getElementById('user-header');
