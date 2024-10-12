@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 var hamburguer = document.getElementById('hamburger');
 let sidebar = document.querySelector('.sidebar');
+sidebar.classList.toggle('hidden');
 hamburguer.addEventListener('click',()=>{
     sidebar.classList.toggle('hidden');
 });
+
