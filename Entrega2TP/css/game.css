@@ -3,7 +3,7 @@ body{
     padding: 0;
     font-family: 'Nunito';
     font-size: 16px;
-    background-color: #F7F7F7;
+    background-color:white;
     width: 100%;
 }
 
@@ -68,7 +68,7 @@ main{
 }
 
 .seccion-usuario{
-    color: #ffffff;
+    color: #F0F0F0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,7 +85,7 @@ main{
 }
 
 .section-userSection{
-    color: #ffffff;
+    color: #F0F0F0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -133,11 +133,10 @@ main{
 
 .search-input{
     border:solid 1px white;
-    width: 250px;
+    width: 100%;
     padding-left: 5px;
     padding-right: 40px;
-    margin-left: 0px;
-    height: 30px;
+    height: 25px;
     box-sizing: border-box;
     background-color:transparent;
     border-radius: 5px;
@@ -176,13 +175,13 @@ button,.icon{
 }
 
 .header-icon-cart{
-    height: 20px;
-    width: 24px;
+    height: 22px;
+    width: 26px;
 }
 
 .header-icon{
-    height: 20px;
-    width: 20px;
+    height: 24px;
+    width: 24px;
 }
 
 
@@ -246,10 +245,10 @@ list-style-type: none;
 /*game*/
 
 .game-container{
-    background-color: #F0F0F0;
+    background-color: white;
     margin:10px;
     width: 1300px;
-    height: 1870px;
+    height: 100%;
     /*border: 1px solid;*/
     display:flex;
     flex-direction: column;
@@ -385,79 +384,207 @@ list-style-type: none;
 }
 
 .comentarybody{
-    width: 600px;
-    height: 635px;
+    
+    overflow-y: scroll;
+    max-width: 600px;
+    height: 500px;
     /*border: 1px solid;*/
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+.comentary-banner-container{
+    width: 100%;
+    height: 500px;
+    display:flex;
+    /*border: 1px solid black;*/
+    justify-content: space-evenly;
+}
+
+.propagandas{
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    justify-content: end;
+    align-items: center;
+}
+
+.card-banner{
+    height: 100%;
+    width: 200px;
+    opacity: 0.6;
+    /*border:solid 1px black;*/
+    background-color:black;
+}
+
+.card-banner:hover{
+    opacity: 1;
+    transition: 1s ease;
+}
+
+.proximamente img{
+    opacity: 0.4;
+}
+
+
+
+
 
 
 .comentary{
     position: relative;
-    width: 600px;
-    height: 80px;
-    background-color: #273f5e;
+    width: 550px;
+    min-height: 80px;
+    background-color:white;
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-radius: 5px;
+    border-radius: 0px;
     gap: 10px;
 }
 input{
-    width: 420px;
-    height: 30px;
-    align-items: center;
-    background-color: #1a2b40;
-    margin-left: 15px;
+    width: 360px;
+    height: 28px;
+    background-color: #7a94b4;
     background: none;
     border: none;
     opacity: 0.9;
-    border-bottom: 1px solid white;
-    padding-left: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 30px;
     font-size: 16px;
     font-weight: 500;
     font-family: 'Nunito', sans;
 
 }
 ::placeholder{
-    color: #bb7c0f;
+    color:black;
     font-weight: 500;
+    
 }
 
 .comentary img{
-    position: absolute;
-    left: 20px;
+    position: relative;
     z-index: 99999;
     width: 15px;
     height: 15px;
+    margin-left: 20px;
 }
 
 .comentary button{
     justify-content: center;
     width: 80px;
-    height: 25px;
-    background-color: #EAA329;
+    height: 30px;
+    background-color: #2F3A50;
     color: white;
-    border-radius: 5px;
+    border-radius: 0px;
     font-family: 'Nunito', sans;
     font-size: 14px;
 }
 
 .comentary button:hover{
-    background-color: #bb7c0f;
+    background-color: #7a94b4;
 }
+/*inicio boton animado*/
+.button-animation {
+    width: 100px;
+    height: 30px;
+    position: relative;
+    padding: 0.8em 1em;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    background-color: #2F3A50;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 12px;
+    font-family: inherit;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+  }
+  
+  .button-animation:hover {
+    animation: sh0 0.5s ease-in-out both;
+  }
+  
+  @keyframes sh0 {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  
+    25% {
+      transform: rotate(7deg) translate3d(0, 0, 0);
+    }
+  
+    50% {
+      transform: rotate(-7deg) translate3d(0, 0, 0);
+    }
+  
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+  
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+  
+  .button-animation:hover .span-animation {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+  }
+  
+  .button-animation::before,
+  .button-animation::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+    z-index: -1;
+    transform: translate(100%, -25%) translate3d(0, 0, 0);
+  }
+  
+  .button-animation:hover::before,
+  .button-animation:hover::after {
+    opacity: 0.15;
+    transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+  }
+  
+  .button-animation:hover::before {
+    transform: translate3d(50%, 0, 0) scale(0.9);
+  }
+  
+  .button-animation:hover::after {
+    transform: translate(50%, 0) scale(1.1);
+  }
+
+/*fin boton animado*/
+
 
 .coments{
-    width: 600px;
-    height: 80px;
-    background-color: #3e6699;
+    width: 550px;
+    min-height: 80px;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 5px;
+    opacity: 0.8;
 }
 .userperfil{
     width: 420px;
@@ -465,7 +592,7 @@ input{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-left: 35px;
+    padding-left: 5px;
     margin-left: 15px;
     border-bottom: 1px solid white;
     margin-bottom: 0px;
@@ -474,16 +601,6 @@ input{
 .userperfil img{
     width: 15px;
     height: 15px;
-}
-
-.icon-user{
-    position: absolute;
-    left: 52px;
-}
-
-.icon-like{
-    position: absolute;
-    left: 480px;
 }
 
 .coment{
@@ -497,15 +614,8 @@ input{
     margin: 0;
 }
 
-.vertodos{
-    align-self: flex-end;
-    width: 110px;
-    height: 30px;
-    background-color: #EAA329;
-    color: white;
-    border-radius: 5px;
-    font-family: 'Nunito', sans;
-    font-size: 14px;
+.icon-user{
+    margin-right: 15px;
 }
 
 /*
@@ -544,7 +654,7 @@ footer h2{
     justify-content: flex-start;
     align-items: center;
     height: 220px;
-    width: 250px;
+    max-width: 250px;
     
 }
 
@@ -599,7 +709,6 @@ ul.p-desktop-smallLight {
 
 .p-desktop-smallLight{
     font-size: 14px;
-    margin: 14px 0px;
 }
     
 
@@ -664,6 +773,9 @@ ul.p-desktop-smallLight {
     background-color: #576C95;
 }
 
+.p-desktop-smallLight{
+    font-size: 14px;
+}
 /*________________________FIN FOOTER________________________*/
 
 .loader-container{
