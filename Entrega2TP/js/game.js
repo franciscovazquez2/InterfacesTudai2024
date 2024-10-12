@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.body.classList.add('loaded'); // Ocultar el loader
             }, 800); // momento antes de iniciar
         }
-    }, 20); //tiempo del intervalo que incrementa el loader
+    }, 40); //tiempo del intervalo que incrementa el loader
 
         /*Boton abrir seccion user*/
         var userHeader = document.getElementById('user-header');
