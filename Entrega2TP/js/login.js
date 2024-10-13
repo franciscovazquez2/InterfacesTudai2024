@@ -5,43 +5,31 @@ document.addEventListener('DOMContentLoaded', inicio);
         "use strict"
 
         let users = [{
-            username: 'a',
-            password: 'p'
+            username: 'admin@gmail.com',
+            password: 'password'
         }];
 
+        /*Boton abrir seccion user*/
+        const userHeader = document.getElementById('user-header');
+        const usmenu = document.querySelector('.seccion-usuario');
+        
         const loginForm = document.querySelector("#login-form");
         const inputMail = document.querySelector('#inputMail');
         const inputPass = document.querySelector('#inputPass');
-        const popoverOK = document.querySelector('#id-popover-on');
-        const popoverOFF = document.querySelector('#id-popover-off');
-        const btnPopoverOff = document.querySelector('#btn-popover-off');
-        const btnPopoverOn = document.querySelector('#btn-popover-on');
-        const btnApple = document.querySelector('#btn-apple');
-        const btnFacebook = document.querySelector('#btn-facebook');
-        const btnGoogle = document.querySelector('#btn-google');
-
-        btnPopoverOff.addEventListener('click', ()=>{loginForm.reset();});
-        btnPopoverOn.addEventListener('click', ()=>{window.location.href = '../Entrega2TP/home.html';});
-        btnApple.addEventListener('click', validarRedes);
-        btnFacebook.addEventListener('click', validarRedes);
-        btnGoogle.addEventListener('click', validarRedes);
-        loginForm.addEventListener('submit', validarForm);
-
         
-        function validarRedes(event){
-            event.preventDefault();
-            popoverOK.showPopover();
-        }
+        loginForm.addEventListener('submit', validarForm);
+        userHeader.addEventListener('click',()=>{usmenu.classList.toggle('userHidden');});
         
         function validarForm(e) {
             e.preventDefault();
+            const message = document.querySelector('#message-login');
             if(!validateUser()){
-                popoverOFF.showPopover();
+                loginForm.reset();
+                messageError(message);
             }else{
-                popoverOK.showPopover();
+                window.location.href = '../Entrega2TP/home.html';
             }
         }
-
 
         function validateUser(){
             let validated = false;
@@ -54,11 +42,19 @@ document.addEventListener('DOMContentLoaded', inicio);
             return validated;
         }
 
-            /*Boton abrir seccion user*/
-    var userHeader = document.getElementById('user-header');
-    let usmenu = document.querySelector('.seccion-usuario');
-    userHeader.addEventListener('click',()=>{
-        usmenu.classList.toggle('userHidden');
-    });
 
+
+    function messageError(message){
+        deleteMessage(message);
+        let span = document.createElement("span");
+        span.textContent = "Email y/o password incorrecta";
+        span.classList.add('error-message');
+        message.appendChild(span);
+    }
+
+    function deleteMessage(message){
+        if(message.lastChild){
+            message.removeChild(message.lastChild);
+            }
+    }
     }
