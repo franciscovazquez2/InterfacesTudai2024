@@ -213,6 +213,7 @@ button,.icon{
 .header-icon{
     height: 24px;
     width: 24px;
+    position: relative;
 }
 
 .config{
@@ -288,6 +289,16 @@ footer h2{
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 14px;
+}
+
+.logo-red-social:hover{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #435372;
+}
+
+.logo-red-social{
+    padding: 5px;
 }
 
 ul.p-desktop-smallLight {

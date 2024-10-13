@@ -1158,6 +1158,16 @@ footer h2{
     margin-top: 14px;
 }
 
+.logo-red-social:hover{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #435372;
+}
+
+.logo-red-social{
+    padding: 5px;
+}
+
 ul.p-desktop-smallLight {
     padding-left: 20px;
 }

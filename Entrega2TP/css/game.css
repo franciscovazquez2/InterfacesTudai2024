@@ -194,10 +194,10 @@ main{
 
 .search-input{
     border:solid 1px white;
-    width: 100%;
+    width: 250px;
     padding-left: 5px;
     padding-right: 40px;
-    height: 25px;
+    height: 35px;
     box-sizing: border-box;
     background-color:transparent;
     border-radius: 5px;
@@ -236,13 +236,14 @@ button,.icon{
 }
 
 .header-icon-cart{
-    height: 22px;
-    width: 26px;
+    height: 20px;
+    width: 24px;
 }
 
 .header-icon{
-    height: 24px;
-    width: 24px;
+    height: 20px;
+    width: 20px;
+    position: relative;
 }
 
 
@@ -736,6 +737,16 @@ footer h2{
     margin-top: 14px;
 }
 
+.logo-red-social:hover{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #435372;
+}
+
+.logo-red-social{
+    padding: 5px;
+}
+
 ul.p-desktop-smallLight {
     padding-left: 20px;
 }
@@ -768,10 +779,6 @@ ul.p-desktop-smallLight {
     width: 100%;
 }
 
-.p-desktop-smallLight{
-    font-size: 14px;
-}
-    
 
 .lista-parrafo-footer{
     display: flex;
@@ -836,6 +843,7 @@ ul.p-desktop-smallLight {
 
 .p-desktop-smallLight{
     font-size: 14px;
+    margin: 14px 0px;
 }
 /*________________________FIN FOOTER________________________*/
 
