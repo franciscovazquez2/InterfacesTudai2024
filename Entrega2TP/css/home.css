@@ -1182,6 +1182,13 @@ ul.p-desktop-smallLight {
     width: 100%;
 }
 
+.linea-separacion{
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 1px;
+    margin: 0px 20px;
+}
+
 .long-line-card-footer{
     border: none;
     margin-top: 12px;
@@ -1212,7 +1219,7 @@ ul.p-desktop-smallLight {
     border: none;
     border-radius: 5px;
     font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     cursor: pointer;
     color: #fafafa;

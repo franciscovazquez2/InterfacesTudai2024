@@ -26,29 +26,18 @@ document.addEventListener("DOMContentLoaded", function() {
     createCarousel('carousel6');
     createCarousel('carousel7');
 
-    /*Boton cambio de icono addCart*/
-    /*__________________FALTA HACERLO FUNCIONAR__________________*/
+    /*__________________FBOTON CAMBIO DE ICONO AL COMPRAR__________________*/
     let buyButtons = document.querySelectorAll('.button-with-icon');
     
     if(buyButtons){
-        console.log("Botones encontrados");
 
         buyButtons.forEach(buyButton => {
             buyButton.addEventListener('click', () => {
-                console.log("Botón compra clickeado");
                 cambiarImagenCart(buyButton);
             });
         });
     }
 
-    let cartAddIcons = document.querySelectorAll('.addCart');
-    let cartInIcons = document.querySelectorAll('.inCart');
-
-    if(cartAddIcons.length > 0 && cartInIcons.length > 0){
-        console.log("Imagenes encontradas");
-    }else{
-        console.log("No se encontraron las imagenes");
-    }
     
     var contador = 0;
     function cambiarImagenCart(buyButton){
@@ -66,9 +55,6 @@ document.addEventListener("DOMContentLoaded", function() {
             cartInIc.style.display = "none";
             contador--;
             cantidadCarrito.innerHTML=contador;
-        }
-        else{
-            console.log("Iconos no encontrados en el boton actual")
         }
 
         if(contador>0){
