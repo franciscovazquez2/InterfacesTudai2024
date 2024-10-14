@@ -280,6 +280,10 @@ body.loaded #loader {
     font-style: 'nunito',sans;
 }
 
+.close-session-user:hover{
+    color: #ffffff;
+}
+
 /*___________FIN HEADER___________*/
 
 /*CLASES PARA CAMBIO DE ICONO AL AGREGAR AL CARRITO*/
