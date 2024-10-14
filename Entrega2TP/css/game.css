@@ -549,7 +549,7 @@ input{
     height: 30px;
     background-color: #2F3A50;
     color: white;
-    border-radius: 0px;
+    border-radius: 5px;
     font-family: 'Nunito', sans;
     font-size: 14px;
 }
