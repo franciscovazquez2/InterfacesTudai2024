@@ -605,7 +605,7 @@ button,.icon{
     transform: translate(36px);
 }
 .button-with-icon:hover .icon.play {
-    transform: translate(19px);
+    transform: translate(28px);
 }
 
 .text {
