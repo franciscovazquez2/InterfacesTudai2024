@@ -160,7 +160,6 @@ button,.icon{
 /*MENU-config*/
 
 main{
-    /*ver si setear tamanio*/
     height: 700px;
     grid-area:main;
     background-color: #FAFAFA;
@@ -169,7 +168,6 @@ main{
     align-items: center;
 }
 /*____________________________FOOTER____________________________*/
-/*ver si setear tamanio*/
 footer{
     height: max-content;
     grid-area:footer;
@@ -280,9 +278,7 @@ ul.p-desktop-smallLight {
 
 
 
-/*____________PRUEBA BOTON____________*/
-/**/
-
+/*____________BOTON ANIMADO____________*/
 .buttonn {
     margin-top:10px ;
     padding: 0.5em 1em;

@@ -233,7 +233,6 @@ button,.icon{
 }
 /*MENU-config*/
 main{
-    /*ver si setear tamanio*/
     height: 920px;
     grid-area:main;
     background-color: #FAFAFA;
@@ -244,7 +243,6 @@ main{
 
 
 /*____________________________FOOTER____________________________*/
-/*ver si setear tamanio*/
 footer{
     height: max-content;
     grid-area:footer;
@@ -355,9 +353,7 @@ ul.p-desktop-smallLight {
 
 
 
-/*____________PRUEBA BOTON____________*/
-/**/
-
+/*____________BOTON ANIMADO____________*/
 .buttonn {
     margin-top:10px ;
     padding: 0.5em 1em;
@@ -500,7 +496,7 @@ ul.p-desktop-smallLight {
     flex-direction: column;
 }
 
-/* POPOVER  -  DAR ESTILO*/
+/* POPOVER */
 #id-popover-on::backdrop{
     background-color: rgba(0, 0, 0, 0.80);
 } 
