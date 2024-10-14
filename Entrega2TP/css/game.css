@@ -193,6 +193,10 @@ a{
     color: #7588AE;
     font-style: 'nunito',sans;
 }
+
+.close-session-user:hover{
+    color: #ffffff;
+}
 /*fin sesion usuario*/
 
 /*BARRA BUSQUEDA HEADER*/

@@ -126,6 +126,10 @@ header{
     font-style: 'nunito',sans;
 }
 
+.close-session-user:hover{
+    color: #ffffff;
+}
+
 button,.icon{
     border: none;
     background-color: #293346;
