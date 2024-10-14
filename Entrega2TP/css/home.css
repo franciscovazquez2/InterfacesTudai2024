@@ -7,8 +7,51 @@ body{
     width: 100%;
 }
 
+/*grid body*/
+.gridContainer{
+    display:grid;
+    max-width: 100%;
+    grid-template-columns: 60px auto;
+    grid-template-rows: 60px 370px auto 400px;
 
-/* Loader */
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "aside aside"
+        "footer footer";
+}
+
+header{
+    grid-area: header;
+    max-height: 60px;
+    background-color:#293346;     
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+main{
+    grid-area:main;
+    overflow: hidden;
+}
+
+aside{
+    grid-area: aside;
+    height: auto;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+nav{
+    grid-area: nav;
+    background-color: #232B3C;
+    height: 360px;
+    
+}
+
+/*___________LOADER___________*/
 .loader-container{
     position: absolute;
     top: 50%;
@@ -69,33 +112,9 @@ body.loaded #loader {
     display: none;
 }
 
+/*___________FIN LOADER___________*/
 
-
-/*grid body*/
-.gridContainer{
-    display:grid;
-    max-width: 100%;
-    grid-template-columns: 60px auto;
-    grid-template-rows: 60px 370px auto 400px;
-
-    grid-template-areas:
-        "header header"
-        "nav main"
-        "aside aside"
-        "footer footer";
-}
-
-/*HEADER*/
-header{
-    grid-area: header;
-    max-height: 60px;
-    background-color:#293346;     
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-}
+/*___________HEADER___________*/
 /*MENU-logo*/
 .hamburgerHidden{
     display: none;
@@ -126,6 +145,69 @@ header{
     align-items: center;
     gap: 5px;
     margin-right: 5px;
+}
+
+/*BARRA BUSQUEDA HEADER*/
+.search-container{
+    position:relative;
+    max-width: 250px;
+    justify-self: center;
+}
+
+.search-input{
+    border:solid 1px white;
+    width: 250px;
+    padding-left: 5px;
+    padding-right: 40px;
+    height: 30px;
+    box-sizing: border-box;
+    background-color:transparent;
+    border-radius: 5px;
+    color: white;
+}
+
+.search-input-mobile{
+    display: none;
+    border:solid 1px white;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 40px;
+    height: 25px;
+    box-sizing: border-box;
+    background-color:transparent;
+    border-radius: 5px;
+    color: white;
+}
+
+.search-input:focus{
+    outline: none;
+    box-shadow: none;
+}
+.search-input::placeholder{
+    color: white;
+    opacity: 0.8;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.search-icon{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+}
+
+.header-icon-cart{
+    height: 20px;
+    width: 24px;
+    position: relative;
+}
+
+.header-icon{
+    height: 20px;
+    width: 20px;
 }
 
 /*SECCION USER*/
@@ -198,6 +280,8 @@ header{
     font-style: 'nunito',sans;
 }
 
+/*___________FIN HEADER___________*/
+
 /*CLASES PARA CAMBIO DE ICONO AL AGREGAR AL CARRITO*/
 .inCart{
     display: inline;
@@ -224,57 +308,6 @@ header{
     right: 88px;;
 }
 
-/*BARRA BUSQUEDA HEADER*/
-.search-container{
-    position:relative;
-    max-width: 250px;
-    justify-self: center;
-}
-
-.search-input{
-    border:solid 1px white;
-    width: 250px;
-    padding-left: 5px;
-    padding-right: 40px;
-    height: 30px;
-    box-sizing: border-box;
-    background-color:transparent;
-    border-radius: 5px;
-    color: white;
-}
-
-.search-input-mobile{
-    display: none;
-    border:solid 1px white;
-    width: 100%;
-    padding-left: 5px;
-    padding-right: 40px;
-    height: 25px;
-    box-sizing: border-box;
-    background-color:transparent;
-    border-radius: 5px;
-    color: white;
-}
-
-.search-input:focus{
-    outline: none;
-    box-shadow: none;
-}
-.search-input::placeholder{
-    color: white;
-    opacity: 0.8;
-    font-size: 14px;
-    font-weight: normal;
-}
-
-.search-icon{
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 15px;
-    height: 15px;
-}
 button,.icon{
     border: none;
     background-color: #293346;
@@ -284,28 +317,8 @@ button,.icon{
     background-color:#293346;
 }
 
-.header-icon-cart{
-    height: 20px;
-    width: 24px;
-    position: relative;
-}
-
-.header-icon{
-    height: 20px;
-    width: 20px;
-}
-
-/*NAV*/
-nav{
-    /*ver si setear tamanio*/
-    grid-area: nav;
-    background-color: #232B3C;
-    height: 360px;
-    
-}
-
 .sidebar{
-    width: 160px; /* Ancho del nav sin hover */
+    width: 160px;
     background-color: #1a2b40;
     height: 370px;
     overflow: hidden;
@@ -323,7 +336,7 @@ nav{
 .sidebar ul li {
     color: #fff;
     cursor: pointer;
-    margin-top: 15px;/*ACAA*/
+    margin-top: 15px;
 
 }
 
@@ -368,20 +381,6 @@ nav{
     width: 160px;
 }
 
-main{
-    /*ver si setear tamanio*/
-    grid-area:main;
-    overflow: hidden;
-}
-
-aside{
-    grid-area: aside;
-    height: auto;/*se amolda al alto que ocupan*/
-    max-width: 100%;
-    overflow: hidden;
-}
-
-
 /*carouseles simples*/
 .carousel-container {
     margin-top: 10px;
@@ -397,27 +396,27 @@ aside{
     
 }
 
-/*nombre de categoria-REVISAR PROPIEDADES FIGMA*/
+/*nombre de categoria*/
 .carousel-title {
     margin-top: 0px;
     text-align: left;
-    margin-bottom: 0px;/*ACA*/
-    font-size: 28px;/*ACA*/
-    font-weight: bold;/*ACA*/
+    margin-bottom: 0px;
+    font-size: 28px;
+    font-weight: bold;
     margin-left:5px;
 }
 
-/*contenedor de cards-REVISAR PROPIEDADES FIGMA*/
+/*contenedor de cards*/
 .carousel {
     display: flex;
     justify-content: center;/*centra las cartas y cumple con la ley de gestalt*/
     transition: transform 0.9s ease;
-    gap: 15px;/*ACA*/
+    gap: 15px;
     margin-top: 10px;
     margin-bottom: 15px;
 }
 
-/*boton de carousel FALTA DAR CORRECTO DISEÑO*/
+/*boton de carousel*/
 .carousel-btn {
     background-color: #333;
     color: white;
@@ -461,9 +460,8 @@ aside{
     border-bottom-right-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease;
-    /*nuevos cambios*/
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;/* ACA ver si va*/
+    position: relative;
 }
 
 .card:hover {
@@ -513,7 +511,7 @@ aside{
 }
 
 .card-title {
-    font-size: 20px;/*ACA*/
+    font-size: 20px;
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -539,6 +537,7 @@ aside{
     font-size: 20px;
     font-weight: normal;
 }
+
 /*boton animado*/
 .button-with-icon {
     overflow: hidden;
@@ -572,17 +571,18 @@ aside{
     color: white;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
     transition: 150ms all ease-in-out;
-  }
-  
-  .button-with-icon .icon {
+}
+
+.button-with-icon .icon {
     margin-right: 8px;
     width: 18px;
     height: 14px;
     background-color:transparent;
     transition: all 0.5s ease-in-out;
-  }
-  /*boton cuando se aprieta*/
-  .button-with-icon:active {
+}
+
+/*boton cuando se aprieta*/
+.button-with-icon:active {
     transform: translateY(3px);
     box-shadow:
       inset 0 16px 2px -15px rgba(0, 0, 0, 0),
@@ -592,25 +592,24 @@ aside{
       0 0 0 2px rgba(255, 255, 255, 0.5),
       0 0 0 rgba(0, 0, 0, 0),
       0 0 0 rgba(0, 0, 0, 0);
-  }
-  
-  .button-with-icon:hover .text {
+}
+
+.button-with-icon:hover .text {
     transform: translateX(80px);
-  }
-  .button-with-icon:hover .icon {
+}
+.button-with-icon:hover .icon {
     transform: translate(36px);
-  }
-  .button-with-icon:hover .icon.play {
+}
+.button-with-icon:hover .icon.play {
     transform: translate(19px);
-  }
-  
-  .text {
+}
+
+.text {
     transition: all 0.5s ease-in-out;
-  }
-  
+}
 
-/*seccion destacada*/
 
+/*___________SECCION DESTACADA___________*/
 .carousel-container-outstandings{
     max-width: 100%;
     justify-content: center;
@@ -766,12 +765,12 @@ aside{
     z-index: 0;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
-  }
-  
-  .button-animation-outstandings:hover {
+}
+
+.button-animation-outstandings:hover {
     animation: sh0 0.5s ease-in-out both;
-  }
-  
+}
+
   @keyframes sh0 {
     0% {
       transform: rotate(0deg) translate3d(0, 0, 0);
@@ -794,13 +793,13 @@ aside{
     }
   }
   
-  .button-animation-outstandings:hover .span-animation-outstandings {
+.button-animation-outstandings:hover .span-animation-outstandings {
     animation: storm 0.7s ease-in-out both;
     animation-delay: 0.06s;
-  }
-  
-  .button-animation-outstandings::before,
-  .button-animation-outstandings::after {
+}
+
+.button-animation-outstandings::before,
+.button-animation-outstandings::after {
     content: '';
     position: absolute;
     right: 0;
@@ -813,28 +812,28 @@ aside{
     transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
     z-index: -1;
     transform: translate(100%, -25%) translate3d(0, 0, 0);
-  }
-  
-  .button-animation-outstandings:hover::before,
-  .button-animation-outstandings:hover::after {
+}
+
+.button-animation-outstandings:hover::before,
+.button-animation-outstandings:hover::after {
     opacity: 0.15;
     transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
-  }
-  
-  .button-animation-outstandings:hover::before {
-    transform: translate3d(50%, 0, 0) scale(0.9);
-  }
-  
-  .button-animation-outstandings:hover::after {
-    transform: translate(50%, 0) scale(1.1);
-  }
+}
 
-/*fin seccion destacada*/
+.button-animation-outstandings:hover::before {
+    transform: translate3d(50%, 0, 0) scale(0.9);
+}
+
+.button-animation-outstandings:hover::after {
+    transform: translate(50%, 0) scale(1.1);
+}
+
+/*___________FIN SECCION DESTACADA___________*/
 
 /* slider section  */
 
 .slider{
-    height: 100%;/*ACA ver tamaño antes habia puesto el tamaño de figma*/
+    height: 100%;
     margin-top: 0px;
     width: 100%;
     overflow: hidden;
@@ -855,7 +854,6 @@ aside{
 
 }
 .slider .list .item .content{
-    background-color: 302f2f;
     position: absolute;
     top: 20%;
     width: 1140px;
@@ -894,7 +892,7 @@ aside{
     grid-template-rows: 40px;
     gap: 5px;
     margin-top: 20px;
-    box-shadow: 5px 5px 8px 302f2f ;
+    box-shadow: 5px 5px 8px #302f2f ;
 }
 .slider .list .item .button button{
     border: solid 1px #fafafa ;
@@ -939,7 +937,6 @@ aside{
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    /* background-color: #EAA329; comentado para que funcione*/
     border: none;
     color: #fff;
     font-family: monospace;
@@ -948,7 +945,6 @@ aside{
     cursor: pointer;
 }
 .nextPrevArrows button:hover{
-    /* background-color: #fff; comentado para que funcione*/
     color: #ffffff;
 }
 
@@ -1094,7 +1090,6 @@ aside{
 
 
 /*____________________________FOOTER____________________________*/
-/*ver si setear tamanio*/
 footer{
     height: max-content;
     grid-area:footer;
@@ -1205,8 +1200,7 @@ ul.p-desktop-smallLight {
 
 
 
-/*____________PRUEBA BOTON____________*/
-/**/
+/*____________BOTON ANIMADO____________*/
 
 .buttonn {
     margin-top:10px ;
@@ -1359,94 +1353,6 @@ ul.p-desktop-smallLight {
     width: 250%;
 }
 
-/*______________________PRUEBA REDES SOCIALES____________________  
-.wrapper {
-    display: inline-flex;
-    list-style: none;
-    height: 120px;
-    width: 100%;
-    padding-top: 40px;
-    font-family: "Poppins", sans-serif;
-    justify-content: center;
-  }
-  
-  .wrapper .icon {
-    position: relative;
-    background: #fff;
-    border-radius: 50%;
-    margin: 10px;
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .wrapper .tooltip {
-    position: absolute;
-    top: 0;
-    font-size: 14px;
-    background: #fff;
-    color: #fff;
-    padding: 5px 8px;
-    border-radius: 5px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .wrapper .tooltip::before {
-    position: absolute;
-    content: "";
-    height: 8px;
-    width: 8px;
-    background: #fff;
-    bottom: 22px;
-    left: 50%;
-    transform: translate(-50%) rotate(45deg);
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .wrapper .icon:hover .tooltip {
-    top: 65px;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-  
-  .wrapper .icon:hover span,
-  .wrapper .icon:hover .tooltip {
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-  }
-  
-  .wrapper .facebook:hover,
-  .wrapper .facebook:hover .tooltip,
-  .wrapper .facebook:hover .tooltip::before {
-    background: #1877f2;
-    color: #fff;
-  }
-  
-  .wrapper .twitter:hover,
-  .wrapper .twitter:hover .tooltip,
-  .wrapper .twitter:hover .tooltip::before {
-    background: #1da1f2;
-    color: #fff;
-  }
-  
-  .wrapper .instagram:hover,
-  .wrapper .instagram:hover .tooltip,
-  .wrapper .instagram:hover .tooltip::before {
-    background: #e4405f;
-    color: #fff;
-  }
-____________________________________*/
-
 
 /*diseño mobile*/
 @media only screen and (max-width: 650px){
@@ -1528,12 +1434,6 @@ ____________________________________*/
         display: none;
     }
 
-    /* .search-icon{
-        border: solid 1px white;
-        border-radius: 5px;
-        padding: 4px 5px;
-    } */
-
     .search-input-mobile{
         display: block;
         border:solid 1px white;
@@ -1553,12 +1453,12 @@ ____________________________________*/
 
     /*carouseles simples*/
 
-/*nombre de categoria-REVISAR PROPIEDADES FIGMA*/
+/*nombre de categoria*/
 .carousel-title {
-    font-size: 22px;/*ACA*/
+    font-size: 22px;
 }
 
-/*boton de carousel FALTA DAR CORRECTO DISEÑO*/
+/*boton de carousel*/
 .carousel-btn {
     font-size: 30px;
     padding: 10px;
@@ -1602,7 +1502,7 @@ ____________________________________*/
 }
 
 .card-title {
-    font-size: 18px;/*ACA*/
+    font-size: 18px;
     font-weight: bold;
 }
 
