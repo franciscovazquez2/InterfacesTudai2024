@@ -157,6 +157,14 @@ header{
     align-items: center;
     margin: 5px;
     text-decoration: none;
+    cursor: pointer;
+    padding-left: 6px;
+}
+
+.section-userSection:hover{
+    padding-left: 6px;
+    background-color: #435372;
+    border-radius: 4px;
 }
 
 .icon-userSection{
@@ -1139,6 +1147,17 @@ footer h2{
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 14px;
+}
+
+.logo-red-social:hover{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #435372;
+}
+
+.logo-red-social{
+    padding: 5px;
+    cursor: pointer;
 }
 
 ul.p-desktop-smallLight {

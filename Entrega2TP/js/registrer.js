@@ -5,8 +5,8 @@ function init() {
 
 
     const users = [{
-        username: 'a@a.c',
-        password: 'p'
+        username: 'admin@gmail.com',
+        password: 'password'
     }];
 
     let validations = {
@@ -66,7 +66,7 @@ function init() {
     inputDate.addEventListener('blur', ()=>{validations.validDate = validateDate(inputDate,messageDate)});
 
     registrerForm.addEventListener('submit', validateRegistrer);
-    btnPopoverOn.addEventListener('click', ()=>{window.location.href = '../home.html';});
+    btnPopoverOn.addEventListener('click', ()=>{window.location.href = '../Entrega2TP/home.html';});
     btnPopoverOff.addEventListener('click', (event)=>{
                                             event.preventDefault();
                                             popoverOFF.hidePopover();});
@@ -103,7 +103,9 @@ function init() {
     function createMessageBadDate(message){
         deleteMessageBad(message);
         let span = document.createElement("span");
+        span.classList.add('bad-login');
         span.textContent = "Fecha erronea, formato a ingresar YYYY-MM-DD";
+        message.classList.add('message-div');
         message.appendChild(span);
     }
 
@@ -112,18 +114,20 @@ function init() {
         if(passRepit === input.value){
             deleteMessageBad(message);
             removeBad(input);
-            return false;
+            return true;
         }else{
             createMessagePassRepit(message);
             addBad(input);
-            return true;
+            return false;
         }
     }
 
     function createMessagePassRepit (message){
         deleteMessageBad(message);
         let span = document.createElement("span");
+        span.classList.add('bad-login');
         span.textContent = "Las contraseñas no condicen";
+        message.classList.add('message-div');
         message.appendChild(span);
     }
 
@@ -132,8 +136,8 @@ function init() {
         const value = input.value;
         let errors = [];
 
-        if (value.length < 8) {
-            errors.push("La contraseña debe tener al menos 8 caracteres.");
+        if (value.length < 6) {
+            errors.push("La contraseña debe tener al menos 6 caracteres.");
         }
         if (!/[a-z]/.test(value)) {
             errors.push("La contraseña debe contener al menos una letra minúscula.");
@@ -144,10 +148,6 @@ function init() {
         if (!/\d/.test(value)) {
             errors.push("La contraseña debe contener al menos un número.");
         }
-        if (!/[@$!%*?&]/.test(value)) {
-            errors.push("La contraseña debe contener al menos un carácter especial.");
-        }
-
         if(errors.length > 0){
             messagePassword (message, errors);
             addBad(input);
@@ -166,9 +166,11 @@ function init() {
         errors.forEach(element =>{
             let div = document.createElement("div");
             let span = document.createElement("span");
-                                        span.textContent = element;
-                                        div.appendChild(span);
-                                        message.appendChild(div);});
+            span.textContent = element;
+            span.classList.add('bad-login');
+            div.appendChild(span);
+            message.classList.add('message-div');
+            message.appendChild(div);});
     }
 
     function deleteAllMessage(message){
@@ -191,10 +193,12 @@ function init() {
 
     };
 
-    function createMessageBad(message, value){
+    function createMessageBad(message){
         deleteMessageBad(message);
         let span = document.createElement("span");
-        span.textContent = "Ingrese Solo letras " + "Ingreso" + value;
+        span.classList.add('bad-login');
+        span.textContent = "Ingrese solo letras";
+        message.classList.add('message-div');
         message.appendChild(span);
         }
 
@@ -209,19 +213,23 @@ function init() {
         if(!regex.test(value)){
             createMessageBadMail(message);
             addBad(input);
+            return false;
         }else if(!existMail(value)) {
             deleteMessageBad(message);
             removeBad(input);
+            return true;
             }else{   
                 createMessageMailExist(message);
-                addBad(input)}
+                addBad(input);
+                return false;}
 
     };
 
     function existMail(value){
+        let email = value.toLowerCase();
         let exist = false;
         users.forEach(element => { 
-            if(value.localeCompare(element.username, undefined, { sensitivity: 'base' }) === 0)
+            if(email.localeCompare(element.username, undefined, { sensitivity: 'base' }) === 0)
                 {exist = true;}});
         return exist;
     }
@@ -229,14 +237,18 @@ function init() {
     function createMessageMailExist(message){
         deleteMessageBad(message);
         let span = document.createElement("span");
+        span.classList.add('bad-login');
         span.textContent = "El mail ya se encuentra registrado";
+        message.classList.add('message-div');
         message.appendChild(span);
     }
 
     function createMessageBadMail (message){
         deleteMessageBad(message);
         let span = document.createElement("span");
+        span.classList.add('bad-login');
         span.textContent = "Formato de mail incorrecto";
+        message.classList.add('message-div');
         message.appendChild(span);
     }
 
@@ -248,11 +260,6 @@ function init() {
     function removeBad(input) {
         input.classList.remove('border-bad-login');
         input.classList.add('border-ok-login');
-    }
-
-    function removeClass(input){
-        input.classList.remove('border-ok-login');
-        input.classList.remove('border-bad-login');
     }
 
         /*Boton abrir seccion user*/

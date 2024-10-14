@@ -85,6 +85,14 @@ header{
     align-items: center;
     margin: 5px;
     text-decoration: none;
+    cursor: pointer;
+    padding-left: 6px;
+}
+
+.section-userSection:hover{
+    padding-left: 6px;
+    background-color: #435372;
+    border-radius: 4px;
 }
 
 .icon-userSection{
@@ -139,6 +147,7 @@ button,.icon{
 .header-icon{
     height: 24px;
     width: 24px;
+    position: relative;
 }
 
 .config{
@@ -213,6 +222,17 @@ footer h2{
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 14px;
+}
+
+.logo-red-social:hover{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #435372;
+}
+
+.logo-red-social{
+    padding: 5px;
+    cursor: pointer;
 }
 
 ul.p-desktop-smallLight {
@@ -392,36 +412,6 @@ ul.p-desktop-smallLight {
     border-color: green;
 }
 
-/* POPOVER  -  DAR ESTILO*/
-#id-popover-on::backdrop{
-    background-color: rgba(0, 0, 0, 0.80);
-} 
-
-#id-popover-off::backdrop {
-    background-color: rgba(0, 0, 0, 0.80);
-}
-
-.btn-conteiner-popover{
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 0px;
-}
-
-/*modificacion popover*/
-[popover]{
-    height: 78px;
-    width: 270px;
-    border-radius: 6px;
-}
-
-.span-popover{
-    display: flex;
-    justify-content: center;
-    padding-top: 5px;
-}
-/* FIN POPOVER */
-
 .form .lbl-nombre{
     position: absolute;
     bottom: 0;
@@ -482,6 +472,7 @@ ul.p-desktop-smallLight {
 
 
 .text_redes a {
+    margin: 5px;
     cursor: pointer;
     color: #BAC4D7;
     text-decoration: none;
@@ -489,6 +480,11 @@ ul.p-desktop-smallLight {
 
 .text_redes a:visited{
     color: #BAC4D7;
+}
+
+.text_redes a:hover{
+    scale: 1.05;
+    transition: 0.3s;
 }
 
 
@@ -513,6 +509,10 @@ ul.p-desktop-smallLight {
 }
 .box_google{
     background: #FFFFFF;
+}
+
+.error-message{
+    color: #FF0000;
 }
 
 @media only screen and (max-width: 800px){
