@@ -3,7 +3,7 @@ body{
     padding: 0;
     font-family: 'Nunito';
     font-size: 16px;
-    background-color:white;
+    background-color:#F7F7F7;
     width: 100%;
 }
 
@@ -30,9 +30,14 @@ header{
     justify-content: space-between;
     position: relative;
 }
+
+main{
+    grid-area:main;
+}
+
 /*breadcums*/
 .breadcum-container{
-    background-color: white;/**/
+    background-color:#F7F7F7;/**/
     width: 450px;
     height: 60px;
     opacity: 0.6;
@@ -45,7 +50,6 @@ header{
 }
 
 .box-contain{
-
     width: 430px;
     display: flex;
     justify-content: center;
@@ -55,7 +59,6 @@ header{
 }
 
 .box{
-    
     display: flex;
     justify-content:center;
     align-items: center;
@@ -67,7 +70,6 @@ header{
     border-bottom: 1px solid rgb(100, 100, 100);
     border-bottom-right-radius: 5px;
     box-shadow: 5px 5px 7px rgb(78, 77, 77);
-    
 }
 
 .box-contain :hover{    
@@ -91,10 +93,8 @@ a{
     text-decoration: none;
     color: black;
 }
+/*fin breadcumbs*/
 
-main{
-    grid-area:main;
-}
 
 /*MENU-logo*/
 .menu{
@@ -110,6 +110,7 @@ main{
     display: flex;
     flex-wrap: nowrap;
 }
+
 .img-logo-header{
     height: 30px;
 }
@@ -129,7 +130,7 @@ main{
 }
 
 .seccion-usuario{
-    color: #F0F0F0;
+    color: #F7F7F7;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,7 +147,7 @@ main{
 }
 
 .section-userSection{
-    color: #F0F0F0;
+    color: #F7F7F7;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -192,6 +193,7 @@ main{
     color: #7588AE;
     font-style: 'nunito',sans;
 }
+/*fin sesion usuario*/
 
 /*BARRA BUSQUEDA HEADER*/
 .search-container{
@@ -201,7 +203,7 @@ main{
 }
 
 .search-input{
-    border:solid 1px white;
+    border:solid 1px #F7F7F7;
     width: 250px;
     padding-left: 5px;
     padding-right: 40px;
@@ -209,7 +211,7 @@ main{
     box-sizing: border-box;
     background-color:transparent;
     border-radius: 5px;
-    color: white;
+    color: #F7F7F7;
 }
 
 .search-input:focus{
@@ -218,7 +220,7 @@ main{
 }
 
 .search-input::placeholder{
-    color: white;
+    color:#F7F7F7;
     opacity: 0.8;
     font-size: 14px;
     font-weight: normal;
@@ -253,8 +255,9 @@ button,.icon{
     width: 20px;
     position: relative;
 }
+/*fin barra busqueda*/
 
-
+/*nav, oculto hasta accionar menu hamburguesa*/
 .sidebar{
     width: 160px; /* Ancho del nav sin hover */
     background-color: #1a2b40;
@@ -278,7 +281,7 @@ list-style-type: none;
 }
 
 .sidebar ul li {
-    color: #fff;
+    color:#F7F7F7;
     cursor: pointer;
     margin-top: 15px;
 }
@@ -302,20 +305,20 @@ list-style-type: none;
 
 .sidebar ul li a {
     text-decoration: none;
-    color: #fff;
+    color:#F7F7F7;
 }
 
 .sidebar ul li.category {
     font-size: 14px;
-    color: #ddd;
+    color:#F7F7F7;
     text-transform: uppercase;
     margin-top: 20px;
 }
+/*fin nav var*/
 
-/*game*/
-
+/*inicio seccion juego*/
 .game-container{
-    background-color: white;
+    background-color:#F7F7F7;
     margin:10px;
     width: 1300px;
     height: 100%;
@@ -335,6 +338,7 @@ list-style-type: none;
     justify-content: space-between;
 }
 
+/*seccion juego (canvas/proximamente)*/
 .gameframe{
     width: 1000px;
     height: 600px;
@@ -342,6 +346,7 @@ list-style-type: none;
     flex-direction: column;
 }
 
+/*imagenes*/
 .galery{
     height: 600px;
     width: 200px;
@@ -430,13 +435,13 @@ list-style-type: none;
     gap: 10px;
 }
 
-
 .instructions img{
     width: 35px;
     height: 40px;
     object-fit: cover;
 }
 
+/*comentarios*/
 .comentarycontainer{
     display:flex;
     flex-direction:column;
@@ -453,12 +458,10 @@ list-style-type: none;
     height: 25px;
 }
 
-.comentarybody{
-    
+.comentarybody{    
     overflow-y: scroll;
     max-width: 600px;
     height: 500px;
-    /*border: 1px solid;*/
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -468,7 +471,6 @@ list-style-type: none;
     width: 100%;
     height: 500px;
     display:flex;
-    /*border: 1px solid black;*/
     justify-content: space-evenly;
 }
 
@@ -482,11 +484,10 @@ list-style-type: none;
 }
 
 .card-banner{
+    background-color: #F7F7F7;
     height: 100%;
     width: 200px;
     opacity: 0.6;
-    /*border:solid 1px black;*/
-    background-color:black;
 }
 
 .card-banner:hover{
@@ -498,22 +499,18 @@ list-style-type: none;
     opacity: 0.4;
 }
 
-
-
-
-
-
 .comentary{
     position: relative;
     width: 550px;
     min-height: 80px;
-    background-color:white;
+    background-color:#F7F7F7;
     display: flex;
     flex-direction: row;
     align-items: center;
     border-radius: 0px;
     gap: 10px;
 }
+
 input{
     width: 360px;
     height: 28px;
@@ -527,12 +524,11 @@ input{
     font-size: 16px;
     font-weight: 500;
     font-family: 'Nunito', sans;
-
 }
+
 ::placeholder{
     color:black;
-    font-weight: 500;
-    
+    font-weight: 500;    
 }
 
 .comentary img{
@@ -557,6 +553,7 @@ input{
 .comentary button:hover{
     background-color: #7a94b4;
 }
+
 /*inicio boton animado*/
 .button-animation {
     width: 100px;
@@ -642,20 +639,19 @@ input{
   .button-animation:hover::after {
     transform: translate(50%, 0) scale(1.1);
   }
-
 /*fin boton animado*/
-
 
 .coments{
     width: 550px;
     min-height: 80px;
-    background-color: #ffffff;
+    background-color: #F7F7F7;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 5px;
     opacity: 0.8;
 }
+
 .userperfil{
     width: 420px;
     height: 30px;
@@ -664,7 +660,7 @@ input{
     align-items: center;
     padding-left: 5px;
     margin-left: 15px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #F7F7F7;
     margin-bottom: 0px;
 }
 
@@ -688,9 +684,8 @@ input{
     margin-right: 15px;
 }
 
-/*
 /*____________________________FOOTER____________________________*/
-/*ver si setear tamanio*/
+
 footer{
     height: max-content;
     grid-area:footer;
@@ -711,7 +706,7 @@ footer h2{
 
 .container-footer-cards{
     flex-wrap: wrap;
-    color: white;
+    color: #F7F7F7;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -796,10 +791,7 @@ ul.p-desktop-smallLight {
 }
 
 
-
-/*____________PRUEBA BOTON____________*/
-/**/
-
+/*boton estilo footer -animacion*/
 .buttonn {
     margin-top:10px ;
     padding: 0.5em 1em;
