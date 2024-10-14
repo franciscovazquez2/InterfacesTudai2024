@@ -1452,7 +1452,12 @@ ul.p-desktop-smallLight {
     }
 
     .menu{
-        gap: 25px;
+        gap: 8px;
+        margin-right: 5px;
+    }
+
+    .img-logo-header{
+        height: 20px;
     }
 
     /*carouseles simples*/
