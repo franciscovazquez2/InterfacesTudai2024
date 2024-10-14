@@ -181,7 +181,7 @@ function init() {
 
     function validateInfo(input, message, regex){
         const value = input.value;
-        if(!regex.test(value)){
+        if(!regex.test(value) || (value == '')){
             createMessageBad(message, value[value.length - 1]);
             addBad(input);
             return false;
@@ -255,6 +255,7 @@ function init() {
     function addBad(input){
         input.classList.remove('border-ok-login');
         input.classList.add('border-bad-login');
+        input.classList.add('red');
     }
 
     function removeBad(input) {

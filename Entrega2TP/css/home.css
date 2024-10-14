@@ -656,6 +656,7 @@ aside{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    row-gap: 15px;
     justify-content: space-around;
 }
 
@@ -1463,6 +1464,9 @@ ul.p-desktop-smallLight {
     color: #fff;
   }
 ____________________________________*/
+
+
+
 
 
 /*diseño mobile*/
