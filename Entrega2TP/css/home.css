@@ -695,7 +695,7 @@ button,.icon{
     color: #FAFAFA;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
     box-shadow: 0 5px 10px #000;
 }
