@@ -305,6 +305,8 @@ list-style-type: none;
 
 .sidebar ul li:hover{
     background-color: #3b4a61;
+    border-radius: 4px;
+    width: 135px;
 }
 
 .sidebar ul li a {
