@@ -659,6 +659,7 @@ button,.icon{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    row-gap: 15px;
     justify-content: space-around;
 }
 
@@ -1363,6 +1364,9 @@ ul.p-desktop-smallLight {
 .btn-carrusel-principal-left:hover::before {
     width: 250%;
 }
+
+
+
 
 
 /*diseño mobile*/
