@@ -483,11 +483,21 @@ ul.p-desktop-smallLight {
 }
 
 .form .border-bad-login{
-    border-color: red;
+    border-color: rgba(255, 0, 0, 0.7);
 }
 
 .form .border-ok-login{
-    border-color: green;
+    border-color: rgba(0, 128, 0, 0.7);
+}
+
+.message-div .bad-login{
+    color: rgba(255, 0, 0, 0.6);
+    font-size: 12px;
+    
+}
+.message-div{
+    display: flex;
+    flex-direction: column;
 }
 
 /* POPOVER  -  DAR ESTILO*/
@@ -549,8 +559,8 @@ ul.p-desktop-smallLight {
     padding-bottom: 5px;
     text-shadow: #293346 1px 2px;
 }
-.form span .span-name-ok{color: green;}
-.form span .span-name-off{color: red;}
+.form span .span-name-ok{color: #008000;}
+.form span .span-name-off{color: #FF0000;}
 
 .form input:focus + .lbl-nombre .text-nomb,
 .form input:valid + .lbl-nombre .text-nomb{
