@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', inicio);
     function messageError(message){
         deleteMessage(message);
         let span = document.createElement("span");
-        span.textContent = "Email y/o password incorrecta";
+        span.textContent = "Email y/o password incorrectos";
         span.classList.add('error-message');
         message.appendChild(span);
     }
