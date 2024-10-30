@@ -323,12 +323,12 @@ list-style-type: none;
 /*fin nav var*/
 
 /*inicio seccion juego*/
-.game-container{
+.game-Container{
     background-color:#F7F7F7;
     margin:10px;
     width: 1300px;
     height: 100%;
-    /*border: 1px solid;*/
+    border: 1px solid;
     display:flex;
     flex-direction: column;
     margin-left: 15px;
@@ -336,9 +336,9 @@ list-style-type: none;
 }
 
 .view-container{
-    height: 600px;
-    width: 1210px;
-    /*border: 1px solid;*/
+    height: 640px;
+    width: 1200px;
+    border: 1px solid;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -346,14 +346,14 @@ list-style-type: none;
 
 /*seccion juego (canvas/proximamente)*/
 .gameframe{
-    width: 1000px;
-    height: 600px;
+    width: 1200px;
+    height: 640px;
     display:flex;
     flex-direction: column;
 }
 
 /*imagenes*/
-.galery{
+/*.galery{
     height: 600px;
     width: 200px;
     display: flex;
@@ -364,7 +364,7 @@ list-style-type: none;
 .imgsuperior{
     width: 200px;
     height: 190px;
-    /*border: 1px solid;*/
+    /*border: 1px solid;
     justify-content: center;
     align-items: center;
 }
@@ -382,6 +382,37 @@ list-style-type: none;
     justify-content: center;
     align-items: center;
 }
+*/
+.propagandas img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*
+.frame{
+    background-color: red;
+    width: 1200px;
+    height: 600px;
+}
+
+
+VIDEOJUEGO
+*/
+
+canvas{
+    border: solid 1px black;
+    margin: 0;
+    padding: 0;
+}
+
+.game-container {
+    width: 1200px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px red;
+}
 
 .game-container img{
     width: 100%;
@@ -389,13 +420,311 @@ list-style-type: none;
     object-fit: cover;
 }
 
-.frame{
-    height: 560px;
+.start-game{
+    display: flex;
+    width: 1200px;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    z-index: 99999;
+    position: absolute;
+    overflow: hidden;
 }
+.start-game button{
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    font-size: 26px;
+    font-weight: bolder;
+    color: white;
+    background-color: black;
+    border: 3px solid white;
+    animation: blink 0.9s infinite ease; 
+    position: absolute;
+    z-index: 999999;   
+}
+
+.vsRobo{
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: 0.5s ease;
+    opacity: 0.8;
+}
+
+.vsIro{
+    height: 100%;
+    width: 100%;
+    transform: translateX(100%);
+    transition: 0.5s ease;
+    opacity: 0.8;
+}
+
+#play:hover ~ .vsRobo{
+    transform: translateX(100%);
+    transition: 0.5s ease;
+    
+}
+
+#play:hover ~ .vsIro{
+    transition: 0.5s ease;
+    transform: translateX(-100%);
+    
+}
+
+
+
+@keyframes blink{
+    0%{
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
+    }
+    100%{
+        box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.2);
+    }
+}
+
+.gameButton button:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer ;   
+    transition: 0.5s ease;
+}
+
+.configuration-game{
+    height: 600px;
+    width: 1200px;
+    border-radius: 10px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset-game{
+    color: white;
+    height: 400px;
+    width: 350px;
+    border-radius: 10px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.reset-game-options{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.winner{
+    font-size: 26px;
+    padding:0;
+    margin: 0;
+}
+
+
+.reset-game button{
+    font-size: 16px;
+}
+
+.imgWinnerR{
+    width: 250px;
+    height: 200px;
+}
+.imgWinnerI{
+    width: 250px;
+    height: 200px;
+}
+.imgDeuce{
+    width: 250px;
+    height: 200px;
+}
+
+.select-game{
+    margin: 30px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.option{
+    display: flex;
+    gap:35px;
+    margin: 10px;
+}
+
+.option #id{
+    display: flex;
+    
+}
+
+
+.gameButton button{
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    display: flex;
+    color: white;
+    font-size: 24px;
+    font-weight: bolder;
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    
+}
+
+/*seccion ficha*/
+.select-file{
+    display: flex;
+    gap: 50px;/*ver aca*/
+}
+
+.select-file .player{
+    color: white;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-file .fichas{
+    display: flex;
+    gap: 20px;
+}
+
+.select-file .imgFicha img:hover{
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 1);
+    transition: 0.3s ease;
+}
+
+.selected{
+    opacity: 0.2;
+}
+
+.select-file .imgFicha{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.imgFicha img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 40px;
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    font-weight: normal;
+    visibility: hidden;
+    border: solid 1px;
+    border-radius: 10px;
+    animation: blink 0.9s infinite ;
+}
+
+.start:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer ;   
+    transition: 0.5s ease;
+}
+
+.hidden{
+    display: none;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.9s ease; /* Ajusta la duración (0.5s) como prefieras */
+}
+
+/*seccion pantalla informativa*/
+.prompt{
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    background-color: #9B9B9B;
+    width: 250px;
+    height: 170px;
+    position: absolute;
+    z-index: 1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border:1px solid white;
+    border-bottom: none;
+    left: 100px;
+    top:250px;
+    background-color: transparent;
+    align-items: center;
+}
+
+.log{
+    margin: 0;
+    padding-top: 0;
+    border-top: 1px solid white;
+    width: 210px;
+    height: 80px;
+    z-index: 9999999;
+    overflow: auto;
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none;  /* Para Internet Explorer y Edge antiguo */
+    color: black;
+    font-weight: normal;
+}
+
+.countdown {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #333;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: transparent;
+  }
+
+.logStyle{
+    color:white;
+    font-weight: bolder;
+}
+
+
+h3{
+   color:white;
+   font-weight: bold;
+   margin: 0;
+   padding: 0;
+   margin-top: 10px;
+   margin-bottom: 5px;   
+}
+/*FIN VIDEOJUEGO*/
 .bargame{
     background-color: #435372;
     height: 40px;
-    width: 1000px;
+    width: 1200px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
