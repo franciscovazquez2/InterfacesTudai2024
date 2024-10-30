@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="css/game.css">
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
 </head>
-<body>
+<body><!--
     <div id="loader">
         <div class="loader-container">
             <div class="spinner"></div>
             <p class="porcentaje">%<span id="porcentaje">0</span></p>
         </div>
-    </div>
+    </div>-->
     <div class="gridContainer">
         <header>
           <nav class="sidebar hidden">
@@ -85,14 +85,14 @@
                   <canvas id="canvas" width="1200px" height="600px"></canvas>
                   <div class="start-game">
                       <button class="buttonGame" id="play">PLAY</button>
-                      <div class="vsRobo"><img src="robocopfigth.jpg" alt="robofigth"></div>
-                      <div class="vsIro"><img src="ironmanfigth.jpg" alt="irofigth"></div>
+                      <div class="vsRobo"><img src="src/img/robocopfigth.jpg" alt="robofigth"></div>
+                      <div class="vsIro"><img src="src/img/ironmanfigth.jpg" alt="irofigth"></div>
                   </div>
                   <div class="reset-game">
                       <h1 class="winner">GANADOR</h1>
-                      <div class="imgWinnerR"><img src="robocopfigth.jpg" alt="robofigth"></div>
-                      <div class="imgWinnerI"><img src="ironmanfigth.jpg" alt="irofigth"></div>
-                      <div class="imgDeuce"><img src="fondo-ironman-robocop-3.jpg" alt="deuce"></div>
+                      <div class="imgWinnerR"><img src="src/img/robocopfigth.jpg" alt="robofigth"></div>
+                      <div class="imgWinnerI"><img src="src/img/ironmanfigth.jpg" alt="irofigth"></div>
+                      <div class="imgDeuce"><img src="src/img/fondo-ironman-robocop-3.jpg" alt="deuce"></div>
                       <div class="reset-game-options">
                           <button class="buttonGame" id="reset">RESET</button>
                           <button class="buttonGame" id="exit">EXIT</button>
@@ -112,17 +112,17 @@
                       <div class="player" id="A">
                           <h3>Avatar IronMan</h3>
                           <div class="fichas">
-                              <div class="imgFicha"><img id="1" src="iroman.jpg" alt="iroman"></div>
-                              <div class="imgFicha"><img id="2" src="ironman2.jpg" alt="ironman2"></div>
-                              <div class="imgFicha"><img id="3" src="ironman3.jpg" alt="ironman3"></div>
+                              <div class="imgFicha"><img id="1" src="src/img/fichairoman.jpg" alt="iroman"></div>
+                              <div class="imgFicha"><img id="2" src="src/img/fichaironman2.jpg" alt="ironman2"></div>
+                              <div class="imgFicha"><img id="3" src="src/img/fichaironman3.jpg" alt="ironman3"></div>
                           </div>
                       </div>
                       <div class="player" id="B">
                           <h3>Avatar Robocop</h3>
                               <div class="fichas">
-                              <div class="imgFicha"><img id="4" src="robocop.jpg" alt="robocop"></div>
-                              <div class="imgFicha"><img id="5" src="robocop2.jpg" alt="robocop2"></div>
-                              <div class="imgFicha"><img id="6" src="robocop3.jpg" alt="robocop3"></div>
+                              <div class="imgFicha"><img id="4" src="src/img/ficharobocop.jpg" alt="robocop"></div>
+                              <div class="imgFicha"><img id="5" src="src/img/ficharobocop2.jpg" alt="robocop2"></div>
+                              <div class="imgFicha"><img id="6" src="src/img/ficharobocop3.jpg" alt="robocop3"></div>
                           </div>
                       </div>
                   </div>
@@ -307,5 +307,12 @@
       </footer>
     </div>
 </body>
-<script src="js/game.js"></script>
+<!--<script src="js/game.js"></script>-->
+<script src="js/Game.js"></script>    
+<script src="js/Figure.js"></script>
+<script src="js/Locker.js"></script>
+<script src="js/LokerReceptor.js"></script>
+<script src="js/Board.js"></script>
+<script src="js/File.js"></script>
+<script src="js/index.js"></script>
 </html>

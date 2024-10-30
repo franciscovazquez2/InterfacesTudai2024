@@ -1,36 +1,44 @@
-"use strict"
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Esperar hasta que la página se haya cargado completamente
-    let porcentaje = 0;
-    const porcentajeCarga = document.getElementById('porcentaje');
+class Game {
 
-    // Simular el incremento del porcentaje
-    const interval = setInterval(function() {
-        if (porcentaje < 100) {
-            porcentaje++;
-            porcentajeCarga.innerText = porcentaje;
-        } else {
-            clearInterval(interval);
-            setTimeout(function() {
-                document.body.classList.add('loaded'); // Ocultar el loader
-            }, 800); // momento antes de iniciar
+    constructor(playerA, playerB,combinations){
+        this.playerA=playerA;
+        this.playerB=playerB;
+        this.combinations=combinations;
+        this.turn = null;
+    }
+
+
+    
+
+    //setea aleatoriamente el turno de quien juega.
+    setFirstTurn(){
+        let i = Math.round(Math.random());
+        if(i > 0){
+            this.turn=this.playerA;
+            return this.playerA;
+        }else{
+            this.turn=this.playerB;
+            return this.playerB
         }
-    }, 40); //tiempo del intervalo que incrementa el loader
+    }
 
-        /*Boton abrir seccion user*/
-        var userHeader = document.getElementById('user-header');
-        let usmenu = document.querySelector('.seccion-usuario');
-        userHeader.addEventListener('click',()=>{
-            usmenu.classList.toggle('userHidden');
-        });
-});
+    
+    //cambio de turno
+    changeTurn(){
+        if(this.turn===this.playerA){
+            this.turn=this.playerB;
+            return this.turn;
+        }else{
+            this.turn =this.playerA;
+            return this.turn;
+        }
+    }
+
+    //devuelve si es el turno de quien intenta jugar
+    isTurn(player){
+        return(this.turn===player)
+    }
 
 
-var hamburguer = document.getElementById('hamburger');
-let sidebar = document.querySelector('.sidebar');
-sidebar.classList.toggle('hidden');
-hamburguer.addEventListener('click',()=>{
-    sidebar.classList.toggle('hidden');
-});
-
+}
