@@ -259,7 +259,17 @@ function setupGame(gameSize){
 canvas.addEventListener('mousedown', (e)=>{
                         console.log("mousedown");
                         let figura = isFile(e);
-                        if(figura != null && figura.isClickable() && !ganador){
+                        if(board.isDeuce()||tiempo==0){//verifica que no sea la ultima ficha(empate)
+                            clearLog(log);
+                            stateLog("EMPATE",log);
+                            winner.innerHTML="EMPATE";
+                            roboWinner.classList.add('hidden');
+                            iroWinner.classList.add('hidden');
+                            deuce.classList.remove('hidden');
+                            resetGame.classList.remove('hidden');
+                            resetearCuentaRegresiva();
+                        }
+                        else if(figura != null && figura.isClickable() && !ganador){
                             //verifica si clickea ficha al turno correspondiente
                             if(game.isTurn(figura.getPlayer())){
                             file = figura;
