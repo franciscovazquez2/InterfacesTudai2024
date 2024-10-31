@@ -95,7 +95,6 @@ a{
 }
 /*fin breadcumbs*/
 
-
 /*MENU-logo*/
 .menu{
     display:flex;
@@ -328,11 +327,11 @@ list-style-type: none;
     margin:10px;
     width: 1300px;
     height: 100%;
-    border: 1px solid;
     display:flex;
     flex-direction: column;
     margin-left: 15px;
     padding-left: 15px;
+    
 }
 
 .view-container{
@@ -340,11 +339,12 @@ list-style-type: none;
     width: 1200px;
     border: 1px solid;
     display: flex;
+    margin-left: 35px;
     flex-direction: row;
     justify-content: space-between;
 }
 
-/*seccion juego (canvas/proximamente)*/
+/*seccion juego*/
 .gameframe{
     width: 1200px;
     height: 640px;
@@ -352,53 +352,7 @@ list-style-type: none;
     flex-direction: column;
 }
 
-/*imagenes*/
-/*.galery{
-    height: 600px;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.imgsuperior{
-    width: 200px;
-    height: 190px;
-    /*border: 1px solid;
-    justify-content: center;
-    align-items: center;
-}
-
-.imgmedium{
-    width: 200px;
-    height: 190px;
-    justify-content: center;
-    align-items: center;
-}
-
-.imginf{
-    width: 200px;
-    height: 190px;
-    justify-content: center;
-    align-items: center;
-}
-*/
-.propagandas img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-/*
-.frame{
-    background-color: red;
-    width: 1200px;
-    height: 600px;
-}
-
-
-VIDEOJUEGO
-*/
-
+/*VIDEOJUEGO*/
 canvas{
     border: solid 1px black;
     margin: 0;
@@ -411,7 +365,6 @@ canvas{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 1px red;
 }
 
 .game-container img{
@@ -419,7 +372,7 @@ canvas{
     height: 100%;
     object-fit: cover;
 }
-
+/*seccion pantalla inicial juego (boton play)*/
 .start-game{
     display: flex;
     width: 1200px;
@@ -445,7 +398,7 @@ canvas{
     position: absolute;
     z-index: 999999;   
 }
-
+/*imagenes presentacion juego*/
 .vsRobo{
     height: 100%;
     width: 100%;
@@ -453,7 +406,6 @@ canvas{
     transition: 0.5s ease;
     opacity: 0.8;
 }
-
 .vsIro{
     height: 100%;
     width: 100%;
@@ -461,21 +413,18 @@ canvas{
     transition: 0.5s ease;
     opacity: 0.8;
 }
-
+/*animacion "aparicion de imagenes al hacer hover en boton play*/
 #play:hover ~ .vsRobo{
     transform: translateX(100%);
     transition: 0.5s ease;
     
 }
-
 #play:hover ~ .vsIro{
     transition: 0.5s ease;
     transform: translateX(-100%);
     
 }
-
-
-
+/*animacion parpadeo botones*/
 @keyframes blink{
     0%{
         box-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
@@ -484,8 +433,9 @@ canvas{
         box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.2);
     }
 }
+/*fin seccion pantalla inicio juego*/
 
-
+/*seccion de configuracion del juego*/
 .configuration-game{
     height: 600px;
     width: 1200px;
@@ -499,6 +449,7 @@ canvas{
     align-items: center;
 }
 
+/*seccion reseteo del juego*/
 .reset-game{
     color: white;
     height: 400px;
@@ -525,7 +476,6 @@ canvas{
     padding:0;
     margin: 0;
 }
-
 
 .reset-game button{
     font-size: 16px;
@@ -560,11 +510,9 @@ canvas{
 }
 
 .option #id{
-    display: flex;
-    
+    display: flex;    
 }
-
-
+/*estilo botones juego*/
 .buttonGame{
     justify-content: center;
     align-items: center;
@@ -578,7 +526,6 @@ canvas{
     background-color: black;
     border: 1px solid white;
     border-radius: 10px;
-    
 }
 
 .buttonGame:hover {
@@ -588,8 +535,7 @@ canvas{
     transition: 0.5s ease;
 }
 
-
-/*seccion ficha*/
+/*seccion fichas*/
 .select-file{
     display: flex;
     gap: 50px;/*ver aca*/
@@ -630,6 +576,8 @@ canvas{
     object-fit: cover;
     border-radius: 50%;
 }
+
+/*estilo seleccion inicio juego*/
 .start {
     display: flex;
     justify-content: center;
@@ -664,39 +612,43 @@ canvas{
 
 /*seccion pantalla informativa*/
 .prompt{
-    font-size: 16px;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 170px;
+    width: 200px;
+    height: 120px;
     position: absolute;
     z-index: 1;
     border-bottom: none;
-    left: 100px;
-    top:250px;
-    background-color: transparent;
+    border-radius: 10px;
+    left: 90px;
+    padding: 10px;
+    top:240px;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .log{
-    margin: 0;
-    padding-top: 0;
-    border-top: 1px solid white;
-    width: 210px;
-    height: 80px;
-    z-index: 9999999;
-    overflow-y: auto;
-    scrollbar-width: none; /* Para Firefox */
+    font-size: 18px;
+    z-index: 9999999;   
 }
 
+/*contador*/
 .divCountdown{
-    font-size: 16px;
+    padding:5px;
+    font-size: 14px;
     color: #232B3C;
-    text-align: center;
-    padding: 10px;
-    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 40px;
     font-weight: bold;
     border-radius: 10px;
+    position: absolute;
+    left:70px;
+    top:70px;
+    z-index: 99999;
     background-color:#FAFAFA;
     animation: blink 1s infinite ease;
 }
@@ -710,13 +662,10 @@ canvas{
     color: white;
 }
 
-
-
 .logStyle{
     color:white;
     font-weight: bolder;
 }
-
 
 h3{
    color:white;
@@ -727,6 +676,8 @@ h3{
    margin-bottom: 5px;   
 }
 /*FIN VIDEOJUEGO*/
+
+/*bargame*/
 .bargame{
     background-color: #435372;
     height: 40px;
@@ -850,6 +801,43 @@ h3{
     align-items: center;
     border-radius: 0px;
     gap: 10px;
+}
+
+/*imagenes*/
+/*.galery{
+    height: 600px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.imgsuperior{
+    width: 200px;
+    height: 190px;
+    /*border: 1px solid;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgmedium{
+    width: 200px;
+    height: 190px;
+    justify-content: center;
+    align-items: center;
+}
+
+.imginf{
+    width: 200px;
+    height: 190px;
+    justify-content: center;
+    align-items: center;
+}
+*/
+.propagandas img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 input{
@@ -1124,13 +1112,11 @@ ul.p-desktop-smallLight {
     width: 100%;
 }
 
-
 .lista-parrafo-footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 
 /*boton estilo footer -animacion*/
 .buttonn {
@@ -1216,31 +1202,6 @@ ul.p-desktop-smallLight {
     margin-top: 0;
     text-align: center;
     font-size: 14px;
-}
-
-.spinner {
-    border: 8px solid rgba(255, 255, 255, 0.3);
-    border-top: 8px solid white;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s infinite;
-    margin-bottom: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.186);
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* Ocultar el loader una vez cargado */
-body.loaded #loader {
-    display: none;
 }
     
 

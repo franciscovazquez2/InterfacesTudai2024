@@ -11,6 +11,12 @@ hamburguer.addEventListener('click',()=>{
     sidebar.classList.toggle('hiddenHamburger');
 });
 
+var userHeader = document.getElementById('user-header');
+    let usmenu = document.querySelector('.seccion-usuario');
+    userHeader.addEventListener('click',()=>{
+        usmenu.classList.toggle('userHidden');
+    });
+
 //inicio de canvas
 let canvas = document.querySelector('#canvas'); 
 let ctx = canvas.getContext("2d");
@@ -18,7 +24,7 @@ const width = canvas.width;
 const height = canvas.height;
 let figuras = [];
 const rect = canvas.getBoundingClientRect()//constante para tomar distancia y calcular x/y
-//const backgroudCanvas = '#9B9B9B';
+
 
 /*let img = new Image();
 img.src= "src/img/fondo-ironman-robocop-2.jpg";
