@@ -91,12 +91,10 @@ class Board extends Figure{
         return this.columns;
     }
 
-    //metodo que averigue si alguien cumplio la combinacion (recibe parametro del tipo de juego/viene del index.    )
-    winner(player,casillero){
-        let positionMatriz = casillero.getMatrizPosition();
-        let contador = 0;
-            
-        //secuencia horizontal
+    
+    //---------------------------------------CHEQUEOS DE LOGICA X EN LINEA---------------------------------------
+    //chequeo secuencia horizontal
+    getHorizontalSequence(positionMatriz, contador, player){
         for(let i =0; i<this.columns;i++){
             //que el casillero no este vacio
             if(this.lockers[positionMatriz.row][i].getFicha()!=null){
@@ -115,7 +113,11 @@ class Board extends Figure{
             }
         }
         contador = 0;
-        //secuencia vertical
+        return false
+    }
+
+    //chequeo secuencia vertical
+    getVerticalSequence(positionMatriz, contador, player){
         for(let i =1; i<this.rows;i++){
             //que el casillero no este vacio
             if(this.lockers[i][positionMatriz.column].getFicha()!=null){
@@ -132,12 +134,14 @@ class Board extends Figure{
                 contador=0; 
             }
         }
-        
         contador=0;
-        //secuencia diagonal derecha
+        return false;
+    }
+
+    //chequeo secuencia diagonal derecha
+    getRightDiagonalSequence(contador, player, posRowTope, posColumnTope){
         //buscar cero
-        let posRowTope = positionMatriz.row;
-        let posColumnTope = positionMatriz.column;
+
         while(posRowTope<this.rows-1&&posColumnTope>0){
             posRowTope+=1;
             posColumnTope-=1;            
@@ -157,8 +161,12 @@ class Board extends Figure{
             posRowTope-=1;
             posColumnTope+=1;
         }
-        
         contador=0;
+        return false;
+    }
+
+    //chequeo secuencia diagonal izquierda
+    getLeftDiagonalSequence(positionMatriz, contador, player, posRowTope, posColumnTope){
         posRowTope = positionMatriz.row;
         posColumnTope = positionMatriz.column
         console.log(posRowTope +"pos top" + posColumnTope + "pos colum");
@@ -183,6 +191,23 @@ class Board extends Figure{
             }
             posRowTope-=1;
             posColumnTope-=1;
+        }
+        return false;
+    }
+
+    //metodo que averigue si alguien cumplio la combinacion (recibe parametro del tipo de juego/viene del index.    )
+    winner(player,casillero){
+        let positionMatriz = casillero.getMatrizPosition();
+        let contador = 0;
+        let posRowTope = positionMatriz.row;
+        let posColumnTope = positionMatriz.column;
+        
+        //busca la combinacion horizontal, vertical, diagonal derecha y diagonal izquierda, si alguna es verdadera entonces hay ganador
+        if((this.getHorizontalSequence(positionMatriz, contador, player))||
+            (this.getVerticalSequence(positionMatriz, contador, player))||
+            (this.getRightDiagonalSequence(contador, player, posRowTope, posColumnTope))||
+            (this.getLeftDiagonalSequence(positionMatriz, contador, player, posRowTope, posColumnTope))){
+                return true;
         }
         return false;
     }

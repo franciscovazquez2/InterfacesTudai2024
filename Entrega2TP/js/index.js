@@ -321,7 +321,7 @@ canvas.addEventListener('mouseup', (e)=>{
                                         }else{
                                             stateLog("es el turno de : "+ game.changeTurn(),log);//se cambia el turno y se informa
                                         }
-                                    },1000);
+                                    },700);
                                     lockerReceptor.setFill("rgba(0,0,0,0)");
                                 }else{
                                     //volver a posicion inicial
@@ -551,7 +551,7 @@ function iniciarCuentaRegresiva() {
     clearInterval(cuentaRegresiva);
     
     // Reinicia el tiempo a 10 segundos (o el tiempo deseado)
-    tiempo = 25 ;
+    tiempo = 240 ;
     
     // Inicia un nuevo intervalo
     cuentaRegresiva = setInterval(() => {
