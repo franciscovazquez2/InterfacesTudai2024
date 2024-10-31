@@ -615,8 +615,8 @@ canvas{
     font-size: 18px;
     display: flex;
     flex-direction: column;
-    width: 200px;
-    height: 120px;
+    width: 150px;
+    height: 130px;
     position: absolute;
     z-index: 1;
     border-bottom: none;
@@ -646,8 +646,8 @@ canvas{
     font-weight: bold;
     border-radius: 10px;
     position: absolute;
-    left:70px;
-    top:70px;
+    left:45px;
+    top:90px;
     z-index: 99999;
     background-color:#FAFAFA;
     animation: blink 1s infinite ease;

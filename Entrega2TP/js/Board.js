@@ -8,13 +8,9 @@ class Board extends Figure{
         this.columns = columns;
         this.rows = rows;
         this.combinations=combinations;
-        
-        // Crear y cargar la imagen
-        //this.backgroundImage = new Image();
-        //this.backgroundImage.src = '/fondo-ironman-robocop-2.jpg';
     }
 
-    //creacion dinamica de lokers segun tamanioo juego
+    //creacion dinamica de lokers segun tamanio juego
     createLokers(){
         this.lockers=[];
         let marginX = 3;//margenes de separacion
@@ -29,7 +25,7 @@ class Board extends Figure{
         for (let i = 0; i < this.rows; i++) {
             this.lockers[i] = []; // Inicializamos cada fila como un arreglo
             for (let j = 0; j < this.columns; j++) {
-              // Instanciamos un nuevo objeto para cada posición
+                //creacion de lockers en la matriz
                 if(i===0){//linea de lockers receptores, solo la primera
                     this.lockers[i][j] = new LokerReceptor(x+widthLoker, y+heightLocker,"rgba(0,0,0,0)",this.context, false, widthLoker, heightLocker,j);  
                     x+=widthLoker+marginX;
@@ -74,7 +70,6 @@ class Board extends Figure{
 
     //devuelve casillero vacio segun columna a la que se quiere ubicar una ficha.
     getLokerEmptyInColumn(column,rows){
-
         for(let i = rows-1 ; i > 0; i--){
             if(this.lockers[i][column].getIsEmpty()){
                 return this.lockers[i][column];
@@ -83,16 +78,34 @@ class Board extends Figure{
         return null;
     }
 
+    //devuelve cantidad de filas
     getRows(){
         return this.rows;
     }
-
+    //devuelve cantidad de columnas
     getColumns(){
         return this.columns;
     }
 
-    
     //---------------------------------------CHEQUEOS DE LOGICA X EN LINEA---------------------------------------
+    
+    //metodo que averigue si alguien cumplio la combinacion (recibe parametro del tipo de juego/viene del index.    )
+    winner(player,casillero){
+        let positionMatriz = casillero.getMatrizPosition();
+        let contador = 0;
+        let posRowTope = positionMatriz.row;
+        let posColumnTope = positionMatriz.column;
+        
+        //busca la combinacion horizontal, vertical, diagonal derecha y diagonal izquierda, si alguna es verdadera entonces hay ganador
+        if((this.getHorizontalSequence(positionMatriz, contador, player))||
+            (this.getVerticalSequence(positionMatriz, contador, player))||
+            (this.getRightDiagonalSequence(contador, player, posRowTope, posColumnTope))||
+            (this.getLeftDiagonalSequence(positionMatriz, contador, player, posRowTope, posColumnTope))){
+                return true;
+        }
+        return false;
+    }
+    
     //chequeo secuencia horizontal
     getHorizontalSequence(positionMatriz, contador, player){
         for(let i =0; i<this.columns;i++){
@@ -195,29 +208,10 @@ class Board extends Figure{
         return false;
     }
 
-    //metodo que averigue si alguien cumplio la combinacion (recibe parametro del tipo de juego/viene del index.    )
-    winner(player,casillero){
-        let positionMatriz = casillero.getMatrizPosition();
-        let contador = 0;
-        let posRowTope = positionMatriz.row;
-        let posColumnTope = positionMatriz.column;
-        
-        //busca la combinacion horizontal, vertical, diagonal derecha y diagonal izquierda, si alguna es verdadera entonces hay ganador
-        if((this.getHorizontalSequence(positionMatriz, contador, player))||
-            (this.getVerticalSequence(positionMatriz, contador, player))||
-            (this.getRightDiagonalSequence(contador, player, posRowTope, posColumnTope))||
-            (this.getLeftDiagonalSequence(positionMatriz, contador, player, posRowTope, posColumnTope))){
-                return true;
-        }
-        return false;
-    }
-
-
+    //devuelve si existe empate
     isDeuce(){
         for(let i=0; i<this.lockers[1].length;i++){
-            
             if(this.lockers[1][i].getFicha()==null){
-
                 return false;
             }
         }
