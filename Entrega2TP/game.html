@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/game.css">
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
 </head>
-<body><!--
+<body>
+  <audio id="backgroundMusic" src="src/music/sounds.mp3" loop></audio>
+  <!--
     <div id="loader">
         <div class="loader-container">
             <div class="spinner"></div>
@@ -16,7 +18,7 @@
     </div>-->
     <div class="gridContainer">
         <header>
-          <nav class="sidebar hidden">
+          <nav class="sidebar hiddenHamburger">
             <ul>
                 <li><a href="home.html"><img src="src/icons/Home.png" alt="Home"></a><span class="category"><a href="home.html">Inicio</a></span></li>
                 <li><a href="#recientes"><img src="src/icons/Clock.png" alt="Recientes"></a><span class="category"><a href="#recientes">Recientes</a></span></li>
@@ -30,7 +32,7 @@
             </ul>
         </nav>
             <div class="menu">
-                <button><img src=".\src\icons\Hamburger.png" alt="hamburger" id="hamburger" class="icon"></button>
+                <button class="iconButton"><img src=".\src\icons\Hamburger.png" alt="hamburger" id="hamburger" class="icon"></button>
                 <div class="header-logos">
                   <a href="home.html"><img src=".\src\icons\PlayersLogo.png" alt="playerslogo" class="img-logo-header"></a>
                   <a href="home.html"><img src=".\src\icons\logo2.png" alt="logo" class="img-logo-header"></a>
@@ -41,9 +43,9 @@
                 <a href=""><img src=".\src\icons\search.png" alt="Search" class="search-icon"></a>
             </div>
             <div class="config">
-                <button><img src=".\src\icons\Cart.png" alt="cart" class="icon header-icon-cart"></button>
-                <button><img src=".\src\icons\Setting.png" alt="setting" class="icon header-icon"></button>
-                <button><img src=".\src\icons\User.png" alt="user" class="icon header-icon" id="user-header"></button>
+                <button class="iconButton"><img src=".\src\icons\Cart.png" alt="cart" class="icon header-icon-cart"></button>
+                <button class="iconButton"><img src=".\src\icons\Setting.png" alt="setting" class="icon header-icon"></button>
+                <button class="iconButton"><img src=".\src\icons\User.png" alt="user" class="icon header-icon" id="user-header"></button>
             </div>
             <div class="seccion-usuario userHidden">
               <div class="sectionUser-header">
@@ -134,7 +136,7 @@
                   <div class="prompt">
                       <h3>Informacion Juego</h3>
                       <div class="log"></div>
-                      <div class="countdown"></div>
+                      <div class="divCountdown"><p>TIEMPO:<span class="countdown"></span></p></div>
                   </div>
               </div>
                 <div class="bargame">

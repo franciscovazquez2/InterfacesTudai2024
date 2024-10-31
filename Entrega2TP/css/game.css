@@ -141,7 +141,7 @@ a{
     position: absolute;
     top: 60px;
     right: 0;
-    z-index: 9990;
+    z-index: 9999999;
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;
 }
@@ -239,7 +239,7 @@ a{
     height: 15px;
 }
 
-button,.icon{
+.iconButton, .icon{
     border: none;
     background-color: #293346;
     cursor: pointer;
@@ -268,13 +268,13 @@ button,.icon{
     padding-top: 0px;
     position: absolute;
     top:60px;
-    z-index: 9998;
+    z-index: 999999;
     max-height: 0px;
     transition: max-height 0.4s ease; 
     overflow: hidden;
 }
 
-.hidden{
+.hiddenHamburger{
     max-height: 370px;
 }
 
@@ -485,12 +485,6 @@ canvas{
     }
 }
 
-.gameButton button:hover {
-    color: black;
-    background-color: white;
-    cursor: pointer ;   
-    transition: 0.5s ease;
-}
 
 .configuration-game{
     height: 600px;
@@ -571,7 +565,7 @@ canvas{
 }
 
 
-.gameButton button{
+.buttonGame{
     justify-content: center;
     align-items: center;
     gap: 5px;
@@ -586,6 +580,14 @@ canvas{
     border-radius: 10px;
     
 }
+
+.buttonGame:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer ;   
+    transition: 0.5s ease;
+}
+
 
 /*seccion ficha*/
 .select-file{
@@ -665,14 +667,10 @@ canvas{
     font-size: 16px;
     display: flex;
     flex-direction: column;
-    background-color: #9B9B9B;
     width: 250px;
     height: 170px;
     position: absolute;
     z-index: 1;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border:1px solid white;
     border-bottom: none;
     left: 100px;
     top:250px;
@@ -687,24 +685,32 @@ canvas{
     width: 210px;
     height: 80px;
     z-index: 9999999;
-    overflow: auto;
+    overflow-y: auto;
     scrollbar-width: none; /* Para Firefox */
-    -ms-overflow-style: none;  /* Para Internet Explorer y Edge antiguo */
-    color: black;
-    font-weight: normal;
 }
 
-.countdown {
+.divCountdown{
     font-size: 16px;
-    color: white;
+    color: #232B3C;
     text-align: center;
     padding: 10px;
-    border: 2px solid #333;
     width: 100px;
     font-weight: bold;
     border-radius: 10px;
-    background-color: transparent;
-  }
+    background-color:#FAFAFA;
+    animation: blink 1s infinite ease;
+}
+
+.timeWarning{
+    background-color: green;
+    color: white;
+}
+.finishTime{
+    background-color: red;
+    color: white;
+}
+
+
 
 .logStyle{
     color:white;

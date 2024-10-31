@@ -3,50 +3,15 @@
 document.addEventListener("DOMContentLoaded", init);
 
 function init(){
-/*
-    // Esperar hasta que la página se haya cargado completamente
-    let porcentaje = 0;
-    const porcentajeCarga = document.getElementById('porcentaje');
-
-    // Simular el incremento del porcentaje
-    const interval = setInterval(function() {
-        if (porcentaje < 100) {
-            porcentaje++;
-            porcentajeCarga.innerText = porcentaje;
-        } else {
-            clearInterval(interval);
-            setTimeout(function() {
-                document.body.classList.add('loaded'); // Ocultar el loader
-            }, 800); // momento antes de iniciar
-        }
-    }, 40); //tiempo del intervalo que incrementa el loader
-
-        /*Boton abrir seccion user
-        var userHeader = document.getElementById('user-header');
-        let usmenu = document.querySelector('.seccion-usuario');
-        userHeader.addEventListener('click',()=>{
-            usmenu.classList.toggle('userHidden');
-        });
-
 
 var hamburguer = document.getElementById('hamburger');
 let sidebar = document.querySelector('.sidebar');
-sidebar.classList.toggle('hidden');
+sidebar.classList.toggle('hiddenHamburger');
 hamburguer.addEventListener('click',()=>{
-    sidebar.classList.toggle('hidden');
+    sidebar.classList.toggle('hiddenHamburger');
 });
 
-
-*/
-
-
-
-
-
-console.log("estoyyyy");
-
-
-    //inicio de canvas
+//inicio de canvas
 let canvas = document.querySelector('#canvas'); 
 let ctx = canvas.getContext("2d");
 const width = canvas.width;
@@ -55,11 +20,39 @@ let figuras = [];
 const rect = canvas.getBoundingClientRect()//constante para tomar distancia y calcular x/y
 //const backgroudCanvas = '#9B9B9B';
 
-let img = new Image();
+/*let img = new Image();
 img.src= "src/img/fondo-ironman-robocop-2.jpg";
 img.onload = () => {
     ctx.drawImage(img, 0, 0, width, height);
-};
+};*/
+let img = new Image();
+
+const imgAspectRatio = img.width / img.height;
+const canvasAspectRatio = width / height;
+let sx, sy, sWidth, sHeight;
+
+img.src = "src/img/fondo-ironman-robocop-2.jpg";
+img.onload = () => {
+
+    if (imgAspectRatio > canvasAspectRatio) {
+        // La imagen es más ancha que el canvas, recortar horizontalmente
+        sHeight = img.height;
+        sWidth = sHeight * canvasAspectRatio;
+        sx = (img.width - sWidth) / 2;
+        sy = 0;
+    } else {
+        sWidth = img.width;
+        sHeight = sWidth / canvasAspectRatio;
+        sx = 0;
+        sy = 220;
+    }
+     // Dibujar la imagen recortada en el canvas sin estirarla
+     ctx.drawImage(
+        img,
+        sx, sy, sWidth, sHeight,  // Área de recorte de la imagen
+        0, 0, width, height       // Área en el canvas
+    );
+    };
 
 
 
@@ -84,6 +77,7 @@ let imgPlayerB=new Image();
 const backgroundMusic = document.getElementById('backgroundMusic');
 //contador
 const countdownDiv = document.querySelector(".countdown");
+const countdownDivcomplete = document.querySelector(".divCountdown");
 
 
 //lectura de pantalla informativa del transcurso del juego
@@ -163,7 +157,6 @@ selectGame.querySelectorAll('button').forEach(button=>{
 startGamePlay.addEventListener('click',()=>{
     size = parseInt(previousType.id);
     if(previousA!=null&&previousB!=null&&size>0){
-        setupGame(size);
         resetGame.classList.add('hidden');
         prompt.style.visibility='visible';
         iroWinner.classList.remove('hidden');
@@ -172,6 +165,7 @@ startGamePlay.addEventListener('click',()=>{
         // Agrega la clase 'fade-out' para la transición de opacidad
         selectGame.classList.add('fade-out');
         // Espera a que termine la transición antes de aplicar 'hidden'
+        setupGame(size);
         setTimeout(() => {
             selectGame.classList.add('hidden');
         }, 500); // Espera 500 ms o lo mismo que la duración de la transición
@@ -186,11 +180,15 @@ resetGame.querySelectorAll('button').forEach(button=>{
             ganador=false;
             figuras=[];
             clearCanvas();
-            setupGame(size);
             iroWinner.classList.remove('hidden');
             roboWinner.classList.remove('hidden');
             resetGame.classList.add('hidden');
             prompt.style.visibility='visible';
+            countdownDivcomplete.classList.remove('finishTime');
+            countdownDivcomplete.classList.remove('timeWarning');
+            resetearCuentaRegresiva();  
+            setupGame(size);
+            iniciarCuentaRegresiva();
             // Agrega la clase 'fade-out' para la transición de opacidad
             selectGame.classList.add('fade-out');
             // Espera a que termine la transición antes de aplicar 'hidden'
@@ -248,9 +246,11 @@ function setupGame(gameSize){
     firstTurn=game.setFirstTurn();
     stateLog("Comienza jugando: "+firstTurn,log);
     board.createLokers();
-    board.draw();
-    loadFiles(files);
+    drawAll();
+    loadFiles(files/2,95, 550,ctx,25,imgPlayerB,"robocop");
+    loadFiles(files/2,1105, 550,ctx,25,imgPlayerA,"ironman");
     iniciarCuentaRegresiva();
+    console.log("entre en el reset de cuentaregre");
     
 };
 
@@ -345,9 +345,9 @@ canvas.addEventListener('mousemove', (e)=>{
                                 if(board.lockers[0][i].isPointInsided(getX(e),getY(e))){
                                     //controla si esta lleno o tiene lugar para informar si se puede ingresar o no ficha
                                     if(board.getLokerEmptyInColumn(board.lockers[0][i].getColumn(),board.getRows())){
-                                        board.lockers[0][i].setFill("rgba(0,255,0,0.4)");
+                                        board.lockers[0][i].setFill("rgba(0,255,0,0.7)");
                                     }else{
-                                        board.lockers[0][i].setFill("rgba(255,0,0,0.4)");
+                                        board.lockers[0][i].setFill("rgba(255,0,0,0.7)");
                                     }
                                 }else{
                                     board.lockers[0][i].setFill("rgba(0,0,0,0)");
@@ -470,7 +470,12 @@ function getY(event){
 //borrar canvas
 function clearCanvas(){
     ctx.clearRect(0,0,width,height); 
-    ctx.drawImage(img, 0, 0, width, height);   
+    //ctx.drawImage(img, 0, 0, width, height);   
+    ctx.drawImage(
+        img,
+        sx, sy, sWidth, sHeight,  // Área de recorte de la imagen
+        0, 0, width, height       // Área en el canvas
+    );
 }
 
 //colores aleatorios
@@ -488,37 +493,19 @@ function loadImg(){
 }
 
 //carga de fichas en tablero
-function loadFiles(cantFichas){
+function loadFiles(cantFichas,witdhPartial, heightPartial,ctx,radius,img,name){
     console.log("cargando fichas");
 //las posiciones 95 y 1105 estan "harcodeadas" para que la imagen de fondo sea entera, dejaria de existir marginBoard
-let heightPartial = 550;
-for (let i = 0; i < cantFichas; i++){
-   let c = new File(95, heightPartial,randomRGB(), ctx, 25,imgPlayerB,"robocop");
-    
-    if(i==(cantFichas-2)){
-        heightPartial -= 55;    
-    }else{
-
-        heightPartial = heightPartial -2;
+    for (let i = 0; i < cantFichas; i++){
+       let c = new File(witdhPartial, heightPartial,"rgba(0,0,0,0)", ctx, radius,img,name);
+        if(i==(cantFichas-2)){
+            heightPartial -= 55;        
+        }else{
+            heightPartial = heightPartial -2;
+        }
+        figuras.push(c);
+        c.draw();
     }
-    figuras.push(c);
-    c.draw();
-}
-
-heightPartial = 550;
-for (let i = 0; i < cantFichas; i++){
-    let c = new File(1105, heightPartial,randomRGB(), ctx, 25, imgPlayerA,"ironman");
-    
-    if(i==(cantFichas-2)){
-        heightPartial -= 55;    
-    }else{
-
-        heightPartial = heightPartial -2;
-    }
-    figuras.push(c);
-    c.draw();
-}
-
 }
 
 
@@ -532,18 +519,14 @@ function isFile(e){
 
 //imprime en el juego
 function stateLog(message,log){
+    log.innerHTML="";
     let parrafo = document.createElement("p");
     parrafo.textContent=message;
-    
-    if (log.lastElementChild) {
-        log.lastElementChild.classList.remove('logStyle');
-    }
-    
     parrafo.classList.add('logStyle');
 
     //log.removeChild(log.firstChild);
     log.appendChild(parrafo);   
-    //parrafo.scrollIntoView();
+    
 }
 
 function clearLog(log){
@@ -551,7 +534,7 @@ function clearLog(log){
 }
 
 
-let tiempo = 100; // Tiempo inicial en segundos
+let tiempo = 25; // Tiempo inicial en segundos
 let cuentaRegresiva; // Variable para almacenar el ID del intervalo
 
 // Función que inicia o reinicia el temporizador
@@ -560,31 +543,43 @@ function iniciarCuentaRegresiva() {
     clearInterval(cuentaRegresiva);
     
     // Reinicia el tiempo a 10 segundos (o el tiempo deseado)
-    tiempo = 100;
+    tiempo = 25 ;
     
     // Inicia un nuevo intervalo
     cuentaRegresiva = setInterval(() => {
     
-    tiempo--;
-    countdownDiv.innerHTML = tiempo;
+    if(!ganador){
+        tiempo--;
+        countdownDiv.innerHTML = tiempo;    
 
         // Detener el temporizador cuando llegue a 0
+        if(tiempo<15){
+            countdownDivcomplete.classList.add('timeWarning');
+        }
+        
+        
         if (tiempo <= 0) {
             clearInterval(cuentaRegresiva);
             console.log("¡Tiempo terminado!");
-            countdownDiv.innerHTML = "¡Tiempo terminado!";
+            countdownDivcomplete.innerHTML="Se acabo el Tiempo!";
+            countdownDivcomplete.classList.add('finishTime');
+            winner.innerHTML="EMPATE";
+            roboWinner.classList.add('hidden');
+            iroWinner.classList.add('hidden');
+            deuce.classList.remove('hidden');
+            resetGame.classList.remove('hidden');
         }
+    }else{
+        clearInterval(cuentaRegresiva);
+        resetearCuentaRegresiva();
+    }
     }, 1000); // Actualiza cada 1 segundo
 }
 
 // Función para resetear la cuenta regresiva
 function resetearCuentaRegresiva() {
-    countdownDiv.innerHTML= "";
+    countdownDivcomplete.innerHTML="TIEMPO: ";
 }
-
-// Ejemplo de uso
-iniciarCuentaRegresiva(); // Inicia la cuenta regresiva
-
 
 }
 
