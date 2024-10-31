@@ -536,6 +536,7 @@ function clearLog(log){
 
 let tiempo = 25; // Tiempo inicial en segundos
 let cuentaRegresiva; // Variable para almacenar el ID del intervalo
+let span = document.createElement('span');
 
 // Función que inicia o reinicia el temporizador
 function iniciarCuentaRegresiva() {
@@ -550,7 +551,8 @@ function iniciarCuentaRegresiva() {
     
     if(!ganador){
         tiempo--;
-        countdownDiv.innerHTML = tiempo;    
+        countdownDiv.innerHTML = tiempo;
+        span.innerHTML = tiempo;    
 
         // Detener el temporizador cuando llegue a 0
         if(tiempo<15){
@@ -578,7 +580,9 @@ function iniciarCuentaRegresiva() {
 
 // Función para resetear la cuenta regresiva
 function resetearCuentaRegresiva() {
+    span.classList.add("countdown");
     countdownDivcomplete.innerHTML="TIEMPO: ";
+    countdownDivcomplete.appendChild(span);
 }
 
 }
