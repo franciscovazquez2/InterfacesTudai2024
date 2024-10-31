@@ -254,20 +254,24 @@ function setupGame(gameSize){
     
 };
 
+function showDeuce(){ //MODULARIZACION -- funcion usada en mousedown y mouseup para mostrar el menu de reset/exit al empatar
+    clearLog(log);
+    stateLog("EMPATE",log);
+    winner.innerHTML="EMPATE";
+    roboWinner.classList.add('hidden');
+    iroWinner.classList.add('hidden');
+    deuce.classList.remove('hidden');
+    resetGame.classList.remove('hidden');
+    resetearCuentaRegresiva();
+}
+
 //EVENTOS DE MOUSE   
 //controla que se seleccione una ficha al turno correspondiente
 canvas.addEventListener('mousedown', (e)=>{
                         console.log("mousedown");
                         let figura = isFile(e);
                         if(board.isDeuce()||tiempo==0){//verifica que no sea la ultima ficha(empate)
-                            clearLog(log);
-                            stateLog("EMPATE",log);
-                            winner.innerHTML="EMPATE";
-                            roboWinner.classList.add('hidden');
-                            iroWinner.classList.add('hidden');
-                            deuce.classList.remove('hidden');
-                            resetGame.classList.remove('hidden');
-                            resetearCuentaRegresiva();
+                            showDeuce()
                         }
                         else if(figura != null && figura.isClickable() && !ganador){
                             //verifica si clickea ficha al turno correspondiente
@@ -313,14 +317,7 @@ canvas.addEventListener('mouseup', (e)=>{
                                             resetearCuentaRegresiva();
                                             drawAll();
                                         }else if(board.isDeuce()||tiempo==0){//verificar que no sea la ultima ficha(empate)
-                                             clearLog(log);
-                                             stateLog("EMPATE",log);
-                                             winner.innerHTML="EMPATE";
-                                             roboWinner.classList.add('hidden');
-                                             iroWinner.classList.add('hidden');
-                                             deuce.classList.remove('hidden');
-                                             resetGame.classList.remove('hidden');
-                                             resetearCuentaRegresiva();
+                                            showDeuce()
                                         }else{
                                             stateLog("es el turno de : "+ game.changeTurn(),log);//se cambia el turno y se informa
                                         }
