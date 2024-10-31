@@ -113,7 +113,6 @@ class Board extends Figure{
             if(this.lockers[positionMatriz.row][i].getFicha()!=null){
                 //verificar que sea el player
                 if(this.lockers[positionMatriz.row][i].getFicha().getPlayer()===player){
-                    console.log(positionMatriz.row+" "+i);
                     contador++;
                     if(contador==this.combinations){
                         return true;
@@ -182,15 +181,12 @@ class Board extends Figure{
     getLeftDiagonalSequence(positionMatriz, contador, player, posRowTope, posColumnTope){
         posRowTope = positionMatriz.row;
         posColumnTope = positionMatriz.column
-        console.log(posRowTope +"pos top" + posColumnTope + "pos colum");
         while(posRowTope<this.rows-1&&posColumnTope<this.columns-1){
             posRowTope+=1;
             posColumnTope+=1;            
         }
-        console.log(posRowTope +"pos top" + posColumnTope + "pos colum   despues del while");
         
         while(posRowTope>0&&posColumnTope>=0){
-            console.log("adentro del while:"+ posRowTope +"row " + posColumnTope +" column");
             if(this.lockers[posRowTope][posColumnTope].getFicha()!=null){
                 if(this.lockers[posRowTope][posColumnTope].getFicha().getPlayer()===player){
                     contador++;
