@@ -469,6 +469,7 @@ function init(){
             element.draw();
         });
     }
+    
 
     //borrar canvas
     function clearCanvas(){

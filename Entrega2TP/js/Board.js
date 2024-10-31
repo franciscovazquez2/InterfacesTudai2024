@@ -43,7 +43,6 @@ class Board extends Figure{
     //dibuja la matriz de lockers
     draw(){
         super.draw();
-        //this.context.fillRect(this.posX,this.posY,this.width,this.height);
         for(let i = 0; i < this.lockers.length;i++){
             for(let j = 0; j<this.lockers[i].length;j++){
                 this.lockers[i][j].draw();
