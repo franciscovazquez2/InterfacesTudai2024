@@ -68,7 +68,7 @@ function init(){
     let firstTurn = null;//primer turno
     let ganador = false;//ganador
     let filePlayerA = "src/img/robocop.jpg";//imagenes por default
-    let filePlayerB="src/img/iroman.jpg";//imagenes por default
+    let filePlayerB="src/img/ironman.jpg";//imagenes por default
     let imgPlayerA = new Image();
     let imgPlayerB=new Image();
     let tiempo = 240; // Tiempo inicial en segundos
@@ -262,7 +262,7 @@ function init(){
                                                 showDeuce()
                                             }else{
                                                 console.log("cambio de turno");
-                                                stateLog("es el turno de : "+ game.changeTurn(),log);//se cambia el turno y se informa
+                                                stateLog("Es el turno de : "+ game.changeTurn(),log);//se cambia el turno y se informa
                                             }
                                         },700);
                                         lockerReceptor.setFill("rgba(0,0,0,0)");
@@ -350,8 +350,8 @@ function init(){
         stateLog("Comienza jugando: "+firstTurn,log);
         board.createLokers();
         drawAll();
-        loadFiles(files/2,95, 550,ctx,25,imgPlayerB,"robocop");
-        loadFiles(files/2,1105, 550,ctx,25,imgPlayerA,"ironman");
+        loadFiles(files,95, 550,ctx,25,imgPlayerB,"robocop");
+        loadFiles(files,1105, 550,ctx,25,imgPlayerA,"ironman");
         iniciarCuentaRegresiva();
         backgroundMusic.play();
     };

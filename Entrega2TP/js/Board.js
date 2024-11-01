@@ -43,6 +43,22 @@ class Board extends Figure{
     //dibuja la matriz de lockers
     draw(){
         super.draw();
+
+        this.context.font = "30px Nunito";             // Tamaño y tipo de fuente
+        this.context.fillStyle = "rgba(250, 250, 250, 0.9)";            // Color de relleno para el texto
+        this.context.shadowOffsetX = 4;                  // Desplazamiento de la sombra en el eje X
+        this.context.shadowColor = "rgba(0, 0, 0, 0.8)"; // Color de la sombra con transparencia
+        this.context.shadowOffsetY = 4;                  // Desplazamiento de la sombra en el eje Y
+        this.context.shadowBlur = 4;
+        // Dibujar texto con relleno
+        this.context.fillText("ROBOCOP", 26, 385); // Texto, coordenada X, coordenada Y
+
+        // Dibujar otro texto con el nuevo color de relleno
+        this.context.fillText("IRONMAN",1036, 385);
+        this.context.shadowOffsetX = 0; 
+        this.context.shadowOffsetY = 0;                  // Desplazamiento de la sombra en el eje Y
+        this.context.shadowBlur = 0;
+
         for(let i = 0; i < this.lockers.length;i++){
             for(let j = 0; j<this.lockers[i].length;j++){
                 this.lockers[i][j].draw();
