@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-container">
+            <div class="spinner"></div>
+            <p class="porcentaje"><span id="porcentaje">0</span>%</p>
+        </div>
+    </div>
+    <div class="gridContainer">
+        <header>
+            <div class="menu">
+                <button class="hamburgerHidden"><img src=".\src\icons\Hamburger.png" alt="hamburger" id="hamburger" class="icon"></button>
+                <div class="header-logos">
+                    <a href="home.html"><img src=".\src\icons\PlayersLogo.png" alt="playerslogo" class="img-logo-header"></a>
+                    <a href="home.html"><img src=".\src\icons\logo2.png" alt="logo" class="img-logo-header"></a>
+                </div>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="BUSCAR" class="search-input">
+                <input type="text" placeholder="" class="search-input-mobile">
+                <a href=""><img src=".\src\icons\Search.png" alt="Search" class="search-icon"></a>
+            </div>
+            <div class="config">
+                <button><img src=".\src\icons\Cart.png" alt="cart" class="icon header-icon-cart"><p class="cuentaCarrito">0</p></button>
+                <button><img src=".\src\icons\Setting.png" alt="setting" class="icon header-icon"></button>
+                <button><img src=".\src\icons\User.png" alt="user" class="icon header-icon" id="user-header"></button>
+            </div>
+            <div class="seccion-usuario userHidden">
+                <div class="sectionUser-header">
+                    <img class="user-icon" src=".\src\icons\User32.png" alt="User">
+                    <h3 style="margin-top: 5px;">¡Hola Gamer!</h3>
+                </div>
+                <div>
+                    <a class="section-userSection">
+                        <img class="icon-userSection" src=".\src\icons\Burbuja.png" alt=" burbuja de texto">
+                        <h4 class="p-desktop-regular">Historial de compentarios</h4>
+                    </a>
+                    <a class="section-userSection">
+                        <img class="icon-userSection" src=".\src\icons\Config.png" alt=" burbuja de texto">
+                        <h4 class="p-desktop-regular">Configuracion de la cuenta</h4>
+                    </a>
+                    <a class="section-userSection">
+                        <img class="icon-userSection" src=".\src\icons\Actividad.png" alt=" burbuja de texto">
+                        <h4 class="p-desktop-regular">Tu actividad</h4>
+                    </a>
+                </div>
+                <a style="text-decoration: none;" href="login.html">
+                    <h4 class="close-session-user">Cerrar sesión</h4>
+                </a>
+            </div>
+        </header>
+        <nav class="sidebar hidden">
+            <ul>
+                <li><a href="home.html"><img src="src/icons/Home.png" alt="Home"></a><span class="category"><a href="home.html">Inicio</a></span></li>
+                <li><a href="#recientes"><img src="src/icons/Clock.png" alt="Recientes"></a><span class="category"><a href="#recientes">Recientes</a></span></li>
+                <li><a href="#novedades"><img src="src/icons/Novedades.png" alt="Novedades"></a><span class="category"><a href="#novedades">Novedades</a></span></li>
+                <li><a href="#destacados"><img src="src/icons/Star.png" alt="Destacados"></a><span class="category"><a href="#destacados">Destacados</a></span></li>
+                <li><a href="#accion"><img src="src/icons/Espada.png" alt="Espada"></a><span class="category"><a href="#accion">Acción</a></span></li>
+                <li><a href="#aventura"><img src="src/icons/Brujula.png" alt="Brujula"></a><span class="category"><a href="#aventura">Aventura</a></span></li>
+                <li><a href="#deportes"><img src="src/icons/Ball.png" alt="Ball"></a><span class="category"><a href="#deportes">Deportes</a></span></li>
+                <li><a href="#cartas"><img src="src/icons/Cartas.png" alt="Cartas"></a><span class="category"><a href="#cartas">Cartas</a></span></li>
+                <li><a href="#clasicos"><img src="src/icons/Clasicos.png" alt="Clasico"></a><span class="category"><a href="#clasicos">Clásicos</a></span></li>
+            </ul>
+        </nav>
+        <main>    
+
+            <div class="slider">
+
+            <div class="list">
+    
+                <div class="item">
+                    <img src="src/img/cubo mario.jpg" alt="Mario">
+    
+                    <div class="content">
+                        <div class="title">MARIO XXL</div>
+                        <div class="type">CLASIC</div>
+                        <div class="description">
+                            Puedes ayudar a Mario con una mision imposible de superar?<br>Empieza una nueva aventura y se he heroe que todos quieren
+                        </div>
+                        <button class="btn-carrusel-principal">Jugar</button>
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <img src="src/img/astronaut.jpg" alt="Subaru">
+    
+                    <div class="content">
+                        <div class="title">APOLO 11</div>
+                        <div class="type">ACTION</div>
+                        <div class="description">
+                            Intenta rescatar la nave de la fallida mision a la luna.<br> Serás capaz de sobrevivir y salvar a tus compañeros astronautas?
+                        </div>
+                        <button class="btn-carrusel-principal">Jugar</button>
+                    </div>
+                </div>
+    
+                <div class="item">
+                    <img src="src/img/subaru.jpg" alt="Subaru">
+    
+                    <div class="content">
+                        <div class="title">SUBARU RACE</div>
+                        <div class="type">TIME ATACK</div>
+                        <div class="description">
+                            Uno de los autos mas iconicos en el Rally International Championship <br> esperando que lo conduzcas, estas listo para correr?
+                        </div>
+                        <button class="btn-carrusel-principal">Jugar</button>
+                    </div>
+                </div>
+    
+    
+            </div>
+    
+    
+            <div class="thumbnail">
+    
+                <div class="item">
+                    <img src="src/img/subaru.jpg" alt="Subaru">
+                </div>
+                <div class="item">
+                    <img src="src/img/cubo mario.jpg" alt="Mario">
+                </div>
+                <div class="item">
+                    <img src="src/img/astronaut.jpg" alt="astronaut">
+                </div>
+    
+            </div>
+    
+    
+            <div class="nextPrevArrows">
+                <button class="prev btn-carrusel-principal-left btnPrevNextTransition"> < </button>
+                <button class="next btn-carrusel-principal btnPrevNextTransition"> > </button>
+            </div>
+    
+    
+        </div>
+    </main>
+    <aside>
+        <div id="recientes" class="carousel-container">
+            <h3 class="carousel-title">Seguir Jugando</h3>
+            <button class="carousel-btn left">‹</button>
+            <div class="carousel" id="carousel1">
+                <div class="card">
+                    <div class="badge badge-new">NEW</div>
+                    <img src="src/img/adventure.jpg" alt="Adventure Island" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Adventure Island</h4>
+                        <p class="card-description">Explora y busca el grial</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular">POPULAR</div>
+                    <img src="src/img/escape.jpg" alt="Escape" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">El Gran Escape</h4>
+                        <p class="card-description">Escapa de la carcel</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-update" style="display: none;"></div>
+                    <img src="src/img/Robocop vs Ironman.jpg" alt="Monument" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Robocop VS Ironman</h4>
+                        <p class="card-description">Logra la combinación y gana</p>
+                        <div class="card-footer">
+                            <a href="game.html"><button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-new">NEW</div>
+                    <img src="src/img/Welsh Town.jpg" alt="Welsh" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">El Gran Tesoro</h4>
+                        <p class="card-description">Busca el tesoro perdido</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular"style="display:none"></div>
+                    <img src="src/img/Abduction!.jpg" alt="Misterio" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">El Misterio</h4>
+                        <p class="card-description">Descubre la pista y avanza</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular">POPULAR</div>
+                    <img src="src/img/dunas.jpg" alt="Dunas" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Dunas del Desierto</h4>
+                        <p class="card-description">Descubre antiguos secretos</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular">POPULAR</div>
+                    <img src="src/img/retro space.jpg" alt="Viajero" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Viajero Espacial</h4>
+                        <p class="card-description">Explora el universo mas alla</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn right">›</button>
+        </div>
+        <div id="carreras" class="carousel-container">
+            <h3 class="carousel-title">Carreras</h3>
+            <button class="carousel-btn left">‹</button>
+            <div class="carousel" id="carousel2">
+                <div class="card">
+                    <div class="badge badge-popular" style="display: none;">POPULAR</div>
+                    <img src="src/img/carrearas.jpg" alt="Race Stunts" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Race Stunts</h4>
+                        <p class="card-description">Corre con tus habilidades</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-update">UPDATE</div>
+                    <img src="src/img/run run run.jpg" alt="Elf 917" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Elf 917</h4>
+                        <p class="card-description">Simulador real dsv2</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular">POPULAR</div>
+                    <img src="src/img/martini porsche.jpg" alt="MartiniPorsche" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Martini Porsche</h4>
+                        <p class="card-description">Corre con los mejores autos</p>
+                        <div class="card-footer">
+                            <span class="card-price">$5500</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular" style="display: none;"></div>
+                    <img src="src/img/carrearas.jpg" alt="Race in Mountains" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Race in Mountains</h4>
+                        <p class="card-description">Corre entre los paisajes</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-new">NEW</div>
+                    <img src="src/img/bmw.jpg" alt="BMWracer" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">BMW Race</h4>
+                        <p class="card-description">Elige tu BMW favorito</p>
+                        <div class="card-footer">
+                            <span class="card-price">$7500</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular">POPULAR</div>
+                    <img src="src/img/subaru.jpg" alt="Subaru Rally" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Subaru Rally</h4>
+                        <p class="card-description">Modifica tu coche y gana</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-new">NEW</div>
+                    <img src="src/img/f1.jpg" alt="F1" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Formula 1</h4>
+                        <p class="card-description">Compite en las mejores pistas</p>
+                        <div class="card-footer">
+                            <span class="card-price">$9500</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn right">›</button>
+        </div>
+        <div class="carousel-container-outstandings ocultarMobile">
+            <div class="carousel-outstandings-title">
+                <h1>Clasicos por siempre</h1>
+                <button class="button-animation-outstandings">
+                    <span class="span-animation-outstandings">Ver todos</span>
+                </button>
+            </div>
+            <div class="cart-container-outstandings">
+                <div class="card-outstandings">
+                    <div class="face front">
+                        <img src="src/img/asteroids.jpg" alt="Asteroids">
+                    </div>
+                    <div class="face back img-cart-asteroids">
+                        <h3>Asteroids</h3>
+                        <p>Pilota tu nave espacial, destruye asteroides y esquiva ovnis en este emocionante clásico arcade. <br> ¡Acción retro sin fin y desafíos para los mejores pilotos del espacio!</p>
+                        <div class="link">
+                            <button class="buttonn">JUGAR</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-outstandings">
+                    <div class="face front">
+                        <img src="src/img/pacman.jpg" alt="PacMan">
+                    </div>
+                    <div class="face back img-cart-pacman">
+                        <h3>Pacman</h3>
+                        <p> Come puntos y frutas mientras esquivas a los fantasmas en este icónico laberinto. <br> ¡Demuestra tus habilidades y alcanza la mayor puntuación!</p>
+                        <div class="link">
+                            <button class="buttonn">JUGAR</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-outstandings">
+                    <div class="face front">
+                        <img src="src/img/cubo mario.jpg" alt="Mario">
+                    </div>
+                    <div class="face back img-cart-mario">
+                        <h3>Mario Bross</h3>
+                        <p>Salta, corre y enfrenta a enemigos para rescatar a la princesa en niveles coloridos llenos de retos. <br> ¡Explora mundos y conquista el clásico de los videojuegos!</p>
+                        <div class="link">
+                            <button class="buttonn">JUGAR</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-outstandings">
+                    <div class="face front">
+                        <img src="src/img/adventure.jpg" alt="Adventure">
+                    </div>
+                    <div class="face back img-cart-adventure">
+                        <h3>Adventure</h3>
+                        <p>Embárcate en una emocionante aventura llena de misterios y desafíos. Explora vastos mundos, resuelve acertijos y enfrenta enemigos. <br> ¡La aventura te espera!</p>
+                        <div class="link">
+                            <button class="buttonn">JUGAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="linea-separacion"></div>
+        <div id="aventura" class="carousel-container">
+            <h3 class="carousel-title">Aventura</h3>
+            <button class="carousel-btn left">‹</button>
+            <div class="carousel" id="carousel3">
+                <div class="card">
+                    <div class="badge badge-new">NEW</div>
+                    <img src="src/img/adventure.jpg" alt="Adventure Island" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Adventure Island</h4>
+                        <p class="card-description">Explora y busca el grial</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular">POPULAR</div>
+                    <img src="src/img/escape.jpg" alt="Escape" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">El Gran Escape</h4>
+                        <p class="card-description">Escapa de la carcel y evita..</p>
+                        <div class="card-footer">
+                            <span class="card-price">$6490</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-update">UPDATE</div>
+                    <img src="src/img/monument valley.jpg" alt="Monument" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Monument Valley</h4>
+                        <p class="card-description">Descubre un misterioso valle</p>
+                        <div class="card-footer">
+                            <span class="card-price">$4990</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-new">NEW</div>
+                    <img src="src/img/Welsh Town.jpg" alt="Welsh" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">El Gran Tesoro</h4>
+                        <p class="card-description">Busca el tesoro perdido en la ..</p>
+                        <div class="card-footer">
+                            <span class="card-price">$7500</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular"></div>
+                    <img src="src/img/Abduction!.jpg" alt="Misterio" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">El Misterio</h4>
+                        <p class="card-description">Descubre que pasa durante..</p>
+                        <div class="card-footer">
+                            <span class="card-price">$9500</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular">POPULAR</div>
+                    <img src="src/img/dunas.jpg" alt="Dunas" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Dunas del Desierto</h4>
+                        <p class="card-description">Descubre antiguos secretos..</p>
+                        <div class="card-footer">
+                            <span class="card-price">$6490</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular">POPULAR</div>
+                    <img src="src/img/retro space.jpg" alt="Viajero" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Viajero Espacial</h4>
+                        <p class="card-description">Explora el universo mas alla</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn right">›</button>
+        </div>
+        <div id="accion" class="carousel-container">
+            <h3 class="carousel-title">Acción</h3>
+            <button class="carousel-btn left">‹</button>
+            <div class="carousel"  id="carousel4">
+                <div class="card">
+                    <div class="badge badge-new">NEW</div>
+                    <img src="src/img/enemigo perfecto.jpg" alt="Enemigo perfecto" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Enemigo Perfecto</h4>
+                        <p class="card-description">Lucha contra un gran enemigo</p>
+                        <div class="card-footer">
+                            <span class="card-price">$7500</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-new">NEW</div>
+                    <img src="src/img/UNCS.jpg" alt="Guerra por la tierra" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">War of World</h4>
+                        <p class="card-description">Defiende el planeta Tierra</p>
+                        <div class="card-footer">
+                            <span class="card-price">$8750</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular" style="display: none;">POPULAR</div>
+                    <img src="src/img/wwii.jpg" alt="wwii" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">World War II</h4>
+                        <p class="card-description">Combate en la guerra mundial</p>
+                        <div class="card-footer">
+                            <span class="card-price">$6490</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular">POPULAR</div>
+                    <img src="src/img/deadpool.jpg" alt="Deadpool" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Deadpool</h4>
+                        <p class="card-description">Lucha contra los villanos</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular" style="display: none;">POPULAR</div>
+                    <img src="src/img/androides.jpg" alt="Guerra cibernetica" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Guerra cibernetica</h4>
+                        <p class="card-description">Lidera la resistencia humana</p>
+                        <div class="card-footer">
+                            <span class="card-price">$7500</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular">POPULAR</div>
+                    <img src="src/img/return of jedi.jpg" alt="Return of thr Jedi" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Return of the Jedi</h4>
+                        <p class="card-description">Lucha en el espacio y viaja</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-new">NEW</div>
+                    <img src="src/img/Sunset Overdrive.jpg" alt="Urban Chaos" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Urban Chaos</h4>
+                        <p class="card-description">Sobrevive a los enemigos</p>
+                        <div class="card-footer">
+                            <span class="card-price">$9500</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn right">›</button>
+        </div>
+        <div id="deportes" class="carousel-container">
+            <h3 class="carousel-title">Deportes</h3>
+            <button class="carousel-btn left">‹</button>
+            <div class="carousel"  id="carousel5">
+                <div class="card">
+                    <div class="badge badge-new">NEW</div>
+                    <img src="src/img/triatlon.jpg" alt="Triatlon" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">La Maraton</h4>
+                        <p class="card-description">Corre la maraton y gana</p>
+                        <div class="card-footer">
+                            <span class="card-price">$9500</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-update">UPDATE</div>
+                    <img src="src/img/Triathlon.jpg" alt="Red Basket" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Red Basket</h4>
+                        <p class="card-description">Sobrevive a los enemigos</p>
+                        <div class="card-footer">
+                            <span class="card-price">$6490</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular" style="display: none;"></div>
+                    <img src="src/img/Soccer the Beautiful Game.jpg" alt="Futbol Shadow" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Futbol Shadow</h4>
+                        <p class="card-description">Juega futbol en las sombras</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-update">UPDATE</div>
+                    <img src="src/img/beisball.jpg" alt="Beisball" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Beisbol</h4>
+                        <p class="card-description">El mejor juego de beisbol</p>
+                        <div class="card-footer">
+                            <span class="card-price">$3890</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-new" style="display: none;"></div>
+                    <img src="src/img/rugby.jpg" alt="Rugby" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Rugby 2023</h4>
+                        <p class="card-description">Compite en el mundial 2023</p>
+                        <div class="card-footer">
+                            <span class="card-price">$8750</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-update">UPDATE</div>
+                    <img src="src/img/tenis.jpg" alt="Tenis" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Nadal Pro Tenis</h4>
+                        <p class="card-description">Conviertete en el mejor tenista</p>
+                        <div class="card-footer">
+                            <span class="card-price">$7500</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-new">NEW</div>
+                    <img src="src/img/vini.jpg" alt="Futbol 2024" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Futbol 2024</h4>
+                        <p class="card-description">Elige tu club favorito y juega</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn right">›</button>
+        </div>
+        <div id="cartas" class="carousel-container">
+            <h3 class="carousel-title">Cartas</h3>
+            <button class="carousel-btn left">‹</button>
+            <div class="carousel"  id="carousel6">
+                <div class="card">
+                    <div class="badge badge-update" style="display: none;"></div>
+                    <img src="src/img/uno.jpg" alt="Uno" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Uno</h4>
+                        <p class="card-description">Juega al Uno ahora online</p>
+                        <div class="card-footer">
+                            <span class="card-price">$3490</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-update" style="display: none;"></div>
+                    <img src="src/img/cartas.jpg" alt="Aliens Cartas" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Aliens Cartas</h4>
+                        <p class="card-description">Elige tu mejor alien y gana</p>
+                        <div class="card-footer">
+                            <span class="card-price">$3890</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-update">UPDATE</div>
+                    <img src="src/img/cartas dragon.jpg" alt="Dragon Cards" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Dragon Cards</h4>
+                        <p class="card-description">Elige a tu dragon y gana</p>
+                        <div class="card-footer">
+                            <span class="card-price">$6490</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular">POPULAR</div>
+                    <img src="src/img/retro poker.jpg" alt="Retro Poker" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Retro Poker</h4>
+                        <p class="card-description">El juego poker en version retro</p>
+                        <div class="card-footer">
+                            <span class="card-price">$5490</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular">POPULAR</div>
+                    <img src="src/img/truco.jpg" alt="Truco" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Truco</h4>
+                        <p class="card-description">Juega al truco de forma online</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">JUGAR</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-update" style="display: none;"></div>
+                    <img src="src/img/escoba.jpg" alt="Escoba Online" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Escoba Online</h4>
+                        <p class="card-description">Juega escoba de forma online</p>
+                        <div class="card-footer">
+                            <span class="card-price">$4990</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-new">NEW</div>
+                    <img src="src/img/mario  poker.jpg" alt="Poker Mario" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Poker Mario</h4>
+                        <p class="card-description">Poker con tematica de Mario</p>
+                        <div class="card-footer">
+                            <span class="card-price">$5490</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn right">›</button>
+        </div>
+        <div id="clasicos" class="carousel-container">
+            <h3 class="carousel-title">Clasicos</h3>
+            <button class="carousel-btn left">‹</button>
+            <div class="carousel"  id="carousel7">
+                <div class="card">
+                    <div class="badge badge-new">NEW</div>
+                    <img src="src/img/godzilla VS kong.png" alt="Godzilla vs KingKong" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Godzilla vs KingKong</h4>
+                        <p class="card-description">Elige tu personaje y pelea</p>
+                        <div class="card-footer">
+                            <span class="card-price">$5490</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-update">UPDATE</div>
+                    <img src="src/img/8bit Tetris.jpg" alt="Tetris" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Tetris</h4>
+                        <p class="card-description">Encastra los bloque y gana</p>
+                        <div class="card-footer">
+                            <span class="card-price">$4990</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular">POPULAR</div>
+                    <img src="src/img/pac-man.jpg" alt="Super Pac-Man" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Super Pac-Man</h4>
+                        <p class="card-description">Esquiva los fantasmas y gana</p>
+                        <div class="card-footer">
+                            <span class="card-price">$6890</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-new" style="display: none;"></div>
+                    <img src="src/img/ludo blanco.jpg" alt="Ludo Online" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Ludo Online</h4>
+                        <p class="card-description">Tira los dados y gana</p>
+                        <div class="card-footer">
+                            <span class="card-price">$5490</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-popular">POPULAR</div>
+                    <img src="src/img/sonic.jpg" alt="Sonic" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Sonic</h4>
+                        <p class="card-description">Corre y recoge monedas</p>
+                        <div class="card-footer">
+                            <button class="button-with-icon">
+                                <img src="src/icons/Jugar.png" class="icon play" alt="cart">
+                                <span class="text">Play</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-new" style="display: none;"></div>
+                    <img src="src/img/donkey kong.jpg" alt="Donkey Kong" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Donkey Kong</h4>
+                        <p class="card-description">Salta barriles y llega a la cima</p>
+                        <div class="card-footer">
+                            <span class="card-price">$6490</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="badge badge-new">NEW</div>
+                    <img src="src/img/mario.jpg" alt="Super Mario" class="card-img">
+                    <div class="card-body">
+                        <h4 class="card-title">Super Mario</h4>
+                        <p class="card-description">Salta sobre enemigos</p>
+                        <div class="card-footer">
+                            <span class="card-price">$5490</span>
+                            <button class="button-with-icon">
+                                <img src="src/icons/CartAdd.png" class="icon addCart" alt="add cart" style="display: block;">
+                                <img src="src/icons/CartIn.png" class="icon inCart" alt="in cart" style="display: none;">
+                                <span class="text">Comprar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn right">›</button>
+        </div>
+    </aside>
+    <footer>
+        <div class="container-footer-cards">
+            <div class="long-line-card-footer"></div>
+            <div class="card-footer-card ocultarMobile">
+                <h2>Seguinos</h2>
+                <div class="line-card-footer"></div>
+                <div class="container-social-networks">
+                    <a><img class="logo-red-social" src=".\src\icons\Facebook.png" alt="logo-facebook"></a>
+                    <a><img class="logo-red-social" src=".\src\icons\Whatsapp.png" alt="logo-whatsapp"></a>
+                    <a><img class="logo-red-social" src=".\src\icons\Instagram.png" alt="logo-instagram"></a>
+                </div>
+            </div>
+            <div class="card-footer-card">
+                <h2>Contactanos</h2>
+                <div class="line-card-footer"></div>
+                <p class="p-desktop-smallLight">¿Tienes preguntas? Nosotros tenemos las respuestas, no dudes en contactarnos.</p>
+                <button class="buttonn btn-email-us">Escribinos</button>
+            </div>
+            <div class="card-footer-card">
+                <h2>Que es Next Games?</h2>
+                <div class="line-card-footer"></div>
+                <p class="p-desktop-smallLight">Next Games tiene su sede en Tandil y cuenta con un equipo de 3 personas trabajando en la platafotma.
+                Nuestro objetivo es crear el mejor patio de juegos online. Gratis y abierto a todos.
+                </p>
+            </div>
+            <div class="card-long-footer ocultarMobile">
+                <h2>Empezar a jugar</h2>
+                <div class="line-card-footer"></div>
+                <div class="lista-parrafo-footer">
+                    <p class="p-desktop-smallLight">¿No estas seguro de a qué jugar? Empieza a descubrir juegos en nuestra página de inicio, 
+                    o elige un juego de cualquiera de estas categorias populares:</p>
+                    <ul class="p-desktop-smallLight">
+                        <li>Clasicos</li>
+                        <li>Aventura</li>
+                        <li>Deportes</li>
+                        <li>Accion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="line-card-footer"></div>
+            <p class="p-desktop-smallLight">El uso de este sitio web significa que aceptas los Términos de uso. Next Games ™ y © 2024 Turner 
+            Broadcasting System Europe Limited. Todos los derechos reservados.</p>
+            <p class="p-desktop-smallLight">Copyright © - <span class="span-copyright">Next Games</span>, Inc. Games © <span class="span-copyright">Franiem</span>.</p>
+        </div>
+    </footer>
+
+</body>
+<script src="js/home.js"></script>
+<script src="js/slider.js"></script>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="css/register.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="gridContainer">
+      <header>
+        <div class="menu">
+          <button style="display: none;">
+            <img
+              src=".\src\icons\Hamburger.png"
+              alt="hamburger"
+              id="hamburger"
+              class="icon"
+            />
+          </button>
+          <div class="header-logos">
+            <a href="home.html"><img src=".\src\icons\PlayersLogo.png" alt="playerslogo" class="img-logo-header"></a>
+            <a href="home.html"><img src=".\src\icons\logo2.png" alt="logo" class="img-logo-header"></a>
+          </div>
+        </div>
+        <div class="config">
+          <button>
+            <img
+              src=".\src\icons\User.png"
+              alt="user"
+              class="icon header-icon"
+              id="user-header"
+            />
+          </button>
+        </div>
+        <div class="seccion-usuario userHidden">
+          <div class="sectionUser-header">
+              <img class="user-icon" src=".\src\icons\User32.png" alt="User">
+              <h3 style="margin-top: 5px;">¡Hola Gamer!</h3>
+          </div>
+          <div>
+              <a class="section-userSection">
+                  <img class="icon-userSection" src=".\src\icons\Burbuja.png" alt=" burbuja de texto">
+                  <h4 class="p-desktop-regular">Historial de compentarios</h4>
+              </a>
+              <a class="section-userSection">
+                  <img class="icon-userSection" src=".\src\icons\Config.png" alt=" burbuja de texto">
+                  <h4 class="p-desktop-regular">Configuracion de la cuenta</h4>
+              </a>
+              <a class="section-userSection">
+                  <img class="icon-userSection" src=".\src\icons\Actividad.png" alt=" burbuja de texto">
+                  <h4 class="p-desktop-regular">Tu actividad</h4>
+              </a>
+          </div>
+          <a style="text-decoration: none;" href="login.html">
+              <h4 class="close-session-user">Iniciar sesión</h4>
+          </a>
+      </div>
+      </header>
+      <main>
+        <div class="form-reg-conteiner">
+          <form class="register-form" id="registrer-form" action="" method="get">
+            <h2>Crear una cuenta</h2>
+            <div class="personal-info">
+              <h4>Datos Personales</h4>
+              <div class="form">
+                <input id="inputRegName"  type="text" autocomplete="off" required />
+                <label class="lbl-nombre">
+                  <span class="text-nomb"> Nombre </span>
+                </label>
+                <div id="messageName"></div>
+              </div>
+              <div class="form">
+                <input id="inputSurname" type="text" autocomplete="off" required />
+                <label class="lbl-nombre">
+                  <span class="text-nomb"> Apellido </span>
+                </label>
+                <div id="messageSurnme"></div>
+              </div>
+              <div class="form">
+                <input id="inputDate"  type="text" autocomplete="off" required />
+                <label class="lbl-nombre">
+                  <span class="text-nomb">Fecha Nacimiento (YYYY-MM-DD)</span>
+                </label>
+                <div id="messageDate"></div>
+              </div>
+            </div>
+            <div class="acount-info">
+              <h4>Datos de cuenta</h4>
+              <div class="form">
+                <input id="inputMail" type="text" autocomplete="off" required />
+                <label class="lbl-nombre">
+                  <span class="text-nomb"> Email </span>
+                </label>
+                <div id="messegeMail"></div>
+              </div>
+              <div class="form">
+                <input id="inputNickname"  type="text" autocomplete="off" required />
+                <label class="lbl-nombre">
+                  <span class="text-nomb">Nickname</span>
+                </label>
+                <div id="messegeNickname"></div>
+              </div>
+              <div class="form">
+                <input id="inputPass" type="text" autocomplete="off" required />
+                <label class="lbl-nombre">
+                  <span class="text-nomb"> Password </span>
+                </label>
+                
+              </div>
+              <div class="form">
+                <input id="inputRepit" type="text" autocomplete="off" required />
+                <label class="lbl-nombre">
+                  <span class="text-nomb"> Repetir Password </span>
+                </label>
+                <div id="messageRepit"></div>
+              </div>
+            </div>
+            <div class="captcha-conteiner">
+              <input type="checkbox" name="captcha" id="" />
+              <span>No soy un robot</span>
+              <img class="icons" src="src/icons/ReCaptcha.png" alt="">
+            </div>
+            <div id="messegePass"></div>
+            <div>
+              <button class="buttonn btn-email-us">Registrar</button>
+            </div>
+          </form>
+        </div>
+        <div id="id-popover-on" popover ="manual">
+          <span class="span-popover">Registrado con exito</span>
+          <div class="btn-conteiner-popover">
+            <button id="btn-popover-on" popovertarget ="id-popover-on">Ingresar</button>
+          </div>
+        </div>
+        <div id="id-popover-off" popover ="manual">
+          <span class="span-popover">Por favor verifique los datos mal cargados</span>
+          <div class="btn-conteiner-popover">
+            <button id="btn-popover-off" popovertarget ="id-popover-off">Reintentar</button>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="container-footer-cards">
+            <div class="long-line-card-footer"></div>
+            <div class="card-footer-card">
+                <h2>Seguinos</h2>
+                <div class="line-card-footer"></div>
+                <div class="container-social-networks">
+                    <a><img class="logo-red-social" src=".\src\icons\Facebook.png" alt="logo-facebook"></a>
+                    <a><img class="logo-red-social" src=".\src\icons\Whatsapp.png" alt="logo-whatsapp"></a>
+                    <a><img class="logo-red-social" src=".\src\icons\Instagram.png" alt="logo-instagram"></a>
+                </div>
+            </div>
+            <div class="card-footer-card">
+                <h2>Contactanos</h2>
+                <div class="line-card-footer"></div>
+                <p class="p-desktop-smallLight">¿Tienes preguntas? Nosotros tenemos las respuestas, no dudes en contactarnos.</p>
+                <button class="buttonn btn-email-us">Escribinos</button>
+            </div>
+            <div class="card-footer-card">
+                <h2>Que es Next Games?</h2>
+                <div class="line-card-footer"></div>
+                <p class="p-desktop-smallLight">Next Games tiene su sede en Tandil y cuenta con un equipo de 3 personas trabajando en la platafotma.
+                Nuestro objetivo es crear el mejor patio de juegos online. Gratis y abierto a todos.
+                </p>
+            </div>
+            <div class="card-long-footer">
+                <h2>Empezar a jugar</h2>
+                <div class="line-card-footer"></div>
+                <div class="lista-parrafo-footer">
+                    <p class="p-desktop-smallLight">¿No estas seguro de a qué jugar? Empieza a descubrir juegos en nuestra página de inicio, 
+                    o elige un juego de cualquiera de estas categorias populares:</p>
+                    <ul class="p-desktop-smallLight">
+                        <li>Clasicos</li>
+                        <li>Aventura</li>
+                        <li>Deportes</li>
+                        <li>Accion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="line-card-footer"></div>
+            <p class="p-desktop-smallLight">El uso de este sitio web significa que aceptas los Términos de uso. Next Games ™ y © 2024 Turner 
+            Broadcasting System Europe Limited. Todos los derechos reservados.</p>
+            <p class="p-desktop-smallLight">Copyright © - <span class="span-copyright">Next Games</span>, Inc. Games © <span class="span-copyright">Franiem</span>.</p>
+        </div>
+    </footer>
+    </div>
+  </body>
+  <script src="js/registrer.js"></script>
+</html>
