@@ -184,6 +184,8 @@ class Board extends Figure{
                 }else{
                     contador=0;
                 }
+            }else{
+                contador = 0;
             }
             posRowTope-=1;
             posColumnTope+=1;
@@ -212,6 +214,8 @@ class Board extends Figure{
                     contador=0;
                 }
                 
+            }else{
+                contador=0;
             }
             posRowTope-=1;
             posColumnTope-=1;
