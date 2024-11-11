@@ -15,21 +15,42 @@ body{
     align-items: center;
 }
 
-#tres{
+.seccion1{
+    background-image: url('../src/seccion1/ff.svg');
+    height: 959px;
+}
+
+.seccion2{
+    background-image: url('../src/seccion2/ff\ 1.svg');
+    height: 894px;
+}
+
+.seccion3{
     background-color: white;
     height: 982px;
 }
 
-#cinco{
+.seccion4{
+
+}
+
+#seccion5{
     background-color: white;
     height: 5442px;
 }
 
-#siete{
+.seccion6{
+
+}
+
+.seccion7{
     background-color: white;
     height: 1763px;
 }
 
+.seccion8{
+
+}
 
 
 
