@@ -120,20 +120,27 @@ body{
 /*inicio cards*/
 .card-container{
     position: absolute;
+    left: 100px;
     max-width:1080px;
     display: flex;
     flex-direction: row;
+    justify-content: start;
     top: 1220px;
-    border: 1px solid black;
+    gap: 40px;
+    /*border: 1px solid black;*/
 }
 
 .card-section1,.card-section2,.card-section3{
     display: flex;
+    width: 338px;
     flex-direction:column;
 }
 
-.card-content1,.card-content2,.card-content3{
-    
+.card-content1,.card-contnt2,.card-content3, p{
+    font-size: 20px;
+    font-weight: 500;
+    justify-content: start;
+    width: 100%;   
 }
 
 .card-box{
@@ -145,22 +152,60 @@ body{
 /*seccion 3*/
 
 .seccion3{
-    background-color: white;
-    height: 982px;
+    background-image: url('../src/seccion3/Rectangle\ 26.svg');
+    height: 1157px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.personajesGroup{
+    position: absolute;
+    bottom: 0;
+}
+.searchGame{
+    position:absolute;
+    top: 175px;
+    max-width: 950px;
+    height: 153px;
+}
+.searchGame, h1{
+    text-align: center;
+    width: 100%;
+    line-height: 110%;
+    letter-spacing: 0%;
+    font-size: 61px;
+    color:white;
+}
+.searchGame span{
+    font-style: oblique;
+}
+
+.downloadButton{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 381px;
+    border:4px solid white;
+    background-color: rgb(34, 212, 34);
+    border-radius: 40px;
+    width: 540px;
+    height: 66px;
+    
 }
 
 .seccion4{
-    background-image: url('../src/seccion4/Rectangle\ 26.svg');
-    height: 1157px;
-}
-
-.seccion5{
     background-color: white;
     height: 5421px;/*5442px;*/
 }
 
-.seccion6{
-    background-image: url('../src/seccion6/Rectangle\ 25.svg');
+.seccion5{
+    background-image: url('../src/seccion5/Rectangle\ 25.svg');
     height: 1444px;
 }
 
