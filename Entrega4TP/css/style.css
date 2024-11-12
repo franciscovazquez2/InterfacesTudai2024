@@ -81,17 +81,19 @@ body{
     gap: 10px;
 }
 
-.app-divertida,h1{
+.app-divertida h1{
+    color: #1B428F;
+    text-align: start;
+    width: 508px;
     margin: 0;
     padding: 0;
-    width: 508px;
     height: 132px;
     font-size: 47px;
     font-weight:700;
-    color: #1B428F;
     line-height: 94.5%;
 }
-.app-divertida,p{
+
+.app-divertida p{
     font-size: 20px;
     height: 218px;
     width: 704px;
@@ -165,12 +167,14 @@ body{
     bottom: 0;
 }
 .searchGame{
+    margin: 0;
     position:absolute;
     top: 175px;
     max-width: 950px;
     height: 153px;
 }
-.searchGame, h1{
+.searchGame h1{
+    margin: 0;
     text-align: center;
     width: 100%;
     line-height: 110%;
@@ -211,6 +215,7 @@ body{
 }
 
 .videoDescription{
+    margin: 0;
     position: absolute;
     top:307px;
     left: 100px;
@@ -219,6 +224,7 @@ body{
 }
 
 .videoDescription h1{
+    margin: 0;
     text-align: start;
     font-weight: bold;
     font-size: 60px;
@@ -246,12 +252,80 @@ body{
     object-fit: cover;
     background-position: center bottom 275px;    
 }
-
+/*seccion7*/
 .seccion7{
     background-image: url('../src/seccion7/ff\ 2.svg');
     height: 1296px;
     object-fit: cover;
 }
+
+.novedades{
+    margin: 0;
+    position: absolute;
+    top:-84px;
+    left: 100px;
+    width: 816px;
+    height: 171px;
+}
+
+.novedades h1{
+    margin: 0;
+    color: black;
+    text-align: start;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 94.5%;
+    letter-spacing: 0%;
+    align-self: top;
+}
+
+.input-section{
+    position:absolute;
+    left: 100px;
+    top:123px;
+}
+
+.inscripcion-content{
+    position: absolute;
+    left: 100px;
+    top: 269px;
+}
+.inscripcion-content p{
+    font-size: 20px;
+    height: 218px;
+    width: 704px;
+    font-weight: 300;
+}
+
+.restriction{
+    position:absolute;
+    left: 100px;
+    top: 375px;
+}
+
+
+
+.gif1,.gif2,.gif3{
+    position: absolute;
+}
+
+.gif3{
+    bottom: 42px;
+    left:65px
+}
+.gif2{
+    left: 756px;
+    bottom: -41px;
+}
+.gif2 img{
+    height: 997px;
+    width: 561px;
+}
+.gif1{
+    bottom: 42px;
+    left: 407px;
+}
+
 
 footer{
     width: 1280px;
