@@ -250,7 +250,7 @@ body{
 
 .seccion6{
     background-image: url('../src/seccion6/455\ -\ para cortar.svg');
-    height: 2039px;/*1763px;*/
+    height: 2037px;/*1763px;*/
     background-repeat: no-repeat;
     object-fit: cover;
     background-position: center bottom 275px;    
@@ -285,7 +285,8 @@ body{
 
 
 .titulo3d{
-
+    margin:0;
+    padding: 0;
     position: absolute;    
     width: 746px;
     height: 285px;
@@ -294,6 +295,8 @@ body{
 }
 
 .titulo3d h1{
+    margin: 0;
+    padding: 0;
     font-size: 60px;
     font-family: Lato;
     color: #9D2121;
