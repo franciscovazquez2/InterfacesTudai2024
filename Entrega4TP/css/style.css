@@ -3,27 +3,146 @@ body{
     padding: 0;
     max-width: 1280px;
     height: auto;/*prueba*/
-    border: solid 1px black;
+    font-family: 'Lato',serif;
 }
+
 
 .scroll-section{
     position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
+/*secciones*/
 
 .seccion1{
     background-image: url('../src/seccion1/ff.svg');
     height: 959px;
 }
+/*header en seccion 1*/
+.header-container{
+    position: sticky;
+    top: 0;
+    height: 400px;
+    background-color: transparent;
+    border: solid 1px;
+    display: flex;
+    justify-content: center;
+    z-index: 9999;
+    
+}
+.header-container-scroll{
+    height: 103px;
+    background-image: url('../src/seccion1/header.svg');
+}
 
+.header{
+    width:1080px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.logo-principal-header{
+    /*margin-top: 50px;*/
+    height: 320px;
+    width: 560px;
+    transition: 1s ease;
+}
+
+.logo-principal-header img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo-small{
+    margin-top: 0px;
+    height: 86px;
+    width: 150px;
+    transition: 1s ease;
+}
+/*fin seccion header*/
+
+/*seccion 2*/
 .seccion2{
     background-image: url('../src/seccion2/ff\ 1.svg');
-    height: 894px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 1876px;
 }
+
+.app-divertida{
+    margin:0;
+    padding: 0;
+    position: absolute;
+    top:60px;
+    left: 100px;
+    gap: 10px;
+}
+
+.app-divertida,h1{
+    margin: 0;
+    padding: 0;
+    width: 508px;
+    height: 132px;
+    font-size: 47px;
+    font-weight:700;
+    color: #1B428F;
+    line-height: 94.5%;
+}
+.app-divertida,p{
+    font-size: 20px;
+    height: 218px;
+    width: 704px;
+    font-weight: 300;
+}
+.cuadro{
+    position: absolute;
+    top: 336px;
+    left:136px;
+}
+
+.figura4{
+    position: absolute;
+    top: 537px;
+    left: 48px;
+    z-index: 9999;
+}
+
+.figura5{
+    position: absolute;
+    top: -87px;
+    right: 0px;
+    z-index: 9999;
+}
+
+/*inicio cards*/
+.card-container{
+    position: absolute;
+    max-width:1080px;
+    display: flex;
+    flex-direction: row;
+    top: 1220px;
+    border: 1px solid black;
+}
+
+.card-section1,.card-section2,.card-section3{
+    display: flex;
+    flex-direction:column;
+}
+
+.card-content1,.card-content2,.card-content3{
+    
+}
+
+.card-box{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*seccion 3*/
 
 .seccion3{
     background-color: white;
@@ -31,27 +150,62 @@ body{
 }
 
 .seccion4{
-
+    background-image: url('../src/seccion4/Rectangle\ 26.svg');
+    height: 1157px;
 }
 
-#seccion5{
+.seccion5{
     background-color: white;
-    height: 5442px;
+    height: 5421px;/*5442px;*/
 }
 
 .seccion6{
-
+    background-image: url('../src/seccion6/Rectangle\ 25.svg');
+    height: 1444px;
 }
 
 .seccion7{
-    background-color: white;
-    height: 1763px;
+    background-image: url('../src/seccion7/455\ -\ para cortar.svg');
+    height: 2039px;/*1763px;*/
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center bottom 275px;    
 }
 
 .seccion8{
-
+    background-image: url('../src/seccion8/ff\ 2.svg');
+    height: 1296px;
+    object-fit: cover;
 }
 
+footer{
+    width: 1280px;
+    height: 595px;
+    background-color: #242424;
+    display: flex;
+    flex-direction: column;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+.footer-play-consoles{
+    max-width: 1080px;
+}
+
+.footer-about-container{
+    background-color: #5E5E5D;
+    height: 515px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-about-content{
+    width: 1080px;
+    font-size: 20px;
+}
 
 
 
