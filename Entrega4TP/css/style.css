@@ -199,10 +199,67 @@ body{
     
 }
 
+/*______________________SECCION 4______________________*/
 .seccion4{
     background-color: white;
     height: 5421px;/*5442px;*/
+    display: flex;
+    flex-direction: column;
 }
+
+.parte-titulo{
+    height: 235px;
+}
+
+.title-secCuatro{
+    position: relative;
+    left: 100px;
+    top: 60px;
+    font-size: 60px;
+}
+
+.articles-secCuatro{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 80px;
+}
+
+.personajes-secCuatro{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 613px;
+    left: 230px;
+}
+
+.pj{
+    height: 435px;
+    width: 290px;
+}
+
+.ocultar-pj{
+    visibility: hidden;
+    height: 435px;
+    width: 290px;
+}
+
+.parte-articulos{
+    display: flex;
+}
+
+.art-secCuatro{
+    position: relative;
+    width: 467PX;
+    left: 100px;
+}
+
+.title-artCuatro{
+    font-size: 40px;
+}
+/*______________________FIN SECCION 4______________________*/
 
 .seccion5{
     background-image: url('../src/seccion5/Rectangle\ 25.svg');
