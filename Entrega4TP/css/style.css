@@ -1,6 +1,13 @@
 body{
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.margins{
+    margin: 0;
+    padding: 0;
     max-width: 1280px;
     height: auto;/*prueba*/
     font-family: 'Lato',serif;
@@ -20,11 +27,11 @@ body{
 }
 /*header en seccion 1*/
 .header-container{
-    position: sticky;
+    width: 1280px;
+    position: fixed;
     top: 0;
     height: 400px;
     background-color: transparent;
-    border: solid 1px;
     display: flex;
     justify-content: center;
     z-index: 9999;
@@ -317,7 +324,7 @@ body{
 
 .seccion6{
     background-image: url('../src/seccion6/455\ -\ para cortar.svg');
-    height: 2039px;/*1763px;*/
+    height: 2037px;/*1763px;*/
     background-repeat: no-repeat;
     object-fit: cover;
     background-position: center bottom 275px;    
@@ -352,7 +359,8 @@ body{
 
 
 .titulo3d{
-
+    margin:0;
+    padding: 0;
     position: absolute;    
     width: 746px;
     height: 285px;
@@ -361,6 +369,8 @@ body{
 }
 
 .titulo3d h1{
+    margin: 0;
+    padding: 0;
     font-size: 60px;
     font-family: Lato;
     color: #9D2121;
