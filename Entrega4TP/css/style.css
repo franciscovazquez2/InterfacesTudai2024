@@ -212,9 +212,10 @@ body{
 }
 
 .title-secCuatro{
+    margin: 0;
     position: relative;
     left: 100px;
-    top: 60px;
+    top: 125px;
     font-size: 60px;
 }
 
@@ -256,8 +257,13 @@ body{
     left: 100px;
 }
 
-.title-artCuatro{
+.title-artCuatro{margin: 0;
     font-size: 40px;
+}
+
+.p-secCuatro{
+    margin: 0;
+    font-size: 20px;
 }
 /*______________________FIN SECCION 4______________________*/
 
