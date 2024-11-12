@@ -81,17 +81,19 @@ body{
     gap: 10px;
 }
 
-.app-divertida,h1{
+.app-divertida h1{
+    color: #1B428F;
+    text-align: start;
+    width: 508px;
     margin: 0;
     padding: 0;
-    width: 508px;
     height: 132px;
     font-size: 47px;
     font-weight:700;
-    color: #1B428F;
     line-height: 94.5%;
 }
-.app-divertida,p{
+
+.app-divertida p{
     font-size: 20px;
     height: 218px;
     width: 704px;
@@ -165,12 +167,14 @@ body{
     bottom: 0;
 }
 .searchGame{
+    margin: 0;
     position:absolute;
     top: 175px;
     max-width: 950px;
     height: 153px;
 }
-.searchGame, h1{
+.searchGame h1{
+    margin: 0;
     text-align: center;
     width: 100%;
     line-height: 110%;
@@ -267,24 +271,172 @@ body{
 }
 /*______________________FIN SECCION 4______________________*/
 
+/*seccion 5*/
 .seccion5{
     background-image: url('../src/seccion5/Rectangle\ 25.svg');
     height: 1444px;
 }
 
-.seccion7{
-    background-image: url('../src/seccion7/455\ -\ para cortar.svg');
+.videoDescription{
+    margin: 0;
+    position: absolute;
+    top:307px;
+    left: 100px;
+    width: 802px;
+    height: 171px;
+}
+
+.videoDescription h1{
+    margin: 0;
+    text-align: start;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 94.5%;
+    letter-spacing: 0%;
+    align-self: top;
+}
+
+.video{
+    position:absolute;
+    top:526px;
+    left: 100px;
+}
+
+.personaje3video{
+    position:absolute;
+    top:352px;
+    left:720px;
+}
+
+
+/* SECCION 6 */
+
+.seccion6{
+    background-image: url('../src/seccion6/455\ -\ para cortar.svg');
     height: 2039px;/*1763px;*/
     background-repeat: no-repeat;
     object-fit: cover;
     background-position: center bottom 275px;    
 }
 
-.seccion8{
-    background-image: url('../src/seccion8/ff\ 2.svg');
+
+.imagen3d{
+    position: absolute;
+    width: 667px;
+    height: 973px;
+    right: 14px;
+    top: 7px
+}
+
+#reveal{
+    width: 100%;
+    height: 100%;
+
+}
+
+.descripcion3d{    
+    width: 467px;
+    height: 190px;
+}
+
+.descripcion3d p{
+    width: inherit;
+    position: absolute;
+    left: 100px;
+    top: 548px;
+}
+
+
+.titulo3d{
+
+    position: absolute;    
+    width: 746px;
+    height: 285px;
+    left: 102px;
+    top: 220px;
+}
+
+.titulo3d h1{
+    font-size: 60px;
+    font-family: Lato;
+    color: #9D2121;
+    text-align: left;
+}
+
+
+.seccion7{
+    background-image: url('../src/seccion7/ff\ 2.svg');
     height: 1296px;
     object-fit: cover;
 }
+
+.novedades{
+    margin: 0;
+    position: absolute;
+    top:-84px;
+    left: 100px;
+    width: 816px;
+    height: 171px;
+}
+
+.novedades h1{
+    margin: 0;
+    color: black;
+    text-align: start;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 94.5%;
+    letter-spacing: 0%;
+    align-self: top;
+}
+
+.input-section{
+    position:absolute;
+    left: 100px;
+    top:123px;
+}
+
+.inscripcion-content{
+    position: absolute;
+    left: 100px;
+    top: 269px;
+}
+.inscripcion-content p{
+    font-size: 20px;
+    height: 218px;
+    width: 704px;
+    font-weight: 300;
+}
+
+.restriction{
+    position:absolute;
+    left: 100px;
+    top: 375px;
+}
+
+
+
+.gif1,.gif2,.gif3{
+    position: absolute;
+}
+
+.gif3{
+    bottom: 42px;
+    left:65px
+}
+.gif2{
+    left: 756px;
+    bottom: -41px;
+}
+.gif2 img{
+    height: 997px;
+    width: 561px;
+}
+.gif1{
+    bottom: 42px;
+    left: 407px;
+}
+
 
 footer{
     width: 1280px;
