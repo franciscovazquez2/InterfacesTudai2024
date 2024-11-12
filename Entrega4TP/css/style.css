@@ -239,16 +239,16 @@ body{
     left:720px;
 }
 
-.seccion7{
-    background-image: url('../src/seccion7/455\ -\ para cortar.svg');
+.seccion6{
+    background-image: url('../src/seccion6/455\ -\ para cortar.svg');
     height: 2039px;/*1763px;*/
     background-repeat: no-repeat;
     object-fit: cover;
     background-position: center bottom 275px;    
 }
 
-.seccion8{
-    background-image: url('../src/seccion8/ff\ 2.svg');
+.seccion7{
+    background-image: url('../src/seccion7/ff\ 2.svg');
     height: 1296px;
     object-fit: cover;
 }
