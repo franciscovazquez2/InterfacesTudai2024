@@ -222,6 +222,12 @@ body{
     height: 235px;
 }
 
+.parte-articulos{
+    height: 5186px; /*totalseccion4 = 5421 / parteTitulo = 235 / parteArticulos = 5186*/
+    position: relative;
+    display: flex;
+}
+
 .title-secCuatro{
     margin: 0;
     position: relative;
@@ -231,11 +237,11 @@ body{
 }
 
 .articles-secCuatro{
+    margin: 0;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    top: 80px;
+    justify-content: space-around;
 }
 
 .personajes-secCuatro{
@@ -248,28 +254,49 @@ body{
 }
 
 .pj{
-    position: sticky;
-    top: 75px;
-    height: 435px;
+    position: fixed;
+    top: 140px;
+    height: 445px;
     width: 290px;
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.8s ease, opacity 0.5s ease;
+}
+
+.pj-sticky-cero{
+    position: sticky;
+    top: 140px;
+    height: 445px;
+    width: 290px;
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.8s ease, opacity 0.5s ease;
+}
+
+.pj-sticky-diez{
+    position: sticky;
+    bottom: 140px;
+    height: 445px;
+    width: 290px;
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.8s ease, opacity 0.5s ease;
 }
 
 .ocultar-pj{
-    visibility: hidden;
     height: 435px;
     width: 290px;
-}
-
-.parte-articulos{
-    position: relative;
-    display: flex;
+    transform: scale(0.1);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    visibility: hidden;
 }
 
 .art-secCuatro{
     position: relative;
-    top: 40px;
+    /*top: 40px;
+    left: 100px;*/
     width: 467PX;
-    left: 100px;
 }
 
 .title-artCuatro{margin: 0;
