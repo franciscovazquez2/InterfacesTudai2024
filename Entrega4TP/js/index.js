@@ -61,9 +61,16 @@ window.addEventListener("scroll",()=>{
     
         if(e.id === "dos"){
             let cardsSecDos = document.querySelectorAll(".card-section2");
+            let figurasSecDos = document.querySelectorAll(".figSecDos");
+
+            figurasSecDos.forEach((fig)=>{
+                let top = scrollY;
+                let speed = fig.getAttribute("data-speed");
+                let posY = -(top*speed/100);
+                fig.setAttribute('style','transform:translate3d(0px,'+posY+'px,0px)');
+            })
             
             if(calcularScrollProgress(e)>=0.5 && calcularScrollProgress(e)<=0.8){
-                console.log("entre al if sec dos");
                 setTimeout(()=>{
                     console.log(cardsSecDos[0]);
                     cardsSecDos[0].style.top='0px';

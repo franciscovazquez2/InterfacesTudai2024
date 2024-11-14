@@ -247,6 +247,7 @@ body{
 }
 
 .app-divertida p{
+    color: #1B428F;
     font-size: 20px;
     height: 218px;
     width: 704px;
@@ -284,6 +285,11 @@ body{
     opacity: 1;
 }
 
+.movFiguras-secDos{
+    position: relative;
+    top: 0;
+}
+
 .figura4{
     position: absolute;
     top: 537px;
@@ -293,7 +299,7 @@ body{
 
 .figura5{
     position: absolute;
-    top: -87px;
+    top: 0px;
     right: 0px;
     z-index: 5;
 }
