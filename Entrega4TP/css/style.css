@@ -13,7 +13,6 @@ body{
     font-family: 'Lato',serif;
 }
 
-
 .scroll-section{
     position: relative;
     width: 100%;
@@ -21,6 +20,12 @@ body{
 }
 /*secciones*/
 
+.seccion1{
+    overflow: hidden;
+    background-image: url('../src/seccion1/ff.svg');
+    height: 959px;
+}
+/*header en seccion 1*/
 .seccion1{
     background-image: url('../src/seccion1/ff.svg');
     height: 959px;
@@ -37,6 +42,7 @@ body{
     z-index: 9999;
     
 }
+
 .header-container-scroll{
     height: 103px;
     background-image: url('../src/seccion1/header.svg');
@@ -44,33 +50,173 @@ body{
 
 .header{
     width:1080px;
+    height: auto;
     display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: space-between;
 }
 
-.logo-principal-header{
-    /*margin-top: 50px;*/
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 400px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    z-index: 9999;
+}
+
+#logo-principal-header{
     height: 320px;
     width: 560px;
     transition: 1s ease;
 }
 
-.logo-principal-header img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.logo-small{
-    margin-top: 0px;
-    height: 86px;
-    width: 150px;
-    transition: 1s ease;
-}
 /*fin seccion header*/
+/*paralax seccion 1*/
+.keyart{
+    position: relative;
+}
 
+.keyart_layer{
+    position:absolute;
+}
+
+#keyart-0{
+    background-image: url('../src/seccion1/arbol\ 1.svg');
+    background-repeat: no-repeat;
+    width: 560px;
+    height: 867px;
+    left:-152px;
+    top:0px;
+    z-index: 29;
+}
+#keyart-1{
+    background-image: url('../src/seccion1/arbol\ 2.svg');
+    background-repeat: no-repeat;
+    width: 434px;
+    height: 672px;
+    left: 880px;
+    top: 107px;
+    z-index: 15;
+}
+
+#keyart-2{
+    background-image: url('../src/seccion1/arbol\ 3.svg');
+    background-repeat: no-repeat;
+    width: 278px;
+    height: 430px;
+    left: 1079px;
+    top: 278px; 
+    z-index: 5;   
+}
+#keyart-3{
+    background-image: url('../src/seccion1/nube\ verde\ 1.svg');
+    background-repeat: no-repeat;
+    height: 107px;
+    width: 244px;
+    left: 1079px;
+    top: 662px;
+    z-index: 10;
+}
+#keyart-5{
+    background-image: url('../src/seccion1/nube\ verde\ 2.svg');
+    background-repeat: no-repeat;
+    height: 63px;
+    width: 191px;
+    left: 1027px;
+    top: 630px;
+    z-index: 4;
+
+}
+#keyart-6{
+    background-image: url('../src/seccion1/nube\ verde\ 3.svg');
+    background-repeat: no-repeat;
+    height: 102px;
+    width: 156px;
+    left: 197px;
+    top: 840px;
+    z-index: 30;
+
+}
+#keyart-7{
+    background-image: url('../src/seccion1/nube\ verde\ 4.svg');
+    background-repeat: no-repeat;
+    height: 114px;
+    width: 295px;
+    left: 161px;
+    top: 718px;
+    z-index: 28;
+}
+#keyart-8{
+    background-image: url('../src/seccion1/piedra\ 1.svg');
+    background-repeat: no-repeat;
+    height: 74px;
+    width: 114px;
+    left: 1069px;
+    top: 737px;
+    z-index: 35;
+}
+#keyart-9{
+    background-image: url('../src/seccion1/piedra\ 2.svg');
+    background-repeat: no-repeat;
+    height: 78px;
+    width: 145px;
+    left: 129px;
+    top: 793px;
+    z-index: 29;
+}
+#keyart-10{
+    background-image: url('../src/seccion1/piedra\ 3.svg');
+    background-repeat: no-repeat;
+    height: 56px;
+    width: 66px;
+    left: 1035px;
+    top: 737px;
+    z-index: 30;
+}
+#keyart-11{
+    background-image: url('../src/seccion1/piedra\ 4.svg');
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 59px;
+    left: 1043px;
+    top: 787px;
+    z-index: 40;
+}
+#keyart-12{
+    background-image: url('../src/seccion1/cuadrado\ 1.svg');
+    background-repeat: no-repeat;
+    height: 314px;
+    width: 240px;
+    left: 411px;
+    top: 500px;
+    z-index: 20;
+}
+#keyart-13{
+    background-image: url('../src/seccion1/cuadrado\ 2.svg');
+    background-repeat: no-repeat;
+    height: 270px;
+    width: 210px;
+    left: 536px;
+    top: 403px;
+    z-index: 12;
+}
+#keyart-14{
+    background-image: url('../src/seccion1/cuadrado\ 3.svg');
+    background-repeat: no-repeat;
+    height: 384px;
+    width: 200px;
+    left: 694px;
+    top: 338px;
+    z-index: 1;
+}
 /*seccion 2*/
 .seccion2{
     background-image: url('../src/seccion2/ff\ 1.svg');
@@ -116,14 +262,14 @@ body{
     position: absolute;
     top: 537px;
     left: 48px;
-    z-index: 9999;
+    z-index: 2;
 }
 
 .figura5{
     position: absolute;
     top: -87px;
     right: 0px;
-    z-index: 9999;
+    z-index: 2;
 }
 
 /*inicio cards*/
@@ -163,20 +309,26 @@ body{
 .seccion3{
     background-image: url('../src/seccion3/Rectangle\ 26.svg');
     height: 1157px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    overflow: hidden;
 }
 
-.personajesGroup{
+#parallax1{
     position: absolute;
-    bottom: 0;
+    background-image: url('../src/seccion3/persnajesJuntos.svg');
+    width: 120%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 20;
+    top:200px;
+    left:-130px;
 }
+
 .searchGame{
     margin: 0;
     position:absolute;
     top: 175px;
+    left:150px;
     max-width: 950px;
     height: 153px;
 }
@@ -202,6 +354,7 @@ body{
     font-size: 24px;
     position: absolute;
     top: 381px;
+    left: 350px;
     border:4px solid white;
     background-color: rgb(34, 212, 34);
     border-radius: 40px;
@@ -216,10 +369,17 @@ body{
     height: 5421px;/*5442px;*/
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .parte-titulo{
     height: 235px;
+}
+
+.parte-articulos{
+    height: 5186px; /*totalseccion4 = 5421 / parteTitulo = 235 / parteArticulos = 5186*/
+    position: relative;
+    display: flex;
 }
 
 .title-secCuatro{
@@ -231,11 +391,11 @@ body{
 }
 
 .articles-secCuatro{
+    margin: 0;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    top: 80px;
+    justify-content: space-around;
 }
 
 .personajes-secCuatro{
@@ -248,24 +408,49 @@ body{
 }
 
 .pj{
-    height: 435px;
+    position: fixed;
+    top: 140px;
+    height: 445px;
     width: 290px;
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.8s ease, opacity 0.5s ease;
+}
+
+.pj-sticky-cero{
+    position: sticky;
+    top: 140px;
+    height: 445px;
+    width: 290px;
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.8s ease, opacity 0.5s ease;
+}
+
+.pj-sticky-diez{
+    position: sticky;
+    bottom: 140px;
+    height: 445px;
+    width: 290px;
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.8s ease, opacity 0.5s ease;
 }
 
 .ocultar-pj{
-    visibility: hidden;
     height: 435px;
     width: 290px;
-}
-
-.parte-articulos{
-    display: flex;
+    transform: scale(0.1);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    visibility: hidden;
 }
 
 .art-secCuatro{
     position: relative;
+    /*top: 40px;
+    left: 100px;*/
     width: 467PX;
-    left: 100px;
 }
 
 .title-artCuatro{margin: 0;
@@ -282,6 +467,7 @@ body{
 .seccion5{
     background-image: url('../src/seccion5/Rectangle\ 25.svg');
     height: 1444px;
+    overflow: hidden;
 }
 
 .videoDescription{
@@ -474,6 +660,7 @@ body{
     background-image: url('../src/seccion7/ff\ 2.svg');
     height: 1296px;
     object-fit: cover;
+    overflow: hidden;
 }
 
 .novedades{
