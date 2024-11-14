@@ -21,14 +21,30 @@ function calcularScrollProgress(element){
     return Math.max(0,Math.min(1,progress));
 }
 
-let artsSecCuatro = document.querySelectorAll(".art-secCuatro");
+let artsSecCuatro = document.querySelectorAll(".art-secCuatro"); //articulos seccion 4
+
+
+// MENU HAMBURGUESA //
+
+const line1__bars = document.querySelector(".line1__bars-menu");
+const line2__bars = document.querySelector(".line2__bars-menu");
+const line3__bars = document.querySelector(".line3__bars-menu");
+
+document.querySelector(".bars__menu").addEventListener("click", animateBars);
+
+function animateBars(){
+    line1__bars.classList.toggle("activeline1__bars-menu");
+    line2__bars.classList.toggle("activeline2__bars-menu");
+    line3__bars.classList.toggle("activeline3__bars-menu");
+}
+
 
 //evento scroll
 window.addEventListener("scroll",()=>{
     
     sections.forEach((e)=>{
         let idSection = e.id;
-               
+            
         if(idSection==="uno"){
             let viewDisplay = calcularScrollProgress(e);
             if(window.scrollY>5 && viewDisplay<0.5){
@@ -54,6 +70,49 @@ window.addEventListener("scroll",()=>{
             
         
         }
+
+
+        /*_______________SECCION 2_______________*/
+
+    
+        if(e.id === "dos"){
+            let cardsSecDos = document.querySelectorAll(".card-section2");
+            let figurasSecDos = document.querySelectorAll(".figSecDos");
+
+            figurasSecDos.forEach((fig)=>{
+                let top = scrollY;
+                let speed = fig.getAttribute("data-speed");
+                let posY = -(top*speed/100);
+                fig.setAttribute('style','transform:translate3d(0px,'+posY+'px,0px)');
+            })
+            
+            if(calcularScrollProgress(e)>=0.5 && calcularScrollProgress(e)<=0.8){
+                setTimeout(()=>{
+                    console.log(cardsSecDos[0]);
+                    cardsSecDos[0].style.top='0px';
+                    cardsSecDos[0].style.opacity='1';
+                },300);
+    
+                setTimeout(()=>{
+                    cardsSecDos[1].style.top='0px';
+                    cardsSecDos[1].style.opacity='1';
+                },600);
+    
+                setTimeout(()=>{
+                    cardsSecDos[2].style.top='0px';
+                    cardsSecDos[2].style.opacity='1';
+                },900);
+            }
+        }
+    
+            /*_______________FIN SECCION 2_______________*/
+
+        /*
+        if(calcularScrollProgress(e)>0 && calcularScrollProgress(e)<1){
+            console.log("estoy en seccion:" + idSection)
+            if
+        }*/
+
     
     });
 
@@ -116,6 +175,34 @@ window.addEventListener("scroll",()=>{
         /*_______________FIN SECCION 4_______________*/
 
 });
+
+        /*________________________PERTENECE A SECCION 2________________________ */
+        const images = [
+            "src/seccion2/cuadro0.svg",
+            "src/seccion2/cuadro1.svg",
+            "src/seccion2/cuadro2.svg",
+            "src/seccion2/cuadro3.svg" 
+        ];
+
+        images.forEach(src =>{
+            const img = new Image();
+            img.src = src;
+        })
+
+        const cuadroImg = document.querySelector(".cuadro img");
+        let currentIndex = 0;
+
+        setInterval(() => {
+            cuadroImg.classList.remove('visible');
+
+            setTimeout(()=>{
+                currentIndex = (currentIndex + 1) % images.length;
+                cuadroImg.src = images[currentIndex];
+                cuadroImg.classList.add('visible');
+            },500)
+        }, 3000);
+        
+        /*________________________FIN PERTENECE A SECCION 2________________________ */
 
 //funcion seccion 4
 function cambiarPersonaje(ocultar, mostrar){

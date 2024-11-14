@@ -12,9 +12,15 @@
     <section id="uno" class="scroll-section seccion1">
         <div class="header-container">
             <div class="header">
-                    <div class="hamburger">hamburgesa</div>
+                    <div class="hamburger">
+                        <div class="bars__menu">
+                            <span class="line1__bars-menu"></span>
+                            <span class="line2__bars-menu"></span>
+                            <span class="line3__bars-menu"></span>
+                        </div>
+                    </div>
                     <div class="logo"><img id="logo-principal-header" src="src/seccion1/logo 1.svg" alt="logo"></div>
-                    <div class="btn-comprar">comprar</div>
+                    <div class="btn-comprar"><h4>COMPRAR</h4></div>
             </div>
         </div>
             <div class="keyart" id="parallax">
@@ -40,17 +46,21 @@
         <div class="app-divertida">
             <h1>La app más divertida y educativa y para niños de 3 años</h1>
             <p>Numberblocks World es una divertida aplicación de vídeo a la carta y juegos por suscripción dirigida a niños a partir de 3 años, con un grupo de edad principal de<br>
-                 4 a 6 años, creada por el equipo de Alphablocks Ltd. y Blue Zoo Animations Studio, ganador de un premio BAFTA.</p>
+                4 a 6 años, creada por el equipo de Alphablocks Ltd. y Blue Zoo Animations Studio, ganador de un premio BAFTA.</p>
         </div>
-        <div class="cuadro"><img src="src/seccion2/cuadro.svg" alt=""></div>
-        <div class="figura4"><img src="src/seccion2/cuadrado 4.svg" alt=""></div>
-        <div class="figura5"><img src="src/seccion2/cuadrado 5.svg" alt=""></div>
+        <div class="borde-cuadro">
+            <div class="cuadro"><img src="src/seccion2/cuadro0.svg" alt=""></div>
+        </div>
+        <div class="movFiguras-secDos">
+            <div class="figura4 figSecDos" data-speed="25"><img src="src/seccion2/cuadrado 4.svg" alt=""></div>
+            <div class="figura5 figSecDos" data-speed="40"><img src="src/seccion2/cuadrado 5.svg" alt=""></div>
+        </div>
         <div class="card-container">
-            <div class="card-section1">
+            <div class="card-section2">
                 <div class="card-box">
                     <img src="src/seccion2/card 1.svg" alt="">
                 </div>
-                <div class="card-content1">
+                <div class="card2-content1">
                     <p>Los niños descubrirán lo divertido que puede ser aprender matemáticas. A través de personajes animados y desafíos interactivos, podrán sumar, restar y entender conceptos básicos de manera fácil y entretenida. ¡Cada número cobra vida para hacer que las matemáticas sean emocionantes!</p>
                 </div>
             </div>
@@ -62,7 +72,7 @@
                     <p>Con NumberBlocks, los niños encontrarán emocionantes retos en cada nivel, diseñados para hacer que el aprendizaje sea tan divertido como un juego. ¡Cada desafío es una nueva aventura matemática!Diviértete e invita a tus amigos, desafíalos y gana premios.</p>
                 </div>
             </div>
-            <div class="card-section3">
+            <div class="card-section2">
                 <div class="card-box">
                     <img src="src/seccion2/card 3.svg" alt="">
                 </div>
@@ -148,7 +158,8 @@
 
     <section id="cinco" class="scroll-section seccion5">
         <div class="videoDescription"><h1>Mira el video y descubre el sorprendente mundo de los NumberBlocks!</h1></div>
-        <div class="video"><img src="src/seccion5/Group 22.svg" alt=""></div>
+        <div class="video"><img src="src/seccion5/Group 22.svg" alt="">
+        </div>
         <div class="personaje3video"><img src="src/seccion5/videopersnaje3.svg" alt=""></div>
     </section>
 
@@ -162,10 +173,19 @@
             tone-mapping="aces" src="../Entrega4TP/src/seccion6/one.glb"
             shadow-intensity="1" alt="A 3D model of a shishkebab"></model-viewer>
         </div>
-
-        
-    </section>
-
+        <div class="conteiner-cubo-sec6">
+            <div class="sec6-cubo-red"><img src="src/seccion6/Recortes-personajes/uno.png" alt=""></div>
+            <div class="sec6-cubo-orange"><img src="src/seccion6/Recortes-personajes/dos.png" alt=""></div>
+            <div class="sec6-cubo-yellow"><img src="src/seccion6/Recortes-personajes/tres.png" alt=""></div>
+            <div class="sec6-cubo-green"><img src="src/seccion6/Recortes-personajes/cuatro.png" alt=""></div>
+            <div class="sec6-cubo-ligthBlue"><img src="src/seccion6/Recortes-personajes/cinco.png" alt=""></div>
+            <div class="sec6-cubo-blue"><img src="src/seccion6/Recortes-personajes/seis.png" alt=""></div>
+            <div class="sec6-cubo-fullColor"><img src="src/seccion6/Recortes-personajes/siete.png" alt=""></div>
+            <div class="sec6-cubo-purple"><img src="src/seccion6/Recortes-personajes/ocho.png" alt=""></div>
+            <div class="sec6-cubo-grey"><img src="src/seccion6/Recortes-personajes/nueve.png" alt=""></div>
+            <div class="sec6-cubo-white"><img src="src/seccion6/Recortes-personajes/diez.png" alt=""></div>
+        </div>
+    </section>    
     <section id="siete" class="scroll-section seccion7">
         <div id="bird"></div>
         <div class="novedades"><h1>¿Quieres ser el primero en enterarse de todas las novedades?</h1></div>
@@ -178,6 +198,8 @@
         <div class="gif1"><img src="src/seccion7/gif1.webp" alt=""></div>
         <div class="inscripcion-content"><p>Al inscribirse en nuestra lista de correo, nos autoriza a ponernos en contacto con usted para enviarle ofertas y actualizaciones de marketing por correo electrónico, y también acepta nuestra Política de privacidad y las Condiciones del servicio.</p></div>
         <div class="restriction"><img src="src/seccion7/image 224.svg" alt=""></div>
+
+
     </section>
     
     <footer>
