@@ -606,39 +606,39 @@ body{
 }
 .sec6-cubo-ligthBlue{
     bottom: 354px;
-    right: -21px;
+    right: 0px;
     height: 375px;
-    width: 235px;
+    width: 215px;
 }
 .sec6-cubo-blue{
-    bottom: -51px;
+    bottom: 0px;
     left: 16px;
-    height: 375px;
+    height: 325px;
     width: 235px;
 }
 .sec6-cubo-fullColor{
-    bottom: -51px;
-    left: 300px;
-    height: 375px;
-    width: 235px;
+    bottom: 0px;
+    left: 280px;
+    height: 326px;
+    width: 236px;
 }
 .sec6-cubo-purple{
-    bottom: -54px;
-    left: 545px;
-    height: 375px;
-    width: 235px;
+    bottom: 0px;
+    left: 543px;
+    height: 325px;
+    width: 239px;
 }
 .sec6-cubo-grey{
-    right: 232px;
-    bottom: -51px;
-    height: 375px;
-    width: 235px;
+    right: 240px;
+    bottom: 0px;
+    height: 326px;
+    width: 228px;
 }
 .sec6-cubo-white{
-    right: -20px;
-    bottom: -51px;
-    height: 375px;
-    width: 235px;
+    right: 4px;
+    bottom: 0px;
+    height: 326px;
+    width: 221px;
 }
 
 
