@@ -28,10 +28,9 @@ window.addEventListener("scroll",()=>{
                
         if(idSection==="uno"){
             let viewDisplay = calcularScrollProgress(e);
-            console.log(viewDisplay);
             if(window.scrollY>5 && viewDisplay<0.5){
                 let scaleValue = 0.9-(viewDisplay);
-                logo.style.transform=`translateY(-35px) scale(${scaleValue})`;
+                logo.style.transform=`translateY(-150px) scale(${scaleValue})`;
                 header.classList.add('header-container-scroll');
                 
             }if(window.scrollY<=5){
