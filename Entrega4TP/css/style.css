@@ -21,6 +21,7 @@ body{
 /*secciones*/
 
 .seccion1{
+    overflow: hidden;
     background-image: url('../src/seccion1/ff.svg');
     height: 959px;
 }
@@ -32,6 +33,8 @@ body{
     height: 400px;
     background-color: transparent;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     z-index: 9999;
     
@@ -69,11 +72,147 @@ body{
 #logo-principal-header{
     height: 320px;
     width: 560px;
-    transition: 1s ease;
+    transition: 2s ease;
+}
+/*fin seccion header*/
+/*paralax seccion 1*/
+.keyart{
+    position: relative;
 }
 
-/*fin seccion header*/
+.keyart_layer{
+    position:absolute;
+}
 
+#keyart-0{
+    background-image: url('../src/seccion1/arbol\ 1.svg');
+    background-repeat: no-repeat;
+    width: 560px;
+    height: 867px;
+    left:-152px;
+    top:0px;
+    z-index: 29;
+}
+#keyart-1{
+    background-image: url('../src/seccion1/arbol\ 2.svg');
+    background-repeat: no-repeat;
+    width: 434px;
+    height: 672px;
+    left: 880px;
+    top: 107px;
+    z-index: 15;
+}
+
+#keyart-2{
+    background-image: url('../src/seccion1/arbol\ 3.svg');
+    background-repeat: no-repeat;
+    width: 278px;
+    height: 430px;
+    left: 1079px;
+    top: 278px; 
+    z-index: 5;   
+}
+#keyart-3{
+    background-image: url('../src/seccion1/nube\ verde\ 1.svg');
+    background-repeat: no-repeat;
+    height: 107px;
+    width: 244px;
+    left: 1079px;
+    top: 662px;
+    z-index: 10;
+}
+#keyart-5{
+    background-image: url('../src/seccion1/nube\ verde\ 2.svg');
+    background-repeat: no-repeat;
+    height: 63px;
+    width: 191px;
+    left: 1027px;
+    top: 630px;
+    z-index: 4;
+
+}
+#keyart-6{
+    background-image: url('../src/seccion1/nube\ verde\ 3.svg');
+    background-repeat: no-repeat;
+    height: 102px;
+    width: 156px;
+    left: 197px;
+    top: 840px;
+    z-index: 30;
+
+}
+#keyart-7{
+    background-image: url('../src/seccion1/nube\ verde\ 4.svg');
+    background-repeat: no-repeat;
+    height: 114px;
+    width: 295px;
+    left: 161px;
+    top: 718px;
+    z-index: 28;
+}
+#keyart-8{
+    background-image: url('../src/seccion1/piedra\ 1.svg');
+    background-repeat: no-repeat;
+    height: 74px;
+    width: 114px;
+    left: 1069px;
+    top: 737px;
+    z-index: 35;
+}
+#keyart-9{
+    background-image: url('../src/seccion1/piedra\ 2.svg');
+    background-repeat: no-repeat;
+    height: 78px;
+    width: 145px;
+    left: 129px;
+    top: 793px;
+    z-index: 29;
+}
+#keyart-10{
+    background-image: url('../src/seccion1/piedra\ 3.svg');
+    background-repeat: no-repeat;
+    height: 56px;
+    width: 66px;
+    left: 1035px;
+    top: 737px;
+    z-index: 30;
+}
+#keyart-11{
+    background-image: url('../src/seccion1/piedra\ 4.svg');
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 59px;
+    left: 1043px;
+    top: 787px;
+    z-index: 40;
+}
+#keyart-12{
+    background-image: url('../src/seccion1/cuadrado\ 1.svg');
+    background-repeat: no-repeat;
+    height: 314px;
+    width: 240px;
+    left: 411px;
+    top: 500px;
+    z-index: 20;
+}
+#keyart-13{
+    background-image: url('../src/seccion1/cuadrado\ 2.svg');
+    background-repeat: no-repeat;
+    height: 270px;
+    width: 210px;
+    left: 536px;
+    top: 403px;
+    z-index: 12;
+}
+#keyart-14{
+    background-image: url('../src/seccion1/cuadrado\ 3.svg');
+    background-repeat: no-repeat;
+    height: 384px;
+    width: 200px;
+    left: 694px;
+    top: 338px;
+    z-index: 1;
+}
 /*seccion 2*/
 .seccion2{
     background-image: url('../src/seccion2/ff\ 1.svg');
@@ -119,14 +258,14 @@ body{
     position: absolute;
     top: 537px;
     left: 48px;
-    z-index: 9999;
+    z-index: 2;
 }
 
 .figura5{
     position: absolute;
     top: -87px;
     right: 0px;
-    z-index: 9999;
+    z-index: 2;
 }
 
 /*inicio cards*/
