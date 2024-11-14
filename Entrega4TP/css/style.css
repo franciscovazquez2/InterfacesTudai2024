@@ -316,14 +316,10 @@ body{
 }
 
 
-/* SECCION 6 */
+/* ------------------ SECCION 6 -------------------- */
 
 .seccion6{
-    background-image: url('../src/seccion6/455\ -\ para cortar.svg');
-    height: 2037px;/*1763px;*/
-    background-repeat: no-repeat;
-    object-fit: cover;
-    background-position: center bottom 275px;    
+    height: 2037px;/*1763px;*/    
 }
 
 
@@ -347,10 +343,11 @@ body{
 }
 
 .descripcion3d p{
+    font-size: 20px;
     width: inherit;
     position: absolute;
     left: 100px;
-    top: 548px;
+    top: 591px;
 }
 
 
@@ -373,6 +370,105 @@ body{
     text-align: left;
 }
 
+.sec6-cubo-red,
+.sec6-cubo-orange,
+.sec6-cubo-yellow,
+.sec6-cubo-green,
+.sec6-cubo-ligthBlue, 
+.sec6-cubo-blue, 
+.sec6-cubo-fullColor, 
+.sec6-cubo-purple, 
+.sec6-cubo-grey, 
+.sec6-cubo-white{
+    object-fit: cover;
+    position: absolute;
+    z-index: 9999;
+    filter: drop-shadow(4px 4px 25px #FFFFFF);
+}
+
+.conteiner-cubo-sec6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sec6-cubo-red{
+    bottom: 354px;
+    left: 0px;
+    height: 375px;
+    width: 251px;
+}
+
+.sec6-cubo-orange{
+    bottom: 354px;
+    left: 279px;
+    height: 375px;
+    width: 235px;
+}
+
+.sec6-cubo-yellow{
+    bottom: 354px;
+    left: 548px;
+    height: 375px;
+    width: 235px;
+}
+.sec6-cubo-green{
+    bottom: 354px;
+    right: 241px;
+    height: 375px;
+    width: 226px;
+}
+.sec6-cubo-ligthBlue{
+    bottom: 354px;
+    right: -21px;
+    height: 375px;
+    width: 235px;
+}
+.sec6-cubo-blue{
+    bottom: -51px;
+    left: 16px;
+    height: 375px;
+    width: 235px;
+}
+.sec6-cubo-fullColor{
+    bottom: -51px;
+    left: 300px;
+    height: 375px;
+    width: 235px;
+}
+.sec6-cubo-purple{
+    bottom: -54px;
+    left: 545px;
+    height: 375px;
+    width: 235px;
+}
+.sec6-cubo-grey{
+    right: 232px;
+    bottom: -51px;
+    height: 375px;
+    width: 235px;
+}
+.sec6-cubo-white{
+    right: -20px;
+    bottom: -51px;
+    height: 375px;
+    width: 235px;
+}
+
+
+.conteiner-cubo-sec6{
+    background-image: url('../src/seccion6/Fondo.svg');
+    background-repeat: no-repeat;
+    width: 1280px;
+    height: 729px;
+    bottom: 275px;
+    position: absolute;
+
+}
+/* ------------------ FIN SECCION 6 -------------------- */
+
+
+/* ------------------ SECCION 7 -------------------- */
 
 .seccion7{
     background-image: url('../src/seccion7/ff\ 2.svg');
