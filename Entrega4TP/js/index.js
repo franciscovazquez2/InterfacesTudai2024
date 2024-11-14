@@ -18,7 +18,7 @@ function calcularScrollProgress(element){
     return Math.max(0,Math.min(1,progress));
 }
 
-let artsSecCuatro = document.querySelectorAll(".art-secCuatro");
+let artsSecCuatro = document.querySelectorAll(".art-secCuatro"); //articulos seccion 4
 
 //evento scroll
 window.addEventListener("scroll",()=>{
@@ -43,7 +43,33 @@ window.addEventListener("scroll",()=>{
         if(idSection==="uno"){
         }
 
+        /*_______________SECCION 2_______________*/
 
+    
+        if(e.id === "dos"){
+            let cardsSecDos = document.querySelectorAll(".card-section2");
+            
+            if(calcularScrollProgress(e)>=0.5 && calcularScrollProgress(e)<=0.8){
+                console.log("entre al if sec dos");
+                setTimeout(()=>{
+                    console.log(cardsSecDos[0]);
+                    cardsSecDos[0].style.top='0px';
+                    cardsSecDos[0].style.opacity='1';
+                },300);
+    
+                setTimeout(()=>{
+                    cardsSecDos[1].style.top='0px';
+                    cardsSecDos[1].style.opacity='1';
+                },600);
+    
+                setTimeout(()=>{
+                    cardsSecDos[2].style.top='0px';
+                    cardsSecDos[2].style.opacity='1';
+                },900);
+            }
+        }
+    
+            /*_______________FIN SECCION 2_______________*/
 
         /*
         if(calcularScrollProgress(e)>0 && calcularScrollProgress(e)<1){
@@ -52,6 +78,9 @@ window.addEventListener("scroll",()=>{
         }*/
     
     });
+
+
+
 
         /*_______________SECCION 4_______________*/
 
