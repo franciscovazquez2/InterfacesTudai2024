@@ -310,14 +310,13 @@ body{
     background-image: url('../src/seccion3/Rectangle\ 26.svg');
     height: 1157px;
     overflow: hidden;
-    justify-content: center;
 }
 
 #parallax1{
     position: absolute;
     background-image: url('../src/seccion3/persnajesJuntos.svg');
     width: 120%;
-    height: 120%;
+    height: 100%;
     background-repeat: no-repeat;
     background-position: center;
     z-index: 20;
