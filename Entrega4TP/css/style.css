@@ -30,6 +30,70 @@ body{
     background-image: url('../src/seccion1/ff.svg');
     height: 959px;
 }
+
+/* MENU HAMBURGUESA */
+
+.bars__menu{
+    top: 24px;
+    position: absolute;
+    width: 40px;
+    height: 34px;
+    transform: translate(-50%, -50%) scale(1);
+    cursor: pointer;
+    left: 100px;
+}
+
+.bars__menu span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #F39E46;
+    transform-origin: 0px 100%;
+    transition: all 300ms;
+    border: 4px solid #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px #0c2b6b;
+}
+
+.activeline1__bars-menu{
+    transform: rotate(45deg) translate(-2px, 2px); 
+    border: 0px solid #FFFFFF;
+}
+
+.activeline2__bars-menu{
+    opacity: 0;
+    margin-left: -30px; 
+}
+
+.activeline3__bars-menu{
+    transform: rotate(-45deg) translate(-5px, 9px);
+    border: 0px solid #FFFFFF;
+}
+
+/*FIN MENU HAMBURGUESA*/
+
+/*BOTON COMPRAR*/
+.btn-comprar{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 10px;
+    right: 100px;
+    height: 50px;
+    width: 200px;
+    background: #83C252;
+    border-radius: 50px;
+    border: 5px #FFFFFF solid;
+    box-shadow: 3px 3px 2px #0c2b6b;
+    cursor: pointer;
+}
+
+.btn-comprar h4{
+    color: #FFFFFF;
+}
+
+/*FIN BOTON COMPRAR*/
 /*header en seccion 1*/
 .header-container{
     width: 1280px;
@@ -61,8 +125,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 600px;
-    height: 400px;
+    width: 560px;
+    height: 320px;
 }
 
 .logo img{
@@ -591,6 +655,11 @@ body{
     text-align: left;
 }
 
+.conteiner-cubo-sec6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .sec6-cubo-red,
 .sec6-cubo-orange,
 .sec6-cubo-yellow,
@@ -601,23 +670,36 @@ body{
 .sec6-cubo-purple, 
 .sec6-cubo-grey, 
 .sec6-cubo-white{
-    object-fit: cover;
     position: absolute;
     z-index: 9999;
-    filter: drop-shadow(4px 4px 25px #FFFFFF);
+    filter: drop-shadow(4px 4px 20px #FFFFFF);
 }
 
-.conteiner-cubo-sec6 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 .sec6-cubo-red{
     bottom: 354px;
     left: 0px;
     height: 375px;
     width: 251px;
+    overflow: hidden;
+}
+
+
+.sec6-cubo-red img:hover {
+    animation: resizeAndShadowRed 1s ease forwards; /* Aplica la animación al hacer hover */
+}
+
+@keyframes resizeAndShadowRed {
+    0% {
+        height: 375px;
+        width: 251px;
+    filter: drop-shadow(4px 4px 20px #FFFFFF);
+    }    
+    100% {
+        height: 380px;
+        width: 261px;
+        filter: drop-shadow(4px 4px 15px #FFFFFF);
+    }
 }
 
 .sec6-cubo-orange{
@@ -625,6 +707,24 @@ body{
     left: 279px;
     height: 375px;
     width: 235px;
+    overflow: hidden;
+}
+
+.sec6-cubo-orange img:hover {
+    animation: resizeAndShadowOrange 1s ease forwards; /* Aplica la animación al hacer hover */
+}
+
+@keyframes resizeAndShadowOrange {
+    0% {
+        height: 375px;
+        width: 235px;
+        filter: drop-shadow(4px 4px 20px #FFFFFF);
+    }    
+    100% {
+        height: 380px;
+        width: 245px;
+        filter: drop-shadow(4px 4px 15px #FFFFFF);
+    }
 }
 
 .sec6-cubo-yellow{
@@ -632,49 +732,201 @@ body{
     left: 548px;
     height: 375px;
     width: 235px;
+    overflow: hidden;
 }
+
+.sec6-cubo-yellow img:hover {
+    animation: resizeAndShadowYellow 1s ease forwards; /* Aplica la animación al hacer hover */
+}
+
+@keyframes resizeAndShadowYellow {
+    0% {
+        height: 375px;
+        width: 235px;
+        filter: drop-shadow(4px 4px 20px #FFFFFF);
+    }    
+    100% {
+        height: 380px;
+        width: 245px;
+        filter: drop-shadow(4px 4px 15px #FFFFFF);
+    }
+}
+
 .sec6-cubo-green{
     bottom: 354px;
     right: 241px;
     height: 375px;
     width: 226px;
+    overflow: hidden;
 }
+
+.sec6-cubo-green img:hover {
+    animation: resizeAndShadowGreen 1s ease forwards; /* Aplica la animación al hacer hover */
+}
+
+@keyframes resizeAndShadowGreen {
+    0% {
+        height: 375px;
+        width: 226px;
+    filter: drop-shadow(4px 4px 20px #FFFFFF);
+    }    
+    100% {
+        height: 380px;
+        width: 236px;
+        filter: drop-shadow(4px 4px 15px #FFFFFF);
+    }
+}
+
 .sec6-cubo-ligthBlue{
     bottom: 354px;
-    right: -21px;
+    right: 0px;
     height: 375px;
-    width: 235px;
+    width: 215px;
+    overflow: hidden;
 }
+
+.sec6-cubo-ligthBlue img:hover {
+    animation: resizeAndShadowLigthblue 1s ease forwards; /* Aplica la animación al hacer hover */
+}
+
+@keyframes resizeAndShadowLigthblue {
+    0% {
+        height: 375px;
+        width: 215px;
+    filter: drop-shadow(4px 4px 20px #FFFFFF);
+    }    
+    100% {
+        height: 380px;
+        width: 225px;
+        filter: drop-shadow(4px 4px 15px #FFFFFF);
+    }
+}
+
 .sec6-cubo-blue{
-    bottom: -51px;
+    bottom: 0px;
     left: 16px;
-    height: 375px;
+    height: 325px;
     width: 235px;
+    overflow: hidden;
 }
+
+.sec6-cubo-blue img:hover {
+
+    animation: resizeAndShadowBlue 1s ease forwards; /* Aplica la animación al hacer hover */
+}
+
+@keyframes resizeAndShadowBlue {
+    0% {
+        height: 325px;
+        width: 235px;
+        filter: drop-shadow(4px 4px 20px #FFFFFF);
+    }    
+    100% {
+        height: 330px;
+        width: 245px;
+        filter: drop-shadow(4px 4px 15px #FFFFFF);
+    }
+}
+
 .sec6-cubo-fullColor{
-    bottom: -51px;
-    left: 300px;
-    height: 375px;
-    width: 235px;
+    bottom: 0px;
+    left: 280px;
+    height: 326px;
+    width: 236px;
+    overflow: hidden;
 }
+
+.sec6-cubo-fullColor img:hover {
+    animation: resizeAndShadowFullColor 1s ease forwards; /* Aplica la animación al hacer hover */
+}
+
+@keyframes resizeAndShadowFullColor {
+    0% {
+        height: 326px;
+        width: 236px;
+        filter: drop-shadow(4px 4px 20px #FFFFFF);
+    }    
+    100% {
+        height: 331px;
+        width: 246px;
+        filter: drop-shadow(4px 4px 15px #FFFFFF);
+    }
+}
+
 .sec6-cubo-purple{
-    bottom: -54px;
-    left: 545px;
-    height: 375px;
-    width: 235px;
+    bottom: 0px;
+    left: 543px;
+    height: 325px;
+    width: 239px;
+    overflow: hidden;
 }
+
+.sec6-cubo-purple img:hover {
+    animation: resizeAndShadowPurple 1s ease forwards; /* Aplica la animación al hacer hover */
+}
+@keyframes resizeAndShadowPurple {
+    0% {
+        height: 325px;
+        width: 239px;
+        filter: drop-shadow(4px 4px 20px #FFFFFF);
+    }    
+    100% {
+        height: 330px;
+        width: 249px;
+        filter: drop-shadow(4px 4px 15px #FFFFFF);
+    }
+}
+
 .sec6-cubo-grey{
-    right: 232px;
-    bottom: -51px;
-    height: 375px;
-    width: 235px;
+    right: 240px;
+    bottom: 0px;
+    height: 326px;
+    width: 228px;
+    overflow: hidden;
 }
+
+.sec6-cubo-grey img:hover {
+    animation: resizeAndShadowGrey 1s ease forwards; /* Aplica la animación al hacer hover */
+}
+
+@keyframes resizeAndShadowGrey {
+    0% {
+        height: 326px;
+        width: 228px;
+        filter: drop-shadow(4px 4px 20px #FFFFFF);
+    }    
+    100% {
+        height: 331px;
+        width: 238px;
+        filter: drop-shadow(4px 4px 15px #FFFFFF);
+    }
+}
+
 .sec6-cubo-white{
-    right: -20px;
-    bottom: -51px;
-    height: 375px;
-    width: 235px;
+    right: 0px;
+    bottom: 0px;
+    height: 326px;
+    width: 216px;
+    overflow: hidden;
 }
+
+.sec6-cubo-white img:hover {
+    animation: resizeAndShadowWhite 1s ease forwards; /* Aplica la animación al hacer hover */
+}
+
+@keyframes resizeAndShadowWhite {
+    0% {
+        height: 326px;
+        width: 216px;
+    filter: drop-shadow(4px 4px 20px #FFFFFF);
+    }    
+    100% {
+        height: 331px;
+        width: 226px;
+        filter: drop-shadow(4px 4px 15px #FFFFFF);
+    }
+}
+
 
 
 .conteiner-cubo-sec6{
