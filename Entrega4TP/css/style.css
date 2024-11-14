@@ -405,7 +405,6 @@ body{
     height: 5421px;/*5442px;*/
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 
 .parte-titulo{
