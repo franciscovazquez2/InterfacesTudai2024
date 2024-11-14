@@ -252,24 +252,50 @@ body{
     width: 704px;
     font-weight: 300;
 }
+
+.borde-cuadro{
+    width: 516px;
+    height: 265px;
+    position: relative;
+    top: 336px;
+    left: 235px;
+    border: #1b5f99 30px solid;
+    border-radius: 77px;
+    z-index: 2;
+    overflow: hidden;
+}
 .cuadro{
     position: absolute;
-    top: 336px;
-    left:136px;
+    top: -29px;
+    left: -29px;
+    z-index: 1;
+}
+
+.cuadro img{
+    position: absolute;
+    width: 576px;
+    height: 324px;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.cuadro img.visible{
+    opacity: 1;
 }
 
 .figura4{
     position: absolute;
     top: 537px;
     left: 48px;
-    z-index: 2;
+    z-index: 5;
 }
 
 .figura5{
     position: absolute;
     top: -87px;
     right: 0px;
-    z-index: 2;
+    z-index: 5;
 }
 
 /*inicio cards*/

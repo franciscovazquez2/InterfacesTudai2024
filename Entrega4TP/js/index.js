@@ -93,9 +93,6 @@ window.addEventListener("scroll",()=>{
     
     });
 
-
-
-
         /*_______________SECCION 4_______________*/
 
         artsSecCuatro.forEach((e)=>{
@@ -155,6 +152,34 @@ window.addEventListener("scroll",()=>{
         /*_______________FIN SECCION 4_______________*/
 
 });
+
+        /*________________________PERTENECE A SECCION 2________________________ */
+        const images = [
+            "src/seccion2/cuadro0.svg",
+            "src/seccion2/cuadro1.svg",
+            "src/seccion2/cuadro2.svg",
+            "src/seccion2/cuadro3.svg" 
+        ];
+
+        images.forEach(src =>{
+            const img = new Image();
+            img.src = src;
+        })
+
+        const cuadroImg = document.querySelector(".cuadro img");
+        let currentIndex = 0;
+
+        setInterval(() => {
+            cuadroImg.classList.remove('visible');
+
+            setTimeout(()=>{
+                currentIndex = (currentIndex + 1) % images.length;
+                cuadroImg.src = images[currentIndex];
+                cuadroImg.classList.add('visible');
+            },500)
+        }, 4000);
+        
+        /*________________________FIN PERTENECE A SECCION 2________________________ */
 
 //funcion seccion 4
 function cambiarPersonaje(ocultar, mostrar){
