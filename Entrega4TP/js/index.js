@@ -20,6 +20,9 @@ function calcularScrollProgress(element){
     const progress = (windowsHeight-rect.top)/(windowsHeight+sectionHeight);
     return Math.max(0,Math.min(1,progress));
 }
+
+let artsSecCuatro = document.querySelectorAll(".art-secCuatro");
+
 //evento scroll
 window.addEventListener("scroll",()=>{
     
@@ -54,7 +57,95 @@ window.addEventListener("scroll",()=>{
     
     });
 
+        /*_______________SECCION 4_______________*/
+
+        artsSecCuatro.forEach((e)=>{
+            let idArt = e.id;
+            console.log("Sec 4 Art: " + idArt + " " + calcularScrollProgress(e));
+
+            if(calcularScrollProgress(e)>0.25 && calcularScrollProgress(e)<0.75){
+                //si estoy en articulo 1, personaje 0 se oculta y personaje 1 se muestra
+                switch(e.id){
+                    case "art-cero":
+                        cambiarPersonaje("uno","cero");
+                        break;
+                    case "art-uno":
+                        cambiarPersonaje("cero", "uno");
+                        cambiarPersonaje("dos","uno")
+                        break;
+                    case "art-dos":
+                        cambiarPersonaje("uno", "dos");
+                        cambiarPersonaje("tres", "dos");
+                        break;
+                    case "art-tres":
+                        cambiarPersonaje("dos", "tres");
+                        cambiarPersonaje("cuatro", "tres");
+                        break;
+                    case "art-cuatro":
+                        cambiarPersonaje("tres", "cuatro");
+                        cambiarPersonaje("cinco", "cuatro");
+                        break;
+                    case "art-cinco":
+                        cambiarPersonaje("cuatro", "cinco");
+                        cambiarPersonaje("seis", "cinco");
+                        break;
+                    case "art-seis":
+                        cambiarPersonaje("cinco", "seis");
+                        cambiarPersonaje("siete", "seis");
+                        break;
+                    case "art-siete":
+                        cambiarPersonaje("seis", "siete");
+                        cambiarPersonaje("ocho", "siete");
+                        break;
+                    case "art-ocho":
+                        cambiarPersonaje("siete", "ocho");
+                        cambiarPersonaje("nueve", "ocho");
+                        break;
+                    case "art-nueve":
+                        cambiarPersonaje("ocho", "nueve");
+                        cambiarPersonaje("diez", "nueve");
+                        break;
+                    case "art-diez":
+                        cambiarPersonaje("nueve", "diez");
+                        break;
+                    
+                }
+            }
+        })
+
+        /*_______________FIN SECCION 4_______________*/
 
 });
+
+
+//funcion seccion 4
+function cambiarPersonaje(ocultar, mostrar){
+    let pjocultar = document.querySelector(`#pj-${ocultar}`);
+    let pjMostrar = document.querySelector(`#pj-${mostrar}`);
+    console.log("borrando: "+ocultar+ " - mostrando: "+mostrar)
+
+    if(ocultar == "uno" && mostrar == "cero"){
+        pjocultar.classList.remove('pj');
+        pjocultar.classList.add('ocultar-pj');
+
+        pjMostrar.classList.remove('ocultar-pj');
+        pjMostrar.classList.add('pj-sticky-cero');
+    }
+    else if(ocultar == "nueve" && mostrar == "diez"){
+        pjocultar.classList.remove('pj');
+        pjocultar.classList.add('ocultar-pj');
+
+        pjMostrar.classList.remove('ocultar-pj');
+        pjMostrar.classList.add('pj-sticky-diez');
+    }
+    else{
+        pjocultar.classList.remove('pj');
+        pjocultar.classList.add('ocultar-pj');
+    
+        pjMostrar.classList.remove('ocultar-pj');
+        pjMostrar.classList.add('pj');
+    }
+
+};
 
 });
