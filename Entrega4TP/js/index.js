@@ -184,7 +184,7 @@ window.addEventListener("scroll",()=>{
                 cuadroImg.src = images[currentIndex];
                 cuadroImg.classList.add('visible');
             },500)
-        }, 4000);
+        }, 3000);
         
         /*________________________FIN PERTENECE A SECCION 2________________________ */
 
