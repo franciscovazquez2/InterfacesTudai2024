@@ -309,20 +309,27 @@ body{
 .seccion3{
     background-image: url('../src/seccion3/Rectangle\ 26.svg');
     height: 1157px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    overflow: hidden;
+    justify-content: center;
 }
 
-.personajesGroup{
+#parallax1{
     position: absolute;
-    bottom: 0;
+    background-image: url('../src/seccion3/persnajesJuntos.svg');
+    width: 120%;
+    height: 120%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 20;
+    top:200px;
+    left:-130px;
 }
+
 .searchGame{
     margin: 0;
     position:absolute;
     top: 175px;
+    left:150px;
     max-width: 950px;
     height: 153px;
 }
@@ -348,6 +355,7 @@ body{
     font-size: 24px;
     position: absolute;
     top: 381px;
+    left: 350px;
     border:4px solid white;
     background-color: rgb(34, 212, 34);
     border-radius: 40px;
