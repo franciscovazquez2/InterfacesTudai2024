@@ -73,6 +73,58 @@ body{
 /*FIN MENU HAMBURGUESA*/
 
 /*BOTON COMPRAR*/
+
+.button-comprar {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 10px;
+    right: 100px;
+    height: 15px;
+    background: #83C252;
+    border-radius: 50px;
+    border: 10px #FFFFFF solid;
+    box-shadow: 4px 4px 1px #0c2b6b;
+    --width: 200px;
+    --timing: 2s;
+    width: var(--width);
+    padding-block: 1em;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.button-comprar:hover {
+    background-image: linear-gradient(
+    to right,
+    rgb(250, 82, 82),
+    rgb(250, 82, 82) 16.65%,
+    rgb(190, 75, 219) 16.65%,
+    rgb(190, 75, 219) 33.3%,
+    rgb(76, 110, 245) 33.3%,
+    rgb(76, 110, 245) 49.95%,
+    rgb(64, 192, 87) 49.95%,
+    rgb(64, 192, 87) 66.6%,
+    rgb(250, 176, 5) 66.6%,
+    rgb(250, 176, 5) 83.25%,
+    rgb(253, 126, 20) 83.25%,
+    rgb(253, 126, 20) 100%,
+    rgb(250, 82, 82) 100%
+    );
+    animation: var(--timing) linear arcoiris infinite;
+    transform: scale(1.1) translateY(4px);
+}
+
+@keyframes arcoiris {
+    to {
+    background-position: var(--width);
+    }
+}
+
+/* ___________________BOTON VIEJO___________________
 .btn-comprar{
     position: absolute;
     display: flex;
@@ -88,11 +140,14 @@ body{
     box-shadow: 3px 3px 2px #0c2b6b;
     cursor: pointer;
 }
+    
 
-.btn-comprar h4{
+.button-comprar h4{
+    font-weight: bold;
+    font-size: 20px;
     color: #FFFFFF;
 }
-
+*/
 /*FIN BOTON COMPRAR*/
 /*header en seccion 1*/
 .header-container{
@@ -579,6 +634,7 @@ body{
 }
 
 .videoDescription h1{
+    color: #FFFFFF;
     margin: 0;
     text-align: start;
     font-weight: bold;
@@ -588,16 +644,36 @@ body{
     align-self: top;
 }
 
+.movFiguras-secCinco{
+    position: relative;
+    top: 0;
+}
+
 .video{
     position:absolute;
+    border: #FFFFFF solid 30px;
+    border-radius: 50px;
     top:526px;
     left: 100px;
+    width: 720px;
+    height: 402px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.video-sec5{
+    position: absolute;
+    top: -2px;
+    width: 720px;
+    height: 405px;
+    z-index: 1;
 }
 
 .personaje3video{
     position:absolute;
     top:352px;
     left:720px;
+    z-index: 3;
 }
 
 

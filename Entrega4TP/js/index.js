@@ -174,7 +174,21 @@ window.addEventListener("scroll",()=>{
 
         /*_______________FIN SECCION 4_______________*/
 
-});
+        /*_______________SECCION 5_______________*/
+        let figurasSecCinco = document.querySelectorAll("#parallax-secCinco");
+
+        figurasSecCinco.forEach((fig)=>{
+            let top = scrollY-10000;
+            console.log("scrollY: "+scrollY)
+            let speed = fig.getAttribute("data-speed");
+            let posY = -(top*speed/100);
+            fig.setAttribute('style','transform:translate3d(0px,'+posY+'px,0px)');
+        })
+
+        /*_______________FIN SECCION 5_______________*/
+
+        
+}); /*_______________CIERRE DE EVENTO SCROLL_______________*/
 
         /*________________________PERTENECE A SECCION 2________________________ */
         const images = [
