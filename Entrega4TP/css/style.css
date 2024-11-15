@@ -177,6 +177,8 @@ body{
 }
 
 .logo{
+    position: absolute;
+    left: 360px;
     display: flex;
     justify-content: center;
     align-items: center;

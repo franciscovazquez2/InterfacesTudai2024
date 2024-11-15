@@ -49,7 +49,7 @@ window.addEventListener("scroll",()=>{
             let viewDisplay = calcularScrollProgress(e);
             if(window.scrollY>5 && viewDisplay<0.5){
                 let scaleValue = 0.9-(viewDisplay);
-                logo.style.transform=`translateY(-150px) scale(${scaleValue})`;
+                logo.style.transform=`translateY(-110px) scale(${scaleValue})`;
                 header.classList.add('header-container-scroll');
                 
             }if(window.scrollY<=5){
