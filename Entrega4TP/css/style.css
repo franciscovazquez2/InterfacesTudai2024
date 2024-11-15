@@ -1023,7 +1023,6 @@ body{
     background-image: url('../src/seccion7/ff\ 2.svg');
     height: 1296px;
     object-fit: cover;
-    overflow: hidden;
 }
 
 .novedades{
@@ -1033,6 +1032,7 @@ body{
     left: 100px;
     width: 816px;
     height: 171px;
+    z-index: 500;
 }
 
 .novedades h1{
@@ -1044,6 +1044,7 @@ body{
     line-height: 94.5%;
     letter-spacing: 0%;
     align-self: top;
+    
 }
 
 .input-section{
@@ -1070,7 +1071,61 @@ body{
     top: 375px;
 }
 
+#bird{
+    height: 365px;
+    width: 372px;
+    margin: auto;
+    background: url(../src/seccion7/birdsframes.png)repeat-x;
+    animation: fly 0.9s steps(5)infinite;
+    position: absolute;
+    top: 400px;
+    left: 200px;
+    z-index: 99999;
+}
+@keyframes fly {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0 }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:1860px }
+  }
+/*seccion infinita*/
 
+@keyframes scroll {
+    0% {background-position-x: 1080px;}
+    100% {background-position-x: 0px;}
+}
+.layer-1{
+    background-image: url('../src/seccion7/cloud1.png');
+    position: absolute;
+    width: 1280px;
+    height: 124px;
+    bottom: 929px;
+    background-repeat: repeat-x;
+    z-index: 99999;
+    animation: scroll 15s infinite linear;
+}
+
+.layer-2{
+    width: 1280px;
+    height: 181px;
+    background-image: url('../src/seccion7/cloud2.png');
+    position: absolute;
+    bottom: 829px;
+    z-index: 99999;
+    background-repeat: repeat-x;
+    animation: scroll 25s infinite linear;
+}
+
+.layer-3{
+    background-image: url('../src/seccion7/cloud.png');
+    position: absolute;
+    width: 1280px;
+    height: 180px;
+    bottom: 570px;
+    z-index: 99;
+    background-repeat: repeat;
+    animation: scroll 20s infinite linear;
+}
 
 .gif1,.gif2,.gif3{
     position: absolute;
@@ -1083,6 +1138,7 @@ body{
 .gif2{
     left: 756px;
     bottom: -41px;
+    z-index: 9999999;
 }
 .gif2 img{
     height: 997px;
