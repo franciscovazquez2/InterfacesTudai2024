@@ -1084,49 +1084,78 @@ body{
     left: 200px;
     z-index: 99999;
 }
+
+#lion{
+    height: 123px;
+    width: 133px;
+    margin: auto;
+    background: url(../src/seccion6/sp.png)repeat-x;
+    animation: dance 0.9s steps(4)infinite;
+    position: absolute;
+    bottom: 100px;
+    left: 200px;
+    z-index: 99999;
+}
+#mosca{
+    height: 123px;
+    width: 133px;
+    margin: auto;
+    background: url(../src/seccion6/moscasp.png)repeat-x;
+    animation: dance 0.9s steps(4)infinite;
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    z-index: 99999;
+}
 @keyframes fly {
     /* Partimos de la primera viñeta del sprite sheet */
     0% { background-position:0 }
     /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
     100% { background-position:1860px }
   }
+@keyframes dance {
+/* Partimos de la primera viñeta del sprite sheet */
+0% { background-position:0 }
+/* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+100% { background-position:492px }
+}
 /*seccion infinita*/
 
 @keyframes scroll {
-    0% {background-position-x: 1080px;}
-    100% {background-position-x: 0px;}
+    0% {background-position-x: 1280px;}
+    100% {background-position-x: -375px;}
 }
 .layer-1{
     background-image: url('../src/seccion7/cloud1.png');
     position: absolute;
-    width: 1280px;
+    width: 100%;
     height: 124px;
     bottom: 929px;
-    background-repeat: repeat-x;
+    background-repeat: no-repeat;
     z-index: 99999;
-    animation: scroll 15s infinite linear;
+    animation: scroll 25s infinite linear;
 }
 
 .layer-2{
-    width: 1280px;
-    height: 181px;
     background-image: url('../src/seccion7/cloud2.png');
     position: absolute;
+    width: 100%;
+    height: 181px;
     bottom: 829px;
     z-index: 99999;
-    background-repeat: repeat-x;
-    animation: scroll 25s infinite linear;
+    background-repeat: no-repeat;
+    animation: scroll 30s infinite linear;
 }
 
 .layer-3{
     background-image: url('../src/seccion7/cloud.png');
     position: absolute;
-    width: 1280px;
+    width: 100%;
     height: 180px;
     bottom: 570px;
     z-index: 99;
-    background-repeat: repeat;
-    animation: scroll 20s infinite linear;
+    background-repeat: no-repeat;
+    animation: scroll 22s infinite linear;
 }
 
 .gif1,.gif2,.gif3{
@@ -1158,6 +1187,8 @@ footer{
     background-color: #242424;
     display: flex;
     flex-direction: column;
+    font-size: 20px;
+    color: white;
 }
 .footer-content{
     display: flex;
@@ -1173,13 +1204,19 @@ footer{
     background-color: #5E5E5D;
     height: 515px;
     display: flex;
-    justify-content: center;
 }
 
 .footer-about-content{
-    width: 1080px;
-    font-size: 20px;
+    margin-top: 25px;
+    margin-top: 15px;
+    width: 820px;
+    margin-left: 100px;
+    text-align: left;
+    letter-spacing: 11%;
 }
+
+
+
 
 
 
