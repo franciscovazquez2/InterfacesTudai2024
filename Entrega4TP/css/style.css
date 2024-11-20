@@ -1095,7 +1095,7 @@ input:focus{
     position: absolute;
     left: 100px;
     top: 269px;
-    z-index: 999999;
+    z-index: 99994;
 }
 
 .inscripcion-content p{
@@ -1110,7 +1110,7 @@ input:focus{
     position:absolute;
     left: 100px;
     top: 400px;
-    z-index: 999999;
+    z-index: 999994;
 }
 
 #bird{
@@ -1172,7 +1172,7 @@ input:focus{
     height: 124px;
     bottom: 929px;
     background-repeat: no-repeat;
-    z-index: 99999;
+    z-index: 99991;
     animation: scroll 25s infinite linear;
 }
 
@@ -1182,7 +1182,7 @@ input:focus{
     width: 100%;
     height: 181px;
     bottom: 829px;
-    z-index: 99999;
+    z-index: 99992;
     background-repeat: no-repeat;
     animation: scroll 30s infinite linear;
 }
@@ -1209,7 +1209,7 @@ input:focus{
 .gif2{
     left: 756px;
     bottom: -41px;
-    z-index: 9999999;
+    z-index: 999995;
 }
 .gif2 img{
     height: 997px;
