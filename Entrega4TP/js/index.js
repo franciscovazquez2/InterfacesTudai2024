@@ -4,13 +4,18 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 //id de seccion    
 let sections = document.querySelectorAll('.scroll-section');
-
+let menu = document.querySelector('.bars__menu');
+let menuOptions = document.querySelector('.menu');
 // Seleccionar el logo y el header
 const logo = document.getElementById('logo-principal-header');
 const header = document.querySelector('.header-container');
+
 //seccion paralax 1
 let layers = document.querySelectorAll('.parallax');
 
+menu.addEventListener('click',()=>{
+    menuOptions.classList.toggle('hidden');
+})
 
 //calcular progreso de scroll por seccion
 function calcularScrollProgress(element){

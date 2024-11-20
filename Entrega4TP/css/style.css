@@ -5,7 +5,7 @@ body{
     justify-content: center;
 }
 
-.margins{
+.body-container{
     margin: 0;
     padding: 0;
     max-width: 1280px;
@@ -69,6 +69,8 @@ body{
     transform: rotate(-45deg) translate(-5px, 9px);
     border: 0px solid #FFFFFF;
 }
+
+
 
 /*FIN MENU HAMBURGUESA*/
 
@@ -1085,28 +1087,34 @@ body{
     z-index: 99999;
 }
 
-#lion{
-    height: 123px;
-    width: 133px;
+#sun{
+    height: 200px;
+    width: 200px;
     margin: auto;
-    background: url(../src/seccion6/sp.png)repeat-x;
-    animation: dance 0.9s steps(4)infinite;
+    background: url(../src/seccion7/sun-spritesheet-small.13d0509.png)repeat-x;
+    animation: dance 0.9s steps(8)infinite;
     position: absolute;
-    bottom: 100px;
-    left: 200px;
-    z-index: 99999;
-}
-#mosca{
-    height: 123px;
-    width: 133px;
-    margin: auto;
-    background: url(../src/seccion6/moscasp.png)repeat-x;
-    animation: dance 0.9s steps(4)infinite;
-    position: absolute;
-    bottom: 100px;
+    top: 200px;
     right: 100px;
     z-index: 99999;
 }
+#tucan{
+    height: 230px;
+    width: 256px;
+    margin: auto;
+    background: url(../src/seccion8-footer/tucan.png)repeat-x;
+    animation: jump 0.9s steps(4)infinite;
+    position: absolute;
+    bottom: -480px;
+    right: 100px;
+    z-index: 99999;
+}
+@keyframes jump {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0 }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:1024px }
+  }
 @keyframes fly {
     /* Partimos de la primera viñeta del sprite sheet */
     0% { background-position:0 }
@@ -1117,7 +1125,7 @@ body{
 /* Partimos de la primera viñeta del sprite sheet */
 0% { background-position:0 }
 /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
-100% { background-position:492px }
+100% { background-position:1600px }
 }
 /*seccion infinita*/
 
