@@ -1095,7 +1095,9 @@ input:focus{
     position: absolute;
     left: 100px;
     top: 269px;
+    z-index: 999999;
 }
+
 .inscripcion-content p{
     font-size: 20px;
     line-height: 1;
@@ -1108,6 +1110,7 @@ input:focus{
     position:absolute;
     left: 100px;
     top: 400px;
+    z-index: 999999;
 }
 
 #bird{
