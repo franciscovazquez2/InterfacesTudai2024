@@ -1384,6 +1384,7 @@ footer{
 
 .subrayado{
     text-decoration: underline;
+    cursor: pointer;
 }
 
 
