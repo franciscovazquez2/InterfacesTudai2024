@@ -83,10 +83,11 @@ window.addEventListener("scroll",()=>{
                 
                 let top =scrollY;
                 let speed = layer.getAttribute('data-speed');
-                let posX = -(top*speed/100);
+                let entry = layer.getAttribute('data-entry');
+                let posX = -(top*entry/100);
                 let posY = -(top*speed/100);
                 
-                layer.setAttribute('style','transform:translate3d(0px,'+posY+'px,0px)');
+                layer.setAttribute('style','transform:translate3d('+posX+'px,'+posY+'px,0px)');
 
             })
             

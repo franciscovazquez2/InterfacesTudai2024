@@ -31,9 +31,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
-    font-family: Arial, sans-serif;
     z-index: 999999999;
+    font-size: 20px;
 }
 
 #loader {
@@ -250,31 +249,6 @@ body.loaded .loader-container {
     }
 }
 
-/* ___________________BOTON VIEJO___________________
-.btn-comprar{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 10px;
-    right: 100px;
-    height: 50px;
-    width: 200px;
-    background: #83C252;
-    border-radius: 50px;
-    border: 5px #FFFFFF solid;
-    box-shadow: 3px 3px 2px #0c2b6b;
-    cursor: pointer;
-}
-    
-
-.button-comprar h4{
-    font-weight: bold;
-    font-size: 20px;
-    color: #FFFFFF;
-}
-*/
-/*FIN BOTON COMPRAR*/
 /*header en seccion 1*/
 .header-container{
     width: 1280px;
