@@ -243,7 +243,7 @@ body.loaded .loader-container {
     justify-content: center;
     top: 10px;
     right: 100px;
-    height: 15px;
+    height: 4px;
     background: #83C252;
     border-radius: 50px;
     border: 10px #FFFFFF solid;
@@ -316,7 +316,8 @@ body.loaded .loader-container {
     width: 1280px;
     position: fixed;
     top: 0;
-    height: 400px;
+    height: 103px;
+    background-image: url('../src/seccion1/header.svg');
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -324,10 +325,6 @@ body.loaded .loader-container {
     
 }
 
-.header-container-scroll{
-    height: 103px;
-    background-image: url('../src/seccion1/header.svg');
-}
 
 .header{
     width:1080px;
@@ -359,6 +356,7 @@ body.loaded .loader-container {
     height: 320px;
     width: 560px;
     transition: 1s ease;
+    transform: scale(1);
 }
 
 /*fin seccion header*/

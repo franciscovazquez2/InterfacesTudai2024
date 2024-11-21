@@ -73,11 +73,9 @@ window.addEventListener("scroll",()=>{
             if(window.scrollY>5 && viewDisplay<0.5){
                 let scaleValue = 0.8-(viewDisplay);
                 logo.style.transform=`translateY(-120px) scale(${scaleValue})`;
-                header.classList.add('header-container-scroll');
                 
             }if(window.scrollY<=5){
                 logo.style.transform=`scale(${(1)})`;
-                header.classList.remove('header-container-scroll');
             } 
             
             layers.forEach((layer)=>{
@@ -99,6 +97,26 @@ window.addEventListener("scroll",()=>{
 
     
         if(e.id === "dos"){
+
+            // Me traigo el elemento logo
+            const menu = document.querySelector('#logo-principal-header');
+
+            // Obtengo el valor computado de la propiedad 'transform'
+            const transformValue = window.getComputedStyle(menu).transform;
+            let tamScaleLogo = 0;
+            if (transformValue !== 'none') {
+                // Me guardo el valor de 'scale' usando una expresión regular
+                const match = transformValue.match(/matrix\(([^,]+),[^,]+,[^,]+,[^,]+,[^,]+,[^,]+\)/);
+                if (match) {
+                    const scale = parseFloat(match[1]); // El valor de escala está en la primera posición
+                    tamScaleLogo = scale; //Guardo scale para poder usarlo fuera del if
+                }
+            }
+            
+            if(tamScaleLogo == 1){ //si el valor de scale es 1 (cuando refresco la pagina) entonces lo bajo a 0.3
+                menu.style.transform = 'translateY(-120px) scale(0.3)';
+            }
+
             let cardsSecDos = document.querySelectorAll(".card-section2");
             let figurasSecDos = document.querySelectorAll(".figSecDos");
 
