@@ -232,7 +232,6 @@ window.addEventListener("scroll",()=>{
 let menuOpts = document.querySelectorAll('.menu-option-hidden');
 
 function desplegarMenu(){
-    console.log("linea uno "+menuOpts[0]+" linea dos "+menuOpts[1]+" linea tres "+menuOpts[2])
     setTimeout(()=>{
         menuOpts[0].classList.toggle('menu-option-hidden');
         menuOpts[0].classList.toggle('menu-option');
