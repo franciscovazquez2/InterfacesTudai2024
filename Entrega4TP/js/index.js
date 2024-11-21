@@ -1,6 +1,23 @@
 "use strict"
 
 document.addEventListener("DOMContentLoaded",()=>{
+    let porcentaje = 0;
+    const progressBar = document.getElementById('progress-bar');
+    const progressText = document.getElementById('progress-text');
+    
+    // Simular el incremento del porcentaje
+    const interval = setInterval(function () {
+        if (porcentaje < 100) {
+            porcentaje += 1;
+            progressBar.style.width = `${porcentaje}%`;
+            progressText.innerText = `${porcentaje}%`;
+        } else {
+            clearInterval(interval);
+            setTimeout(function () {
+                document.body.classList.add('loaded'); // Ocultar el loader
+            }, 800); // Momento antes de iniciar
+        }
+    }, 50);
 
 //id de seccion    
 let sections = document.querySelectorAll('.scroll-section');

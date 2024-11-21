@@ -18,6 +18,125 @@ body{
     width: 100%;
     height: 100%;
 }
+
+
+/*___________LOADER___________*/
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    z-index: 999999999;
+}
+
+#loader {
+    width: 300px;
+    height: 60px;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#loader .progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400%;
+    animation: rainbow 1s linear infinite;
+    border-radius: 10px;
+    transition: width 0.2s ease-in-out;
+}
+
+#loader .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Ocultar el loader una vez cargado */
+body.loaded .loader-container {
+    display: none;
+}
+
+/* Animación para las imágenes */
+.falling-images {
+    position: absolute;
+    top: -100px; /* Empieza fuera de la pantalla */
+    left: calc(50% - 40px); /* Ajusta al centro con variaciones */
+    width: 150px;
+    height: 150px;
+    animation: fall 1.5s linear infinite;
+    z-index: 1;
+    opacity: 0.5; /* Para un efecto visual más suave */
+}
+
+/* Variar la posición de cada imagen */
+.falling-images:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+.falling-images:nth-child(2) {
+    left: 20%;
+    animation-delay: 0.25s;
+}
+.falling-images:nth-child(3) {
+    left: 30%;
+    animation-delay: 0.5s;
+}
+.falling-images:nth-child(4) {
+    left: 40%;
+    animation-delay: 0.75s;
+}
+.falling-images:nth-child(5) {
+    left: 50%;
+    animation-delay: 1s;
+}
+.falling-images:nth-child(6) {
+    left: 60%;
+    animation-delay: 1.25s;
+}
+.falling-images:nth-child(7) {
+    left: 70%;
+    animation-delay: 1.5s;
+}
+.falling-images:nth-child(8) {
+    left: 80%;
+    animation-delay: 2s;
+}
+/* Animación de caída */
+@keyframes fall {
+    0% {
+        top: -100px;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 110%;
+        transform: rotate(360deg); /* Girar mientras cae */
+    }
+}
+
+
+/*___________FIN LOADER___________*/
 /*secciones*/
 
 .seccion1{
