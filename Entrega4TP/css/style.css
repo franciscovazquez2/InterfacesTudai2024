@@ -70,6 +70,11 @@ body{
     border: 0px solid #FFFFFF;
 }
 
+#logo-principal-header{
+    position:absolute;
+    left: 300px;
+}
+
 
 
 /*FIN MENU HAMBURGUESA*/
@@ -1138,17 +1143,7 @@ input:focus{
     right: 100px;
     z-index: 99999;
 }
-#tucan{
-    height: 230px;
-    width: 256px;
-    margin: auto;
-    background: url(../src/seccion8-footer/tucan.png)repeat-x;
-    animation: jump 0.9s steps(4)infinite;
-    position: absolute;
-    bottom: -480px;
-    right: 100px;
-    z-index: 99999;
-}
+
 @keyframes jump {
     /* Partimos de la primera viñeta del sprite sheet */
     0% { background-position:0 }
