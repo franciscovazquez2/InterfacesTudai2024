@@ -9,7 +9,7 @@ body{
     margin: 0;
     padding: 0;
     max-width: 1280px;
-    height: auto;/*prueba*/
+    height: auto;
     font-family: 'Lato',serif;
 }
 
@@ -143,11 +143,6 @@ body.loaded .loader-container {
     background-image: url('../src/seccion1/ff.svg');
     height: 959px;
 }
-/*header en seccion 1*/
-.seccion1{
-    background-image: url('../src/seccion1/ff.svg');
-    height: 959px;
-}
 
 /* MENU HAMBURGUESA */
 
@@ -175,7 +170,6 @@ body.loaded .loader-container {
 
 .activeline1__bars-menu{
     transform: rotate(45deg) translate(-2px, 2px); 
-    border: 0px solid #FFFFFF;
 }
 
 .activeline2__bars-menu{
@@ -185,7 +179,6 @@ body.loaded .loader-container {
 
 .activeline3__bars-menu{
     transform: rotate(-45deg) translate(-5px, 9px);
-    border: 0px solid #FFFFFF;
 }
 
 .menu{
@@ -566,7 +559,6 @@ body.loaded .loader-container {
     justify-content: start;
     top: 1220px;
     gap: 40px;
-    /*border: 1px solid black;*/
 }
 
 .card-section2{
@@ -655,7 +647,7 @@ body.loaded .loader-container {
 /*______________________SECCION 4______________________*/
 .seccion4{
     background-color: white;
-    height: 5421px;/*5442px;*/
+    height: 5421px;
     display: flex;
     flex-direction: column;
 }
@@ -736,8 +728,6 @@ body.loaded .loader-container {
 
 .art-secCuatro{
     position: relative;
-    /*top: 40px;
-    left: 100px;*/
     width: 467PX;
 }
 
@@ -814,7 +804,7 @@ body.loaded .loader-container {
 /* ------------------ SECCION 6 -------------------- */
 
 .seccion6{
-    height: 2037px;/*1763px;*/    
+    height: 2037px; 
 }
 
 
